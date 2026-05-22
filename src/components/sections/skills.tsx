@@ -1,46 +1,63 @@
+import {
+  Code2,
+  Database,
+  Monitor,
+  Wrench,
+} from "lucide-react";
+
 import Container from "../ui/container";
 
-const skillGroups = [
+const expertise = [
   {
     title: "Frontend",
-    items: [
-      "React.js",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "JavaScript",
+    icon: Monitor,
+
+    skills: [
+      { name: "React.js", level: "expert" },
+      { name: "Next.js", level: "expert" },
+      { name: "TypeScript", level: "medium" },
+      { name: "Tailwind CSS", level: "expert" },
+      { name: "Redux", level: "medium" },
+      { name: "Framer Motion", level: "basic" },
     ],
   },
 
   {
     title: "Backend",
-    items: [
-      "Laravel",
-      "PHP",
-      "REST APIs",
-      "Node.js",
-      "Authentication",
+    icon: Code2,
+
+    skills: [
+      { name: "Laravel", level: "expert" },
+      { name: "PHP", level: "expert" },
+      { name: "REST APIs", level: "expert" },
+      { name: "WebSocket", level: "medium" },
+      { name: "WebRTC", level: "basic" },
+      { name: "Axios", level: "medium" },
     ],
   },
 
   {
-    title: "Database",
-    items: [
-      "MySQL",
-      "PostgreSQL",
-      "Supabase",
-      "Database Design",
+    title: "Databases",
+    icon: Database,
+
+    skills: [
+      { name: "MySQL", level: "expert" },
+      { name: "PostgreSQL", level: "medium" },
+      { name: "Supabase", level: "medium" },
+      { name: "phpMyAdmin", level: "basic" },
     ],
   },
 
   {
-    title: "Tools",
-    items: [
-      "Git",
-      "GitHub",
-      "Linux",
-      "AWS",
-      "Vercel",
+    title: "Tools & Platforms",
+    icon: Wrench,
+
+    skills: [
+      { name: "Git & GitHub", level: "expert" },
+      { name: "AWS", level: "basic" },
+      { name: "Vercel", level: "medium" },
+      { name: "VS Code", level: "expert" },
+      { name: "Postman", level: "medium" },
     ],
   },
 ];
@@ -50,52 +67,72 @@ export default function Skills() {
     <section className="pb-28">
       <Container>
         
-        <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
-          
-          {/* LEFT */}
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-500">
-              Technical Expertise
-            </p>
+        {/* Heading */}
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900">
+            Technical Expertise
+          </h2>
 
-            <h2 className="mt-5 text-5xl font-black leading-tight text-gray-900">
-              Technologies
-              <br />
-              I work with.
-            </h2>
+          <p className="mt-2 text-gray-500">
+            Technologies and tools I work with
+          </p>
+        </div>
 
-            <p className="mt-8 max-w-md text-lg leading-8 text-gray-500">
-              I build scalable and modern applications
-              using frontend, backend, database and
-              cloud technologies.
-            </p>
-          </div>
+        {/* Cards */}
+        <div className="mt-10 grid gap-6 lg:grid-cols-4">
+          {expertise.map((section) => {
+            const Icon = section.icon;
 
-          {/* RIGHT */}
-          <div className="space-y-10">
-            {skillGroups.map((group) => (
+            return (
               <div
-                key={group.title}
-                className="border-b border-gray-200 pb-8 last:border-none"
+                key={section.title}
+                className="rounded-[28px] border border-gray-200 bg-white p-7 shadow-sm"
               >
                 
-                <h3 className="text-xl font-bold text-gray-900">
-                  {group.title}
-                </h3>
+                {/* Top */}
+                <div className="flex items-center gap-3">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-red-50">
+                    <Icon
+                      size={20}
+                      className="text-red-500"
+                    />
+                  </div>
 
-                <div className="mt-5 flex flex-wrap gap-3">
-                  {group.items.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-gray-200 bg-white px-5 py-2 text-sm font-medium text-gray-600 shadow-sm"
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {section.title}
+                  </h3>
+                </div>
+
+                {/* Skills */}
+                <div className="mt-7 flex flex-wrap gap-x-5 gap-y-4">
+                  {section.skills.map((skill) => (
+                    <div
+                      key={skill.name}
+                      className="flex items-center gap-2"
                     >
-                      {item}
-                    </span>
+                      
+                      {/* Skill Level Dot */}
+                      <div
+                        className={`h-2 w-2 rounded-full ${
+                          skill.level === "expert"
+                            ? "bg-red-500"
+
+                            : skill.level === "medium"
+                            ? "bg-gray-500"
+
+                            : "border border-black bg-white"
+                        }`}
+                      />
+
+                      <span className="text-sm text-gray-600">
+                        {skill.name}
+                      </span>
+                    </div>
                   ))}
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </Container>
     </section>

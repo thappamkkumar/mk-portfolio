@@ -1,111 +1,166 @@
+import {
+  ArrowRight,
+  GraduationCap,
+} from "lucide-react";
+
 import Container from "../ui/container";
-import SectionHeading from "../ui/section-heading";
 
-const experiences = [
+const education = [
   {
-    role: "Full Stack Developer",
-    company: "Freelance & Personal Projects",
-    period: "2023 - Present",
-  },
-  {
-    role: "Frontend Developer",
-    company: "Modern Web Applications",
-    period: "2022 - 2023",
-  },
-];
+    title:
+      "Bachelor of Technology - Computer Science",
 
-const technologies = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Tailwind CSS",
-  "Laravel",
-  "PHP",
-  "MySQL",
-  "Node.js",
+    institute:
+      "Sri Sai College of Engineering & Technology (PTU)",
+
+    year: "2018 – 2022",
+  },
+
+  {
+    title: "PHP Web Development Training",
+
+    institute:
+      "4-Month Industrial Training Program",
+
+    year: "2022",
+  },
 ];
 
 export default function About() {
   return (
-    <section className="pb-24">
+    <section className="pb-28">
       <Container>
-        <SectionHeading
-          title="About Me"
-          subtitle="Passionate about building scalable and modern web applications."
-        />
-
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-16 lg:grid-cols-2">
           
-          {/* Left */}
-          <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h3 className="text-2xl font-bold text-gray-900">
-              Who I Am
-            </h3>
+          {/* LEFT SIDE */}
+          <div>
+            
+            {/* Heading */}
+            <div className="flex items-center gap-3">
+              
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-50">
+                <div className="h-4 w-4 rounded-full border-2 border-red-500" />
+              </div>
 
-            <p className="mt-6 leading-8 text-gray-500">
-              I am a full stack developer focused on
-              creating modern, performant, and user-friendly
-              applications. I enjoy solving real-world
-              problems and working with modern technologies.
-            </p>
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  About Me
+                </h2>
 
-            <p className="mt-4 leading-8 text-gray-500">
-              My main focus is frontend engineering with
-              strong backend understanding using Laravel,
-              APIs, databases, and scalable architecture.
-            </p>
+                <p className="mt-1 text-gray-500">
+                  A quick introduction
+                </p>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="mt-10 flex flex-col items-start gap-10 lg:flex-row lg:items-end">
+              
+              {/* Text */}
+              <div className="max-w-sm">
+                <p className="leading-8 text-gray-500">
+                  I'm a Full Stack Developer who enjoys
+                  building scalable, user-focused web
+                  applications.
+                </p>
+
+                <p className="mt-5 leading-8 text-gray-500">
+                  My focus is on clean code,
+                  performance and creating impactful
+                  digital experiences.
+                </p>
+
+                {/* Button */}
+                <button className="mt-8 inline-flex items-center gap-2 rounded-2xl border border-gray-200 bg-white px-5 py-3 text-sm font-semibold text-gray-700 shadow-sm transition hover:bg-gray-50">
+                  Know More About Me
+                  <ArrowRight size={16} />
+                </button>
+              </div>
+
+              {/* Image Area */}
+              <div className="relative">
+                
+                {/* Background Shape */}
+                <div className="absolute inset-0 rounded-full bg-red-100 blur-2xl" />
+
+                {/* Profile */}
+                <div className="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-full border border-gray-200 bg-white shadow-sm">
+                  
+                  {/* Replace with image later */}
+                  <span className="text-sm text-gray-400">
+                    Profile Image
+                  </span>
+                </div>
+
+                {/* Small Curve Decoration */}
+                <div className="absolute -left-10 top-1/2 hidden h-10 w-10 rounded-full border border-gray-300 lg:block" />
+              </div>
+            </div>
           </div>
 
-          {/* Right */}
-          <div className="space-y-6">
+          {/* RIGHT SIDE */}
+          <div>
             
-            {/* Experience */}
-            <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-gray-900">
-                Experience
-              </h3>
+            {/* Heading */}
+            <div className="flex items-center gap-3">
+              
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-50">
+                <GraduationCap
+                  size={18}
+                  className="text-red-500"
+                />
+              </div>
 
-              <div className="mt-6 space-y-6">
-                {experiences.map((item) => (
-                  <div
-                    key={item.role}
-                    className="border-b border-gray-100 pb-4 last:border-none"
-                  >
-                    <h4 className="font-semibold text-gray-900">
-                      {item.role}
-                    </h4>
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  Education & Training
+                </h2>
 
-                    <p className="mt-1 text-gray-500">
-                      {item.company}
-                    </p>
+                <p className="mt-1 text-gray-500">
+                  Academic background
+                </p>
+              </div>
+            </div>
 
-                    <span className="mt-2 inline-block text-sm text-red-500">
-                      {item.period}
+            {/* Timeline */}
+            <div className="relative mt-12 border-l border-gray-200 pl-8">
+              {education.map((item, index) => (
+                <div
+                  key={item.title}
+                  className={`relative ${
+                    index !== education.length - 1
+                      ? "pb-12"
+                      : ""
+                  }`}
+                >
+                  
+                  {/* Timeline Dot */}
+                  <div className="absolute -left-[38px] top-2 h-4 w-4 rounded-full border-4 border-white bg-red-500 shadow-sm" />
+
+                  {/* Row */}
+                  <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
+                    
+                    {/* Left */}
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {item.title}
+                      </h3>
+
+                      <p className="mt-2 text-gray-500">
+                        {item.institute}
+                      </p>
+                    </div>
+
+                    {/* Right */}
+                    <span className="text-sm font-medium text-gray-500">
+                      {item.year}
                     </span>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-
-            {/* Tech Stack */}
-            <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-gray-900">
-                Tech Stack
-              </h3>
-
-              <div className="mt-6 flex flex-wrap gap-3">
-                {technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm text-gray-700"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
           </div>
+
         </div>
       </Container>
     </section>
