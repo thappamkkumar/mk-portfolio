@@ -1,21 +1,11 @@
-import Navbar from "@/components/layout/navbar";
-import Hero from "@/components/sections/hero";
-import Experience from "@/components/sections/experience";
-import Projects from "@/components/sections/projects";
-import Skills from "@/components/sections/skills";
-import About from "@/components/sections/about";
-import Contact from "@/components/sections/contact";
+import Header from "@/components/layout/header/Header";
+import Hero from "@/components/sections/hero/Hero"; 
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
+    <main className="h-[2000px]">
+      <Header /> 
       <Hero />
-      <Experience />
-      <Projects />
-      <Skills />
-      <About />
-      <Contact />
     </main>
   );
 }
