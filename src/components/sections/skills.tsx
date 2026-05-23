@@ -64,7 +64,7 @@ const expertise = [
 
 export default function Skills() {
   return (
-    <section className="pb-28">
+    <section className="pb-28" id="skills">
       <Container>
         
         {/* Heading */}

@@ -80,7 +80,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="pb-28">
+    <section className="pb-28" id="projects">
       <Container>
         
         {/* Heading */}

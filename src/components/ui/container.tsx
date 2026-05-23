@@ -9,7 +9,7 @@ export default function Container({
 }: Props) {
   return (
     <div
-      className={`max-w-7xl mx-auto px-6 lg:px-8 ${className}`}
+      className={`max-w-[1400px] mx-auto px-6 lg:px-8 ${className}`}
     >
       {children}
     </div>

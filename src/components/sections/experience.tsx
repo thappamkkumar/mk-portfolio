@@ -35,7 +35,7 @@ const techStack = [
 
 export default function Experience() {
   return (
-    <section className="pb-28">
+    <section className="pb-28" id="experience">
       <Container>
         
         {/* Heading */}

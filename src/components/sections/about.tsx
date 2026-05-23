@@ -28,7 +28,7 @@ const education = [
 
 export default function About() {
   return (
-    <section className="pb-28">
+    <section className="pb-28" id="about">
       <Container>
         <div className="grid gap-16 lg:grid-cols-2">
           

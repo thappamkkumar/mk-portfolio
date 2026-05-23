@@ -43,7 +43,7 @@ const socials = [
 
 export default function Contact() {
   return (
-    <section className="pb-16">
+    <section className="pb-16" id="contact">
       <Container>
         
         {/* Main Container */}
