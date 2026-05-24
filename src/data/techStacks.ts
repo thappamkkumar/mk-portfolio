@@ -1,7 +1,7 @@
 import {
   Atom,
   Database,
-  Globe,
+  Zap,
   Layers3,
 } from "lucide-react";
 
@@ -16,16 +16,16 @@ export const techStacks: TechStackItem[] = [
   {
     icon: Layers3,
     title: "Backend",
-    tech: "Node.js, Laravel, REST APIs",
+    tech: "Laravel, REST APIs",
   },
   {
-    icon: Globe,
+    icon: Zap,
     title: "Realtime",
     tech: "WebSocket, WebRTC",
   },
   {
     icon: Database,
     title: "Database",
-    tech: "MySQL, PostgreSQL, Redis",
+    tech: "MySQL, PostgreSQL",
   },
 ];

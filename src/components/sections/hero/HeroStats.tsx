@@ -20,7 +20,7 @@ export default function HeroStats() {
                   gap-2
                 "
               >
-                <Icon className="h-7 w-7" />
+                <Icon className="h-5 w-5" />
                 <h4 className="text-2xl font-semibold text-white">
                   {item.value}
                 </h4>

@@ -6,6 +6,8 @@ export default function Home() {
     <main className="h-[2000px]">
       <Header /> 
       <Hero />
+      
     </main>
+    
   );
 }

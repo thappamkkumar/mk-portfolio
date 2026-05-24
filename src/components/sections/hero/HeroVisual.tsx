@@ -1,48 +1,36 @@
-import HeroPanel from "./HeroPanel";
-import ArchitectureVisual from "./ArchitectureVisual"; 
+import HeroPanel from "./HeroPanel"; 
 export default function HeroVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-[640px]">
+    <div className="relative  w-full      ">
        
       <div
-        className="
-          relative
+        className=" 
           overflow-hidden
-          rounded-[32px]
-          border
-          border-white/10
-          bg-white/[0.03]
-          backdrop-blur-2xl
+          rounded-xl 
+          bg-[url('/images/hero-bg.png')] bg-no-repeat bg-right-bottom bg-[length:18rem]
         "
       >
-        <div
-          className="
-            absolute
-            inset-0
-            bg-gradient-to-br
-            from-white/[0.04]
-            via-transparent
-            to-lime-400/[0.03]
-          "
-        />
+         
 
-        <div
-          className="
-            relative
-            z-10
-            grid
-            min-h-[540px]
-            grid-cols-1
-
-            lg:min-h-[640px]
-            lg:grid-cols-[1fr_280px]
-          "
-        >
+        <div  className="  bg-white/[0.05]  "      >
           <HeroPanel />
-
-          <ArchitectureVisual />
+ 
         </div>
       </div>
+      <div className="mt-auto p-5">
+        <div className="flex flex-wrap items-center gap-2 text-xs text-zinc-500">
+          <span>// building</span>
+          <div className="h-1 w-1 rounded-full bg-zinc-500" />
+          <span>learning</span>
+          <div className="h-1 w-1 rounded-full bg-zinc-500" />
+		<span>improving</span>
+          <div className="h-1 w-1 rounded-full bg-lime-300/80" />
+          <span className="text-lime-300/80">
+            shipping
+          </span>
+        </div>
+      </div>
+      
     </div>
   );
 }

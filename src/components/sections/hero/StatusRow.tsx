@@ -1,8 +1,8 @@
 export default function StatusRow() {
   return (
-    <div className="mt-8 border-t border-white/10 pt-6">
-      <div className="flex items-center gap-3 text-sm">
-        <span className="text-lime-400">
+    <div className="    pt-8">
+      <div className="  text-xs">
+        <span className="text-lime-300 pr-3">
           status:
         </span>
 

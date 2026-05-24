@@ -4,38 +4,29 @@ export default function TechStackCard() {
   return (
     <div
       className="
-        rounded-3xl
+        rounded-lg
         border
         border-white/10
-        bg-black/20
-        p-5
-        backdrop-blur-xl
+        bg-white/[0.06]
+        p-3
+        backdrop-blur-md
+        w-full
+        max-w-xs
       "
     >
-      <div className="space-y-5">
+      <div className="space-y-3">
         {techStacks.map((item) => {
           const Icon = item.icon;
 
           return (
             <div
               key={item.title}
-              className="flex items-start gap-4"
+              className="flex items-center gap-4  "
             >
               <div
-                className="
-                  flex
-                  h-10
-                  w-10
-                  items-center
-                  justify-center
-                  rounded-xl
-                  border
-                  border-white/10
-                  bg-white/[0.03]
-                  text-lime-400
-                "
+                className="text-white  "
               >
-                <Icon className="h-5 w-5" />
+                <Icon className="h-6 w-6" />
               </div>
 
               <div>
@@ -43,7 +34,7 @@ export default function TechStackCard() {
                   {item.title}
                 </h4>
 
-                <p className="mt-1 text-xs leading-relaxed text-zinc-500">
+                <p className="mt-1 text-xs leading-relaxed text-zinc-400">
                   {item.tech}
                 </p>
               </div>

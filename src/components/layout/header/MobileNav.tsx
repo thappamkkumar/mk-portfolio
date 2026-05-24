@@ -63,7 +63,7 @@ export default function MobileNav({
             : "translate-x-full"
         )}
       >
-      <div className="w-full h-full bg-lime-900/10  py-3  flex flex-col">
+      <div className="w-full h-full bg-zinc-900  py-3  flex flex-col">
 	  {/* Top */}
 	  <div className="mb-10 px-6 flex items-center justify-between">
 	    <div>

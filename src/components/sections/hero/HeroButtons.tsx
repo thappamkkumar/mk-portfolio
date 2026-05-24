@@ -7,7 +7,7 @@ export default function HeroButtons() {
        
 	<Link
 	href="#work"
-	className="w-fit  inline-flex items-center gap-3 rounded-md border px-8 py-4 text-sm font-medium transition-all duration-300 border-lime-300/30 bg-lime-300 text-black hover:bg-lime-400"
+	className="group w-fit  inline-flex items-center gap-3 rounded-md border px-8 py-4 text-sm font-medium transition-all duration-300 border-lime-300/30 bg-lime-300 text-black hover:bg-lime-400"
 	   
 	>
 		Explore My Work
@@ -16,7 +16,7 @@ export default function HeroButtons() {
     
 	<Link
 	href="#contact"
-	className= " w-fit  inline-flex items-center gap-3 rounded-md border px-8 py-4  text-sm font-medium transition-all duration-300 border-white/10 bg-white/[0.03] text-white hover:border-lime-400/30 hover:bg-white/[0.05]"
+	className= "group w-fit  inline-flex items-center gap-3 rounded-md border px-8 py-4  text-sm font-medium transition-all duration-300 border-white/10 bg-white/[0.03] text-white hover:border-lime-400/30 hover:bg-white/[0.05]"
 	
 	>
 		Let&apos;s Connect 
