@@ -54,3 +54,14 @@ body {
   background: rgba(163, 255, 18, 0.6);
 }
  
+ 
+ @layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section
-      className="relative overflow-hidden   py-24 lg:py-32"
+      className="relative overflow-hidden   pt-24 lg:pt-32  pb-10"
       aria-label="Hero Section"
     >
        
