@@ -1,10 +1,13 @@
  
+import Workspace from '@/components/workspace/Workspace';
 
 export default function Home() {
-  return (
-    <main className="overflow-hidden h-[2000px]">
-      
-    </main>
-    
-  );
+	
+
+	return (
+		<div className="overflow-hidden  ">
+			<Workspace />
+		</div>
+
+	);
 }
