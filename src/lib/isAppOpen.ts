@@ -8,8 +8,6 @@ export const isAppOpen = (
   id: AppId
 ) => {
   return openedApps.some(
-    (app) =>
-      app.id === id &&
-      !app.hidden
+    (app) => app.id === id
   );
 };

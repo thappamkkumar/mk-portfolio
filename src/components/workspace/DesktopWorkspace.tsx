@@ -36,8 +36,7 @@ const DesktopWorkspace = ({
 						hideApp={hideApp}
   				/>
 				</main>
-			</div>
-			Desktop
+			</div> 
 		</div>
 	)
 }

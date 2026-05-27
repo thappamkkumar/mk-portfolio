@@ -11,4 +11,6 @@ export interface WorkspaceProps {
   closeApp: (id: AppId) => void;
 
   hideApp: (id: AppId) => void;
+   
+  closeAllApps: () => void;
 }
