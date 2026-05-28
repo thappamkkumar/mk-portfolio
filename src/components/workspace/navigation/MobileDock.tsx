@@ -1,57 +1,80 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import {
+  useState,
+  useCallback,
+} from "react";
 
 import MobileMenu
   from "./MobileMenu";
 
 import type {
+  AppId,
+} from "@/types/app";
+
+import type {
   MobileDockProps,
 } from "@/types/mobileDock";
- 
 
 const MobileDock = ({
   openedApps,
   openApp,
-  closeAllApps,
+  hideAllApps,
 }: MobileDockProps) => {
 
   const [showMenu, setShowMenu] =
     useState(false);
-	
-	
-	const handleCloseAllApps =useCallback(()=>{
-		setShowMenu(false);
-		closeAllApps();
-	}, []);
-	
+
+  const handleCloseAllApps =
+    useCallback(() => {
+
+      setShowMenu(false);
+
+      hideAllApps();
+
+    }, [hideAllApps]);
+
+  const handleOpenApp =
+    useCallback(
+      (id: AppId) => {
+
+        setShowMenu(false);
+
+        openApp(id);
+
+      },
+      [openApp]
+    );
+
   return (
     <>
       {/* Menu */}
       {showMenu && (
-				<div
-					className="
-						absolute
-						inset-x-4
-						bottom-24
-						z-40
-						max-h-[calc(100dvh-120px)]
-						overflow-y-auto
-						rounded-3xl
-						border
-						border-white/10
-						bg-black/90
-						backdrop-blur-xl
-					"
-				>
+        <div
+          className="
+            absolute
+            inset-x-4
+            bottom-24
+            z-40
+            max-h-[calc(100dvh-120px)]
+            overflow-y-auto
+            rounded-3xl
+            border
+            border-white/10
+            bg-black/90
+            backdrop-blur-xl
+          "
+        >
 
-					<MobileMenu
-						openedApps={openedApps}
-						openApp={openApp}
-					/>
+          <MobileMenu
+            openedApps={openedApps}
+            handleOpenApp={
+              handleOpenApp
+            }
+          />
 
-				</div>
-			)}	
+        </div>
+      )}
 
       {/* Dock */}
       <footer
@@ -77,8 +100,9 @@ const MobileDock = ({
           "
         >
 
-          {/* Active App Button */}
+          {/* Active App */}
           <button
+            type="button"
             className="
               flex
               h-12
@@ -94,10 +118,13 @@ const MobileDock = ({
             A
           </button>
 
-          {/* Menu Toggle */}
+          {/* Menu */}
           <button
+            type="button"
             onClick={() =>
-              setShowMenu((prev) => !prev)
+              setShowMenu(
+                (prev) => !prev
+              )
             }
             className="
               flex
@@ -116,7 +143,10 @@ const MobileDock = ({
 
           {/* Home */}
           <button
-            onClick={handleCloseAllApps}
+            type="button"
+            onClick={
+              handleCloseAllApps
+            }
             className="
               flex
               h-12

@@ -9,6 +9,7 @@ const DesktopWorkspace = ({
 		openApp,
 		closeApp,
 		hideApp,
+		hideAllApps
 }: WorkspaceProps) => {
 
 	return (
@@ -21,6 +22,7 @@ const DesktopWorkspace = ({
 				  openApp={openApp}
 				  closeApp={closeApp}
 				  hideApp={hideApp}
+				  hideAllApps={hideAllApps}
 				/>
 				
 				 {/* Workspace */}

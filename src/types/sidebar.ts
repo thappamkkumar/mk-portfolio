@@ -7,4 +7,5 @@ export interface SidebarProps {
   openedApps: OpenedApp[];
 
   openApp: (id: AppId) => void;
+  HideAllApps: () => void;
 }

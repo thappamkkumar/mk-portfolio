@@ -12,6 +12,7 @@ import type {  AppId,  OpenedApp,} from "@/types/app";
 import {  closeAppInStack} from "@/lib/workspace/closeApp";
 import {   hideAppInStack} from "@/lib/workspace/hideApp";
 import {  openAppInStack} from "@/lib/workspace/openApp"; 
+import {  hideAllAppsInStack} from "@/lib/workspace/hideAllApps"; 
 
 
 const Workspace = () => {
@@ -38,9 +39,11 @@ const Workspace = () => {
     []
   );
   
-	 const closeAllApps = useCallback(
+	 const hideAllApps = useCallback(
 		() => {
-		  setOpenedApps([]);
+			 setOpenedApps((prev) =>
+				  hideAllAppsInStack(prev)
+				);
 		},
 		[]
 	);;
@@ -66,7 +69,7 @@ const Workspace = () => {
       openApp={openApp}
       closeApp={closeApp}
       hideApp={hideApp}
-      closeAllApps={closeAllApps}
+      hideAllApps={hideAllApps}
     />
   ) : (
     <DesktopWorkspace
@@ -74,6 +77,7 @@ const Workspace = () => {
       openApp={openApp}
       closeApp={closeApp}
       hideApp={hideApp} 
+      hideAllApps={hideAllApps}
     />
   );
 };

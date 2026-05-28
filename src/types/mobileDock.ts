@@ -7,5 +7,5 @@ export interface MobileDockProps {
   openedApps: OpenedApp[];
 
   openApp: (id: AppId) => void;
-  closeAllApps: () => void;
+  HideAllApps: () => void;
 }

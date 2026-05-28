@@ -7,13 +7,13 @@ import { isAppOpen }
   from "@/lib/isAppOpen";
 
 import type {
-  SidebarProps,
-} from "@/types/sidebar";
+  MobileMenuProps,
+} from "@/types/navigation";
 
 const MobileMenu = ({
   openedApps,
-  openApp,
-}: SidebarProps) => {
+  handleOpenApp,
+}: MobileMenuProps) => {
 
   return (
     <div
@@ -34,8 +34,9 @@ const MobileMenu = ({
         return (
           <button
             key={app.id}
+            type="button"
             onClick={() =>
-              openApp(app.id)
+              handleOpenApp(app.id)
             }
             className="
               relative
@@ -69,7 +70,7 @@ const MobileMenu = ({
               />
             )}
 
-            {/* Icon Placeholder */}
+            {/* Icon */}
             <div
               className="
                 mb-2
@@ -93,6 +94,7 @@ const MobileMenu = ({
           </button>
         );
       })}
+
     </div>
   );
 };

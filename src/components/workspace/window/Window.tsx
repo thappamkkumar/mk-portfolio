@@ -1,8 +1,23 @@
 "use client";
 
+import {
+  Minus,
+  X,
+} from "lucide-react";
+
 import type {
   WindowProps,
 } from "@/types/window";
+
+const actionButtonClass = `
+  flex
+  h-8
+  w-8
+  items-center
+  justify-center
+  rounded-full
+  transition-colors
+`;
 
 const Window = ({
   app,
@@ -20,7 +35,7 @@ const Window = ({
         flex
         flex-col
         overflow-hidden
-        bg-neutral-950
+        bg-black
       "
       style={{
         zIndex,
@@ -32,6 +47,7 @@ const Window = ({
         className="
           flex
           h-14
+          shrink-0
           items-center
           justify-between
           border-b
@@ -40,7 +56,18 @@ const Window = ({
         "
       >
 
-        {/* Left */}
+        {/* Title */}
+        <p
+          className="
+           capitalize
+            text-white/70
+          "
+        >
+         <span className="font-bold  text-md		 " >Mukesh</span> /  
+         <span className=" text-sm " > {app.id} </span>
+        </p>
+
+        {/* Actions */}
         <div
           className="
             flex
@@ -49,46 +76,46 @@ const Window = ({
           "
         >
 
-          {/* Close */}
-          <button
-            onClick={() =>
-              closeApp(app.id)
-            }
-            className="
-              h-3
-              w-3
-              rounded-full
-              bg-red-500
-            "
-          />
-
           {/* Hide */}
           <button
+            type="button"
             onClick={() =>
               hideApp(app.id)
             }
-            className="
-              h-3
-              w-3
-              rounded-full
-              bg-yellow-500
-            "
-          />
+            className={`
+              ${actionButtonClass}
+              bg-white/5
+              hover:bg-white/10
+            `}
+          >
+            <Minus
+              size={16}
+              className="
+                text-white/70
+              "
+            />
+          </button>
+
+          {/* Close */}
+          <button
+            type="button"
+            onClick={() =>
+              closeApp(app.id)
+            }
+            className={`
+              ${actionButtonClass}
+              bg-red-800 
+              text-white
+              hover:bg-red-500/25
+            `}
+          >
+            <X
+              size={16} 
+            />
+          </button>
 
         </div>
 
-        {/* Title */}
-        <p
-          className="
-            text-sm
-            capitalize
-            text-white/70
-          "
-        >
-          {app.id}
-        </p>
-
-        <div />
       </header>
 
       {/* Content */}

@@ -15,7 +15,7 @@ const MobileWorkspace = ({
   openApp,
   closeApp,
   hideApp,
-  closeAllApps,
+  hideAllApps,
 }: WorkspaceProps) => {
 
   return (
@@ -50,7 +50,7 @@ const MobileWorkspace = ({
       <MobileDock
           openedApps={openedApps}
           openApp={openApp}
-          closeAllApps={closeAllApps}
+          hideAllApps={hideAllApps}
       />
 
       

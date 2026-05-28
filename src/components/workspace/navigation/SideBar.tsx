@@ -1,4 +1,10 @@
+
 "use client";
+
+import {
+  Home,
+  LayoutGrid,
+} from "lucide-react";
 
 import { APPS }
   from "@/constants/apps";
@@ -6,87 +12,224 @@ import { APPS }
 import { isAppOpen }
   from "@/lib/isAppOpen";
 
-import type { SidebarProps }
-  from "@/types/sidebar";
+import type {
+  SidebarProps,
+} from "@/types/sidebar";
 
 const SideBar = ({
   openedApps,
   openApp,
+  hideAllApps,
 }: SidebarProps) => {
 
   return (
     <aside
       className="
+        relative
+        z-50
         flex
-        w-20
+        h-screen
+        w-24
+        shrink-0
         flex-col
-        items-center
-        gap-4
         border-r
-        border-white/10
-        bg-black/40
-        py-6
+        border-[#232323]
+        bg-[#111111]
       "
     >
 
-      {APPS.map((app) => {
-        const active = isAppOpen(
-          openedApps,
-          app.id
-        );
+      {/* Top */}
+      <div
+        className="
+          flex
+          flex-1
+          flex-col
+          items-center
+          gap-4
+          overflow-y-auto
+          py-6
+        "
+      >
 
-        return (
-          <button
-            key={app.id}
-            onClick={() =>
-              openApp(app.id)
-            }
+        {/* Home */}
+        <DockButton
+          label="Home"
+          active={false}
+          onClick={hideAllApps}
+        >
+
+          <Home
             className="
-              group
-              relative
-              flex
-              h-12
-              w-12
-              items-center
-              justify-center
-              rounded-2xl
-              border
-              transition-all
-              duration-200
+              h-5
+              w-5
             "
-          >
-            {/* Active Dot */}
-            {active && (
-              <span
+          />
+
+        </DockButton>
+
+        {/* Divider */}
+        <div
+          className="
+            h-px
+            w-10
+            bg-[#262626]
+          "
+        />
+
+        {/* Apps */}
+        {APPS.map((app) => {
+          const active = isAppOpen(
+            openedApps,
+            app.id
+          );
+
+          const Icon = app.icon;
+
+          return (
+            <DockButton
+              key={app.id}
+              label={app.label}
+              active={active}
+              onClick={() =>
+                openApp(app.id)
+              }
+            >
+
+              <Icon
                 className="
-                  absolute
-                  -right-1
-                  top-1/2
-                  h-1.5
-                  w-1.5
-                  -translate-y-1/2
-                  rounded-full
-                  bg-green-500
+                  h-5
+                  w-5
                 "
               />
-            )}
 
-            {/* Label */}
-            <span
-              className="
-                text-xs
-                text-white/80
-                transition-opacity
-                group-hover:text-white
-              "
-            >
-              {app.label}
-            </span>
-          </button>
-        );
-      })}
+            </DockButton>
+          );
+        })}
+
+      </div>
+
+      {/* Bottom */}
+      <div
+        className="
+          border-t
+          border-[#232323]
+          p-4
+        "
+      >
+
+        <DockButton
+          label="Workspace"
+          active={false}
+        >
+
+          <LayoutGrid
+            className="
+              h-5
+              w-5
+            "
+          />
+
+        </DockButton>
+
+      </div>
+
     </aside>
   );
 };
 
+type DockButtonProps = {
+  children: React.ReactNode;
+  label: string;
+  active?: boolean;
+  onClick?: () => void;
+};
+
+const DockButton = ({
+  children,
+  label,
+  active,
+  onClick,
+}: DockButtonProps) => {
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`
+        group
+        relative
+        flex
+        h-16
+        w-16
+        shrink-0
+        flex-col
+        items-center
+        justify-center
+        gap-1
+        rounded-xl
+        border
+        transition-all
+        duration-200
+        ${
+          active
+            ? `
+              border-[#343434]
+              bg-[#1d1d1d]
+            `
+            : `
+              border-transparent
+              bg-transparent
+              hover:border-[#2a2a2a]
+              hover:bg-[#181818]
+            `
+        }
+      `}
+    >
+
+      {/* Active Indicator */}
+      {active && (
+        <span
+          className="
+            absolute
+            -left-px
+            h-8
+            w-[3px]
+            rounded-r-full
+            bg-[#4ade80]
+          "
+        />
+      )}
+
+      {/* Icon */}
+      <div
+        className="
+          text-[#d4d4d4]
+          transition-all
+          duration-200
+          group-hover:text-white
+        "
+      >
+        {children}
+      </div>
+
+      {/* Label */}
+      <span
+        className="
+          text-[10px]
+          font-medium
+          leading-none
+          text-[#8b8b8b]
+          transition-colors
+          duration-200
+          group-hover:text-[#d4d4d4]
+        "
+      >
+        {label}
+      </span>
+
+    </button>
+  );
+};
+
 export default SideBar;
+
