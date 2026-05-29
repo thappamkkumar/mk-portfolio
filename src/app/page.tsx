@@ -1,13 +1,16 @@
- 
-import Workspace from '@/components/workspace/Workspace';
+// app/page.tsx
+
+import HeroSection from "@/components/hero/hero-section";
 
 export default function Home() {
-	
-
-	return (
-		<div className="overflow-hidden  ">
-			<Workspace />
-		</div>
-
-	);
+  return (
+    <section
+      className="
+        relative
+        min-h-full
+      "
+    >
+      <HeroSection />
+    </section>
+  );
 }
