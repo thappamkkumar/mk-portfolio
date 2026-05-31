@@ -1,6 +1,7 @@
 // app/page.tsx
 
 import HeroSection from "@/components/hero/hero-section";
+import BackgroundGrid from "@/components/layout/background-grid";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         min-h-full
       "
     >
+    	<BackgroundGrid />
       <HeroSection />
     </section>
   );

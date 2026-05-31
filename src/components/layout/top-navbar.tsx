@@ -1,6 +1,7 @@
 // components/layout/top-navbar.tsx
 
 import {
+Home,
   BriefcaseBusiness,
   Code2,
   Mail,
@@ -12,34 +13,38 @@ import {
 
 const tabs = [
   {
-    title: "About",
-    icon: User,
+    title: "Home",
+    icon: Home,
+    link:'/',
     active: true,
+  },
+  {
+    title: "About",
+    icon: User, 
+     link:'/about',
   },
   {
     title: "Skills",
     icon: Code2,
+     link:'/skills',
   },
   {
     title: "Experience",
     icon: BriefcaseBusiness,
+     link:'/experience',
   },
   {
     title: "Contact",
     icon: Mail,
+     link:'/contact',
   },
 ];
 
 const TopNavbar = () => {
   return (
     <header
-      className="
-        relative
-        z-50
-        h-20
-        border-b
-        border-white/10
-        bg-black/40
+      className=" 
+        bg-zinc-900/50
         backdrop-blur-2xl
       "
     >
@@ -49,7 +54,8 @@ const TopNavbar = () => {
           flex
           h-full
           items-center
-          justify-between
+          justify-start
+          gap-10
           px-6
         "
       >
@@ -71,69 +77,68 @@ const TopNavbar = () => {
         {/* Browser Tabs */}
         <div
           className="
-            absolute
-            left-36
-            hidden
-            h-full
-            items-end
-            md:flex
+              flex
+              pt-3 
           "
         >
           {tabs.map((tab) => {
             const Icon = tab.icon;
 
             return (
-              <button
+              <a
                 key={tab.title}
+                href={tab.link}
                 className={`
                   group
                   relative
-                  flex
-                  h-[62px]
-                  min-w-[180px]
+                  flex 
                   items-center
                   gap-3
-                  rounded-t-2xl
-                  border
-                  border-b-0
-                  border-white/10
-                  px-6
+                 
+                  px-4
+                  py-3
                   text-sm
                   transition-all
                   duration-300
+                overflow-hidden	
 
                   ${
                     tab.active
-                      ? `
-                        bg-gradient-to-b
-                        from-white/[0.08]
-                        to-transparent
-                        text-white
+                      ? ` 
+                      text-white 
                       `
                       : `
-                        bg-white/[0.02]
+                        bg-transparent
                         text-zinc-500
                         hover:text-white
+                         
                       `
                   }
                 `}
               >
-                <Icon className="h-4 w-4" />
+                <Icon className="h-4 w-4  " />
 
                 <span>{tab.title}</span>
-
-                <X
-                  className="
-                    ml-auto
-                    h-4
-                    w-4
-                    opacity-0
-                    transition-all
-                    duration-300
-                    group-hover:opacity-100
-                  "
-                />
-              </button>
+								
+								<button	className="ml-10 transition-all duration-300 hover:bg-white/10 hover:text-white/50 p-[1px] rounded-full ">
+		              <X
+		                className="
+		                 
+		                  h-4
+		                  w-4
+		                   
+		                  
+		                "
+		              />
+		            </button>
+		            {
+                    tab.active &&
+		            		<div className=" absolute inset-[-1]   z-[-1]  bg-gradient-to-b
+												from-white/15 
+            						to-zinc-900 
+                        rounded-t-xl" />
+		            }
+              </a>
             );
           })}
 
@@ -141,12 +146,11 @@ const TopNavbar = () => {
           <button
             className="
               flex
-              h-[62px]
-              w-16
+              border-l
+              border-white/10
+              px-3
               items-center
               justify-center
-              border-b
-              border-white/10
               text-zinc-500
               transition-all
               duration-300
@@ -157,61 +161,7 @@ const TopNavbar = () => {
           </button>
         </div>
 
-        {/* Right Actions */}
-        <div
-          className="
-            ml-auto
-            flex
-            items-center
-            gap-5
-          "
-        >
-          <button
-            className="
-              text-zinc-500
-              transition-all
-              duration-300
-              hover:text-white
-            "
-          >
-            <SunMedium className="h-5 w-5" />
-          </button>
-
-          {/* Profile */}
-          <div className="relative">
-            <div
-              className="
-                h-11
-                w-11
-                overflow-hidden
-                rounded-full
-                border
-                border-white/10
-                bg-zinc-900
-              "
-            >
-              <img
-                src="https://i.pravatar.cc/100"
-                alt="profile"
-                className="h-full w-full object-cover"
-              />
-            </div>
-
-            <div
-              className="
-                absolute
-                bottom-0
-                right-0
-                h-3
-                w-3
-                rounded-full
-                border-2
-                border-black
-                bg-emerald-400
-              "
-            />
-          </div>
-        </div>
+         
       </div>
     </header>
   );

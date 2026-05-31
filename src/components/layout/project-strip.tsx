@@ -39,22 +39,18 @@ const ProjectStrip = () => {
   return (
     <section
       className="
-        relative
-        z-40
-        border-b
-        border-white/10
-        bg-black/30
-        backdrop-blur-2xl
+         
+        bg-zinc-900 
       "
     >
       <div
         className="
-          flex
-          h-24
+          flex 
           items-center
           gap-5
           overflow-x-auto
           px-6
+          py-3 
         "
       >
         {/* Left Title */}
@@ -64,12 +60,14 @@ const ProjectStrip = () => {
             min-w-fit
             items-center
             gap-3
-            text-2xl
+            text-lg
+            md:text-xl
             font-medium
             text-white
+
           "
         >
-          <span className="text-xl">Projects</span>
+          <span className="  ">Projects</span>
 
           <ArrowRight className="h-5 w-5" />
         </button>
@@ -90,16 +88,16 @@ const ProjectStrip = () => {
                 key={project.title}
                 className="
                   group
-                  flex
-                  h-14
+                  flex 
                   min-w-fit
                   items-center
                   gap-3
-                  rounded-2xl
+                  rounded-lg
                   border
                   border-white/10
                   bg-white/[0.02]
-                  px-5
+                  px-4
+                  py-3
                   text-sm
                   text-zinc-300
                   transition-all
@@ -124,30 +122,7 @@ const ProjectStrip = () => {
           })}
         </div>
 
-        {/* View All */}
-        <button
-          className="
-            ml-auto
-            flex
-            h-14
-            min-w-[120px]
-            items-center
-            justify-center
-            rounded-2xl
-            border
-            border-dashed
-            border-white/15
-            bg-white/[0.02]
-            text-sm
-            text-zinc-400
-            transition-all
-            duration-300
-            hover:bg-white/[0.05]
-            hover:text-white
-          "
-        >
-          View All
-        </button>
+         
       </div>
     </section>
   );
