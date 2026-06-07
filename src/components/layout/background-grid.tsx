@@ -30,12 +30,12 @@ const BackgroundGrid = () => {
         className="
           absolute
           left-1/2
-          top-[-100px]
-          h-[700px]
-          w-[900px]
+          -top-25        
+           h-170
+          w-225
           -translate-x-1/2
           rounded-full
-          bg-white/[0.03]
+          bg-white/3
           blur-3xl
         "
       />
