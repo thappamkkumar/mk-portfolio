@@ -29,6 +29,11 @@ const tabs = [
      link:'/skills',
   },
   {
+    title: "Projects",
+    icon: Code2,
+     link:'/projects',
+  },
+  {
     title: "Experience",
     icon: BriefcaseBusiness,
      link:'/experience',
