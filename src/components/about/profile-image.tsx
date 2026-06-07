@@ -29,6 +29,7 @@ export default function ProfileImage({
         priority
         src={image}
         alt={name}
+        sizes="(max-width: 768px) 100vw, 50vw"  
         className="object-contain"
       />
     </div>

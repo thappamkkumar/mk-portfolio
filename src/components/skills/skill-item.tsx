@@ -29,7 +29,7 @@ export default function SkillItem({
           px-3
           py-1.5
           text-xs
-          text-zinc-300
+          text-zinc-400
           transition-all
           duration-200
           hover:border-emerald-500/30

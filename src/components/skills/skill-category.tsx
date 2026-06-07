@@ -10,7 +10,7 @@ export default function SkillCategory({
   category,
 }: SkillCategoryProps) {
   return (
-    <section
+    <div
       aria-labelledby={category.id}
       className="
         border-b
@@ -55,6 +55,6 @@ export default function SkillCategory({
           ))}
         </ul>
       </div>
-    </section>
+    </div>
   );
 }

@@ -6,7 +6,7 @@ import TrendingTags from "./trending-tags";
 
 const HeroSection = () => {
   return (
-    <section
+    <div
       className="
         relative
         flex
@@ -178,7 +178,7 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

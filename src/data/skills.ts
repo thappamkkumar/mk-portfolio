@@ -6,7 +6,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Languages",
     skills: [
       { name: "JavaScript", level: "comfortable" },
-      { name: "TypeScript", level: "comfortable" },
+      { name: "TypeScript", level: "working" },
       { name: "PHP", level: "comfortable" },
       { name: "HTML5", level: "comfortable" },
       { name: "CSS3", level: "comfortable" },
@@ -19,8 +19,8 @@ export const skillCategories: SkillCategory[] = [
     title: "Frontend",
     skills: [
       { name: "React.js", level: "comfortable" },
-      { name: "Next.js", level: "comfortable" },
-      { name: "Tailwind CSS", level: "comfortable" },
+      { name: "Next.js", level: "working" },
+      { name: "Tailwind CSS", level: "working" },
       { name: "Bootstrap", level: "comfortable" },
       { name: "Redux Toolkit", level: "working" },
       { name: "Framer Motion", level: "working" },
@@ -44,9 +44,8 @@ export const skillCategories: SkillCategory[] = [
     title: "Databases",
     skills: [
       { name: "MySQL", level: "comfortable" },
-      { name: "PostgreSQL", level: "comfortable" },
-      { name: "Supabase", level: "working" },
-      { name: "MongoDB", level: "familiar" },
+      { name: "PostgreSQL", level: "working" },
+      { name: "Supabase", level: "working" }, 
     ],
   },
 
@@ -57,8 +56,8 @@ export const skillCategories: SkillCategory[] = [
       { name: "Git", level: "comfortable" },
       { name: "GitHub", level: "comfortable" },
       { name: "VS Code", level: "comfortable" },
-      { name: "Postman", level: "comfortable" },
-      { name: "Vercel", level: "comfortable" },
+      { name: "Postman", level: "familiar" },
+      { name: "Vercel", level: "working" },
     ],
   },
 
@@ -66,8 +65,7 @@ export const skillCategories: SkillCategory[] = [
     id: "deployment",
     title: "DevOps & Deployment",
     skills: [
-      { name: "Linux", level: "working" },
-      { name: "Docker", level: "working" },
+      { name: "Linux", level: "familiar" }, 
       { name: "AWS", level: "familiar" },
     ],
   },

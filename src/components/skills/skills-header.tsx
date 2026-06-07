@@ -1,6 +1,6 @@
 export default function SkillsHeader() {
   return (
-    <header className="mb-16">
+    <div className="mb-16">
       <p className="mb-3 text-sm text-emerald-400">
         &gt; My Toolbox
       </p>
@@ -14,6 +14,6 @@ export default function SkillsHeader() {
         build modern web applications and digital
         experiences.
       </p>
-    </header>
+    </div>
   );
 }

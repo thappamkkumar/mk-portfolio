@@ -1,6 +1,6 @@
 export default function SkillsGuide() {
   return (
-    <section className="pt-10">
+    <div className="pt-20 ">
       <h2 className="mb-5 text-sm font-medium text-zinc-200">
         Skill Level Guide
       </h2>
@@ -30,6 +30,6 @@ export default function SkillsGuide() {
           </span>
         </div>
       </div>
-    </section>
+    </div>
   );
 }	

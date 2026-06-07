@@ -2,6 +2,17 @@ import SkillSection from "@/components/skills/skill-section";
 import { skillCategories } from "@/data/skills";
 
 export default function Page() {
-  return <SkillSection categories={skillCategories} />;
+  return (
+    <section
+      className="
+        mx-auto
+        max-w-5xl
+        px-4
+        py-8
+        md:px-6
+      "
+    >
+      <SkillSection categories={skillCategories} />
+    </section>
+  );
 }
- 
