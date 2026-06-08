@@ -12,7 +12,7 @@ export const projects: Project[] = [
     tagline:
       "Professional Media & Networking Platform",
 
-    period: "Jan 2025 – Present",
+    period: "Jan 2025 – Ongoing",
 
     summary:
       "Full-stack professional networking and media platform featuring posts, stories, communities, real-time chat, audio/video calling, job listings, freelance modules, and content discovery systems.",

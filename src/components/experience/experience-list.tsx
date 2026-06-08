@@ -10,13 +10,13 @@ export default function ExperienceList({
   experiences,
 }: ExperienceListProps) {
   return (
-    <section>
+    <div>
       {experiences.map((experience) => (
         <ExperienceItem
           key={experience.id}
           experience={experience}
         />
       ))}
-    </section>
+    </div>
   );
 }

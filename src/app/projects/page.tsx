@@ -7,7 +7,7 @@ import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-10">
+    <section className="mx-auto max-w-7xl px-4 py-10 md:px-6">
       <ProjectHero />
 
       <ProjectList projects={projects} />

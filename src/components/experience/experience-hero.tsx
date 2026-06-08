@@ -1,6 +1,6 @@
 export default function ExperienceHero() {
   return (
-    <section className="py-16 md:py-24">
+    <section className=" pb-5">
       <p className="text-sm text-emerald-400">
         Professional Work
       </p>

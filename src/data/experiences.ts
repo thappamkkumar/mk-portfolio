@@ -8,7 +8,7 @@ export const experiences: Experience[] = [
 
     role: "Full Stack Engineer",
 
-    period: "May 2025 – Present",
+    period: "May 2025 – Ongoing",
 
     description:
       "Developed and deployed a salon booking and business management platform featuring appointment workflows, content management, reviews, and administrative operations.",
@@ -50,7 +50,7 @@ export const experiences: Experience[] = [
 
     role: "Full Stack Engineer",
 
-    period: "Apr 2026 – Present",
+    period: "Apr 2026 – Ongoing",
 
     description:
       "Developed and deployed a responsive beauty salon website focused on customer engagement, service showcase, and lead generation.",

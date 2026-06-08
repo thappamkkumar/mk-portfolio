@@ -22,7 +22,8 @@ export default function ExperienceItem({
       className="
         border-b
         border-white/10
-        py-16
+         py-16
+        md:py-24
       "
     >
       <div
