@@ -28,19 +28,19 @@ export const projects: Project[] = [
 
     images: [
       {
-        src: "/projects/skillvilla/feed.webp",
-        label: "Feed",
+        src: "/projects/skillvilla/dashboard.png",
+        label: "Admin Dashboard",
       },
       {
-        src: "/projects/skillvilla/community.webp",
+        src: "/projects/skillvilla/community.png",
         label: "Communities",
       },
       {
-        src: "/projects/skillvilla/chat.webp",
-        label: "Realtime Chat",
+        src: "/projects/skillvilla/vedio_call.png",
+        label: "Vedio Call",
       },
       {
-        src: "/projects/skillvilla/jobs.webp",
+        src: "/projects/skillvilla/job.png",
         label: "Jobs & Freelance",
       },
     ],
@@ -73,19 +73,19 @@ export const projects: Project[] = [
 
     images: [
       {
-        src: "/projects/shophub/home.webp",
+        src: "/projects/shophub/home.png",
         label: "Homepage",
       },
       {
-        src: "/projects/shophub/products.webp",
+        src: "/projects/shophub/products.png",
         label: "Products",
       },
       {
-        src: "/projects/shophub/vendor.webp",
-        label: "Vendor Dashboard",
+        src: "/projects/shophub/product-management.png",
+        label: "Vendor Product Management",
       },
       {
-        src: "/projects/shophub/admin.webp",
+        src: "/projects/shophub/admin-dashboard.png",
         label: "Admin Panel",
       },
     ],
@@ -118,19 +118,19 @@ export const projects: Project[] = [
 
     images: [
       {
-        src: "/projects/styleloop/home.webp",
+        src: "/projects/styleloop/home.png",
         label: "Homepage",
       },
       {
-        src: "/projects/styleloop/catalog.webp",
-        label: "Catalog",
+        src: "/projects/styleloop/order.png",
+        label: "Order Management",
       },
       {
-        src: "/projects/styleloop/product.webp",
+        src: "/projects/styleloop/product.png",
         label: "Product Details",
       },
       {
-        src: "/projects/styleloop/cart.webp",
+        src: "/projects/styleloop/cart.png",
         label: "Shopping Cart",
       },
     ],

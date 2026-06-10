@@ -25,20 +25,20 @@ export const experiences: Experience[] = [
 
     images: [
       {
-        src: "/experience/vk-salon/home.webp",
+        src: "/experience/vk-salon/home.png",
         label: "Homepage",
       },
       {
-        src: "/experience/vk-salon/services.webp",
+        src: "/experience/vk-salon/services.png",
         label: "Services",
       },
       {
-        src: "/experience/vk-salon/booking.webp",
+        src: "/experience/vk-salon/booking.png",
         label: "Booking",
       },
       {
-        src: "/experience/vk-salon/admin.webp",
-        label: "Dashboard",
+        src: "/experience/vk-salon/admin.png",
+        label: "Admin",
       },
     ],
   },
@@ -66,19 +66,19 @@ export const experiences: Experience[] = [
 
     images: [
       {
-        src: "/experience/kundal/home.webp",
+        src: "/experience/kundal/home.png",
         label: "Homepage",
       },
       {
-        src: "/experience/kundal/services.webp",
+        src: "/experience/kundal/services.png",
         label: "Services",
       },
       {
-        src: "/experience/kundal/testimonials.webp",
-        label: "Testimonials",
+        src: "/experience/kundal/work.png",
+        label: "Gallery & Customer Showcase",
       },
       {
-        src: "/experience/kundal/contact.webp",
+        src: "/experience/kundal/contact.png",
         label: "Contact",
       },
     ],

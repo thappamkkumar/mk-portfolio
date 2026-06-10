@@ -12,7 +12,7 @@ export default function CodeSnippetCard({
         rounded-2xl
         border
         border-white/10
-        bg-[#0d1117]
+        bg-zinc-900
         ${className}
       `}
     >
@@ -88,7 +88,13 @@ export default function CodeSnippetCard({
           {"\n"}
           {"    "}
           <span className="text-orange-300">
-            "PostgreSQL"
+            "Mysql"
+          </span>
+          ,
+          {"\n"}
+          {"    "}
+          <span className="text-orange-300">
+            "Tailwind"
           </span>
           ,
           {"\n"}
