@@ -1,12 +1,11 @@
 // components/layout/top-navbar.tsx
 
 import {
-Home,
+  Home,
   BriefcaseBusiness,
   Code2,
   Mail,
   Plus,
-  SunMedium,
   User,
   X,
 } from "lucide-react";

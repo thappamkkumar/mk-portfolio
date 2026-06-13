@@ -32,7 +32,7 @@ export default function ContactHeader() {
           text-white/60
         "
       >
-        I'm a Full Stack Developer focused on
+        I&apos;m a Full Stack Developer focused on
         building modern web applications with
         Next.js, Laravel, TypeScript and
         scalable backend systems.

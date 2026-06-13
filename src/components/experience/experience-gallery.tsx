@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ExperienceImage } from "@/types/experience";
 
 interface ExperienceGalleryProps {
-  images: ExperienceImage[];
+  images?: ExperienceImage[];
 }
 
 export default function ExperienceGallery({

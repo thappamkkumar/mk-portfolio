@@ -48,7 +48,7 @@ export default function CodeSnippetCard({
           </span>
           :{" "}
           <span className="text-orange-300">
-            "Mukesh Kumar"
+            &quot;Mukesh Kumar&quot;
           </span>
           ,
           {"\n"}
@@ -58,7 +58,7 @@ export default function CodeSnippetCard({
           </span>
           :{" "}
           <span className="text-orange-300">
-            "Full Stack Developer"
+            &quot;Full Stack Developer&quot;
           </span>
           ,
           {"\n"}
@@ -70,31 +70,31 @@ export default function CodeSnippetCard({
           {"\n"}
           {"    "}
           <span className="text-orange-300">
-            "Next.js"
+            &quot;Next.js&quot;
           </span>
           ,
           {"\n"}
           {"    "}
           <span className="text-orange-300">
-            "TypeScript"
+            &quot;TypeScript&quot;
           </span>
           ,
           {"\n"}
           {"    "}
           <span className="text-orange-300">
-            "Laravel"
+            &quot;Laravel&quot;
           </span>
           ,
           {"\n"}
           {"    "}
           <span className="text-orange-300">
-            "Mysql"
+            &quot;Mysql&quot;
           </span>
           ,
           {"\n"}
           {"    "}
           <span className="text-orange-300">
-            "Tailwind"
+            &quot;Tailwind&quot;
           </span>
           ,
           {"\n"}
