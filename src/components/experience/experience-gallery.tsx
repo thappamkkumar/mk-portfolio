@@ -22,7 +22,7 @@ export default function ExperienceGallery({
           className="
             group
             relative
-            aspect-[4/3]
+            aspect-4/3
             overflow-hidden
             rounded-xl
             border
@@ -46,7 +46,7 @@ export default function ExperienceGallery({
               absolute
               inset-x-0
               bottom-0
-              bg-gradient-to-t
+              bg-linear-to-t
               from-black/90
               to-transparent
               p-3

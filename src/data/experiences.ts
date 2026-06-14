@@ -8,7 +8,7 @@ export const experiences: Experience[] = [
 
     role: "Full Stack Engineer",
 
-    period: "May 2025 – Ongoing",
+    period: "May 2025 - Ongoing",
 
     description:
       "Developed and deployed a salon booking and business management platform featuring appointment workflows, content management, reviews, and administrative operations.",
@@ -50,7 +50,7 @@ export const experiences: Experience[] = [
 
     role: "Full Stack Engineer",
 
-    period: "Apr 2026 – Ongoing",
+    period: "Apr 2026 - Ongoing",
 
     description:
       "Developed and deployed a responsive beauty salon website focused on customer engagement, service showcase, and lead generation.",
@@ -92,7 +92,7 @@ export const experiences: Experience[] = [
 
     role: "Full Stack Engineer",
 
-    period: "Oct 2023 – Sep 2024",
+    period: "Oct 2023 - Sep 2024",
 
     description:
       "Built a full-stack e-commerce platform including product management, shopping cart, payments, OTP authentication, order workflows and administration.",
