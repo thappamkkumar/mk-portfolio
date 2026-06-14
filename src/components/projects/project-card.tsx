@@ -101,7 +101,7 @@ export default function ProjectCard({
                   rounded-full
                   border
                   border-white/10
-                  bg-white/[0.02]
+                  bg-white/2
                   px-3
                   py-1.5
                   text-sm

@@ -1,6 +1,6 @@
 export default function ExperienceHero() {
   return (
-    <section className=" pb-5">
+    <div className=" pb-5">
       <p className="text-sm text-emerald-400">
         Professional Work
       </p>
@@ -28,6 +28,6 @@ export default function ExperienceHero() {
         and booking platforms to e-commerce
         solutions and marketing websites.
       </p>
-    </section>
+    </div>
   );
 }

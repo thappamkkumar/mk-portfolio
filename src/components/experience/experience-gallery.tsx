@@ -32,7 +32,9 @@ export default function ExperienceGallery({
           <Image
             src={image.src}
             alt={image.label}
+            priority
             fill
+            sizes="(max-width: 1024px) 100vw, 520px"
             className="
               object-cover
               transition-transform
@@ -40,6 +42,7 @@ export default function ExperienceGallery({
               group-hover:scale-105
             "
           />
+          
 
           <div
             className="
