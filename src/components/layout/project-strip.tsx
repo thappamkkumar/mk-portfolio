@@ -43,8 +43,7 @@ const ProjectStrip = () => {
 
         <div className="flex flex-wrap items-center gap-2 md:gap-3">
 
-          <div className="pe-2 flex items-center gap-1 sm:gap-2 lg:gap-3
-            text-sm sm:text-base md:text-lg font-semibold text-zinc-200 " >
+          <div className="pe-2 flex items-center gap-1 sm:gap-2 lg:gap-3 text-sm sm:text-base md:text-lg font-semibold text-zinc-200 " >
             <span className=" ">Projects</span>
             <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </div>
@@ -53,7 +52,7 @@ const ProjectStrip = () => {
             <div key={project.slug} className="flex items-center gap-2 md:gap-4 whitespace-nowrap">
               <Link
                 href={project.href}
-                className="text-xs sm:text-sm text-zinc-300 hover:text-zinc-100 transition-colors duration-300 font-medium"
+                className="text-xs sm:text-sm text-zinc-300 hover:text-zinc-500 transition-colors duration-300 font-medium"
               >
                 {project.title}
               </Link>
