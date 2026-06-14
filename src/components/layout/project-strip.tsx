@@ -95,14 +95,14 @@ const ProjectStrip = () => {
                   rounded-lg
                   border
                   border-white/10
-                  bg-white/[0.02]
+                  bg-white/2
                   px-4
                   py-3
                   text-sm
                   text-zinc-300
                   transition-all
                   duration-300
-                  hover:bg-white/[0.05]
+                  hover:bg-white/5
                 "
               >
                 <Icon

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 
+import BackgroundEffect from "@/components/layout/background-effect";
 import ProjectStrip from "@/components/layout/project-strip";
 import TopNavbar from "@/components/layout/top-navbar";
 
@@ -31,33 +32,34 @@ export default function RootLayout({
           antialiased
         `}
       >
-     <main
-			className="
-				relative
-				flex
-				h-screen
-				flex-col
-				overflow-hidden
-				bg-black/30
-			"
-		>
-			
+        <main
+          className="
+            relative
+            flex
+            h-screen
+            flex-col
+            overflow-hidden
+            bg-black/30
+          "
+        >
+          
 
-			<TopNavbar />
+          <TopNavbar />
 
-			<ProjectStrip />
+          <ProjectStrip />
 
-			<section
-				className="
-				  relative
-				  flex-1
-				  overflow-y-auto
-				  overflow-x-hidden
-				"
-			>
-    {children}
-  </section>
-</main>
+          <section
+            className="
+              relative
+              flex-1
+              overflow-y-auto
+              overflow-x-hidden
+            "
+          >
+              <BackgroundEffect />
+            {children}
+          </section>
+        </main>
       </body>
     </html>
   );
