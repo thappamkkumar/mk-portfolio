@@ -1,5 +1,7 @@
 // components/hero/hero-section.tsx
 
+import { TrendingUp } from 'lucide-react';
+
 import ActionCards from "./action-cards";
 import SearchBar from "./search-bar";
 import TrendingTags from "./trending-tags";
@@ -10,13 +12,15 @@ const HeroSection = () => {
       className="
         relative
         flex
-         
+        min-h-screen
         flex-col
         items-center
         justify-center
         overflow-hidden
-        px-6
-        py-20
+        px-4
+        pt-10
+        pb-16
+        md:px-6
       "
     >
      
@@ -34,42 +38,33 @@ const HeroSection = () => {
         "
       >
         {/* Intro */}
-        <div
+        
+        <p
           className="
-            flex
-            items-center
-            gap-3
+            text-lg
+            tracking-wide
             text-emerald-400
           "
         >
-          <span className="text-xl">&gt;</span>
-
-          <p
-            className="
-              text-lg
-              tracking-wide
-            "
-          >
-            Hello, I&apos;m
-          </p>
-        </div>
+          Hello, I&apos;m
+        </p>
+        
 
         {/* Name */}
         <h1
           className="
-            mt-6
-            bg-gradient-to-b
-            from-white
-            via-zinc-100
-            to-zinc-500
+            bg-linear-to-b
+            from-white/90
+            via-zinc-100/80
+            to-zinc-500/70
             bg-clip-text
             text-center
-            text-6xl
+            text-5xl
             font-semibold
             tracking-[-0.06em]
             text-transparent
-            sm:text-7xl
-            md:text-8xl
+            sm:text-6xl
+            md:text-7xl
           "
         >
           Mukesh Kumar
@@ -80,9 +75,10 @@ const HeroSection = () => {
           className="
             mt-4
             text-center
-            text-3xl
+            text-2xl
             font-medium
-            text-zinc-500
+            text-zinc-400
+            sm:text-3xl
           "
         >
           Full Stack Developer
@@ -91,12 +87,13 @@ const HeroSection = () => {
         {/* Description */}
         <p
           className="
-            mt-6
+            mt-5
             max-w-3xl
             text-center
-            text-lg
+            text-base
             leading-8
             text-zinc-400
+            sm:text-lg
           "
         >
           I build scalable,
@@ -108,14 +105,14 @@ const HeroSection = () => {
         </p>
 
         {/* Search */}
-        <div className="mt-14 w-full">
+        <div className="mt-6 w-full">
           <SearchBar />
         </div>
 
         {/* Trending */}
         <div
           className="
-            mt-10
+            mt-6
             flex
             flex-col
             items-center
@@ -124,10 +121,14 @@ const HeroSection = () => {
         >
           <p
             className="
-              text-lg
+              text-md
               text-zinc-400
+              flex
+              items-center
+              gap-2
             "
           >
+            <TrendingUp className="w-4 h-4" />
             Trending Searches
           </p>
 
@@ -135,48 +136,13 @@ const HeroSection = () => {
         </div>
 
         {/* Action Cards */}
-        <div className="mt-14 w-full">
+        <div className="mt-10 w-full">
           <ActionCards />
         </div>
 
-        {/* Scroll */}
-        <div
-          className="
-            mt-16
-            flex
-            flex-col
-            items-center
-            gap-3
-            text-zinc-500
-          "
-        >
-          <div
-            className="
-              flex
-              h-12
-              w-7
-              items-start
-              justify-center
-              rounded-full
-              border
-              border-white/10
-              p-1
-            "
-          >
-            <div
-              className="
-                h-2
-                w-2
-                rounded-full
-                bg-zinc-400
-              "
-            />
-          </div>
+       
 
-          <p className="text-sm">
-            Scroll to explore
-          </p>
-        </div>
+           
       </div>
     </div>
   );

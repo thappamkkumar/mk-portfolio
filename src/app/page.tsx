@@ -5,13 +5,8 @@ import BackgroundGrid from "@/components/layout/background-grid";
 
 export default function Home() {
   return (
-    <section
-      className="
-        relative
-        min-h-full
-      "
-    >
-    	<BackgroundGrid />
+    <section className="relative min-h-screen">
+      <BackgroundGrid />
       <HeroSection />
     </section>
   );
