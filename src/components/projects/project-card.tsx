@@ -48,8 +48,8 @@ export default function ProjectCard({
             className="
               mt-5
               text-3xl
-              font-bold
-              md:text-5xl
+              font-semibold
+              md:text-4xl
             "
           >
             {project.name}

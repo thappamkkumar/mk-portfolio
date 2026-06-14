@@ -9,8 +9,8 @@ export default function ExperienceHero() {
         className="
           mt-4
           text-4xl
-          font-bold
-          md:text-6xl
+          font-medium
+          md:text-5xl
         "
       >
         Experience

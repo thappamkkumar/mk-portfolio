@@ -17,8 +17,8 @@ export default function IntroContent({
 
       <h1
         className="
-          text-3xl
-          font-bold
+          text-4xl
+          font-medium
           leading-tight
           md:text-5xl
         "

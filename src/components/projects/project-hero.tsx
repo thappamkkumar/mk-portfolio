@@ -7,7 +7,7 @@ export default function ProjectHero() {
           Projects
       </p>
 
-      <h1 className="mb-6 text-4xl font-bold md:text-6xl">
+      <h1 className="mb-6 text-4xl font-medium md:text-5xl">
         Things I&apos;ve Built
       </h1>
 
