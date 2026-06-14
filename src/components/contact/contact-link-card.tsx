@@ -1,4 +1,4 @@
-import Link from "next/link";
+ 
 import { ArrowUpRight } from "lucide-react";
 
 interface ContactLinkCardProps {
@@ -17,14 +17,12 @@ export default function ContactLinkCard({
     rounded-2xl
     border
     border-white/10
-    bg-white/[0.02]
+    bg-white/2
     p-6
     transition-all
     hover:border-emerald-500/30
   `;
-
-  const isExternal =
-    href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:");
+ 
 
   const content = (
     <div className="flex items-start justify-between">
@@ -41,17 +39,11 @@ export default function ContactLinkCard({
     </div>
   );
 
-  if (isExternal) {
+ 
     return (
       <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
         {content}
       </a>
     );
-  }
-
-  return (
-    <Link href={href} className={className}>
-      {content}
-    </Link>
-  );
+  
 }

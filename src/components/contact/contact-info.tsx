@@ -18,7 +18,7 @@ export default function ContactInfo() {
           rounded-2xl
           border
           border-white/10
-          bg-white/[0.02]
+          bg-white/2
         "
       >
         <ContactRow
@@ -52,7 +52,7 @@ export default function ContactInfo() {
           rounded-2xl
           border
           border-white/10
-          bg-white/[0.02]
+          bg-white/2
           p-5
         "
       >
@@ -60,18 +60,20 @@ export default function ContactInfo() {
           Current Focus
         </h3>
 
-        <ul
+       <ul
           className="
             mt-4
             space-y-2
             text-sm
             text-white/60
+            list-disc
+            pl-5
           "
         >
-          <li>• Full Stack Development</li>
-          <li>• Next.js & TypeScript</li>
-          <li>• Laravel & PHP</li>
-          <li>• Remote Opportunities</li>
+          <li>Full Stack Development</li>
+          <li>Next.js & TypeScript</li>
+          <li>Laravel & PHP</li>
+          <li>Remote Opportunities</li>
         </ul>
       </div>
     </div>
