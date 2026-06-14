@@ -25,7 +25,7 @@ export default function SkillItem({
           rounded-md
           border
           border-white/10
-          bg-white/[0.02]
+          bg-white/2
           px-3
           py-1.5
           text-xs
@@ -33,7 +33,7 @@ export default function SkillItem({
           transition-all
           duration-200
           hover:border-emerald-500/30
-          hover:bg-white/[0.04]
+          hover:bg-white/4 
         "
       >
         <span>{skill.name}</span>

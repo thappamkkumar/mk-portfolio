@@ -2,7 +2,7 @@ export default function SkillsHeader() {
   return (
     <div className="mb-16">
       <p className="mb-3 text-sm text-emerald-400">
-        &gt; My Toolbox
+          My Toolbox
       </p>
 
       <h1 className="text-4xl font-medium tracking-tight md:text-5xl">

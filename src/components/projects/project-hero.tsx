@@ -2,7 +2,7 @@
 
 export default function ProjectHero() {
   return (
-    <div className="mb-5 ">
+    <div className=" ">
       <p className="mb-3 text-sm text-emerald-400">
           Projects
       </p>
