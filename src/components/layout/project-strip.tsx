@@ -1,130 +1,70 @@
-import {
-  ArrowRight,
-  CheckCircle2,
-  Cloud,
-  Folder,
-  MessageCircle,
-  PlaySquare,
-  Zap,
-} from "lucide-react";
+'use client';
+
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Chat App",
-    icon: MessageCircle,
+    title: "SkillVilla",
+    slug: "skillvilla",
+    href: "/projects/skillvilla",
   },
   {
-    title: "Media Platform",
-    icon: PlaySquare,
+    title: "ShopHub",
+    slug: "shophub",
+    href: "/projects/shophub",
   },
   {
-    title: "Realtime Engine",
-    icon: Zap,
+    title: "StyleLoop",
+    slug: "styleloop",
+    href: "/projects/styleloop",
   },
   {
-    title: "Portfolio v1",
-    icon: Folder,
+    title: "VK Salon",
+    slug: "vk-salon",
+    href: "/experience/vk-salon",
   },
   {
-    title: "Task Manager",
-    icon: CheckCircle2,
+    title: "Kundal Makeover",
+    slug: "kundal",
+    href: "/experience/kundal",
   },
   {
-    title: "API Gateway",
-    icon: Cloud,
+    title: "Shivam Electro Tools",
+    slug: "shivam",
+    href: "/experience/shivam",
   },
 ];
 
 const ProjectStrip = () => {
   return (
-    <section
-      className="
-         
-        bg-zinc-900 
-      "
-    >
-      <div
-        className="
-          flex 
-          items-center
-          gap-5
-          overflow-x-auto
-          px-6
-          py-3 
-        "
-      >
-        {/* Left Title */}
-        <button
-          className="
-            flex
-            min-w-fit
-            items-center
-            gap-3
-            text-lg
-            md:text-xl
-            font-medium
-            text-white
+    <div className="w-full px-4 sm:px-6 md:px-8 py-3 sm:py-4 border-b border-white/10">
+       
 
-          "
-        >
-          <span className="  ">Projects</span>
+        <div className="flex flex-wrap items-center gap-2 md:gap-3">
 
-          <ArrowRight className="h-5 w-5" />
-        </button>
+          <div className="pe-2 flex items-center gap-1 sm:gap-2 lg:gap-3
+            text-sm sm:text-base md:text-lg font-semibold text-zinc-200 " >
+            <span className=" ">Projects</span>
+            <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
+          </div>
 
-        {/* Project Pills */}
-        <div
-          className="
-            flex
-            items-center
-            gap-4
-          "
-        >
-          {projects.map((project) => {
-            const Icon = project.icon;
-
-            return (
-              <button
-                key={project.title}
-                className="
-                  group
-                  flex 
-                  min-w-fit
-                  items-center
-                  gap-3
-                  rounded-lg
-                  border
-                  border-white/10
-                  bg-white/2
-                  px-4
-                  py-3
-                  text-sm
-                  text-zinc-300
-                  transition-all
-                  duration-300
-                  hover:bg-white/5
-                "
+          {projects.map((project, index) => (
+            <div key={project.slug} className="flex items-center gap-2 md:gap-4 whitespace-nowrap">
+              <Link
+                href={project.href}
+                className="text-xs sm:text-sm text-zinc-300 hover:text-zinc-100 transition-colors duration-300 font-medium"
               >
-                <Icon
-                  className="
-                    h-4
-                    w-4
-                    text-zinc-500
-                    transition-all
-                    duration-300
-                    group-hover:text-white
-                  "
-                />
-
                 {project.title}
-              </button>
-            );
-          })}
+              </Link>
+              {index !== projects.length - 1 ? (
+                <span className="text-zinc-700">|</span>
+              ) : null}
+            </div>
+          ))}
         </div>
-
-         
-      </div>
-    </section>
+       
+    </div>
   );
 };
 

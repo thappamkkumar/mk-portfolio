@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import BackgroundEffect from "@/components/layout/background-effect";
-import ProjectStrip from "@/components/layout/project-strip";
 import TopNavbar from "@/components/layout/top-navbar";
 
 const inter = Inter({
@@ -45,8 +44,6 @@ export default function RootLayout({
           
 
           <TopNavbar />
-
-          <ProjectStrip />
 
           <section
             className="
