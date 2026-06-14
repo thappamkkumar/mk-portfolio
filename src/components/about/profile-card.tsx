@@ -10,7 +10,7 @@ export default function ProfileCard() {
         rounded-2xl
         border
         border-white/10
-        bg-white/[0.02]
+        bg-white/2
         p-6
         backdrop-blur-sm
       "

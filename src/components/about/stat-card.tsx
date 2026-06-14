@@ -20,7 +20,7 @@ export default function StatCard({
         border
         border-white/10
 
-        bg-white/[0.02]
+        bg-white/2
         p-5
 
         transition-all

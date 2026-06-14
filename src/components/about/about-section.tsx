@@ -19,7 +19,7 @@ export default function AboutSection({
   stats,
 }: AboutSectionProps) {
   return (
-    <section className="space-y-8">
+    <div className="space-y-8">
       {/* Intro + Image */}
 
       <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
@@ -47,6 +47,6 @@ export default function AboutSection({
       </div>
 
       <StatsGrid stats={stats} />
-    </section>
+    </div>
   );
 }

@@ -14,14 +14,14 @@ export default function ProfileImage({
       className="
         relative
           
-        min-h-[350px]
+        min-h-87
         overflow-hidden
         rounded-2xl
         border
         border-white/10
-        bg-white/[0.02]
+        bg-white/2
 
-        md:min-h-[450px]
+        md:min-h-112
       "
     >
       <Image
