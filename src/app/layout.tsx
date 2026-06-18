@@ -6,6 +6,7 @@ import "./globals.css";
 import CursorEffect from "@/components/layout/cursor-effect";
 import SiteBackground from "@/components/layout/site-background";
 import TopNavbar from "@/components/layout/top-navbar";
+import Footer from "@/components/layout/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -59,6 +60,7 @@ export default function RootLayout({
             {children}
           </section>
         </main>
+        <Footer />
       </body>
     </html>
   );
