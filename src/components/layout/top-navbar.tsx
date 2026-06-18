@@ -1,152 +1,215 @@
 "use client";
 
-// components/layout/top-navbar.tsx
-
-import {
-  Home,
-  BriefcaseBusiness,
-  Code2,
-  Mail,
-  User,
-  X,
-  Layers,
-} from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
-const initialTabs = [
-  {
-    title: "Home",
-    icon: Home,
-    link: "/",
-  },
-  {
-    title: "About",
-    icon: User,
-    link: "/about",
-  },
-  {
-    title: "Skills",
-    icon: Code2,
-    link: "/skills",
-  },
-  {
-    title: "Projects",
-    icon: Layers,
-    link: "/projects",
-  },
-  {
-    title: "Experience",
-    icon: BriefcaseBusiness,
-    link: "/experience",
-  },
-  {
-    title: "Contact",
-    icon: Mail,
-    link: "/contact",
-  },
+const navItems = [
+  { title: "About", link: "/about" },
+  { title: "Skills", link: "/skills" },
+  { title: "Projects", link: "/projects" },
+  { title: "Experience", link: "/experience" },
+  { title: "Contact", link: "/contact" },
 ];
 
-const TopNavbar = () => {
+export default function TopNavbar() {
   const pathname = usePathname();
-  const router = useRouter();
-  const [tabs, setTabs] = useState(initialTabs);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleCloseTab = (tabLink: string) => {
-    setTabs((currentTabs) => {
-      const nextTabs = currentTabs.filter((tab) => tab.link !== tabLink);
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
 
-      if (nextTabs.length === 0 && typeof window !== "undefined") {
-        const win = window.open("", "_self");
-        if (win) {
-          win.close();
-        }
-        window.location.href = "about:blank";
-      }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
-      if (pathname === tabLink && nextTabs.length > 0) {
-        router.push(nextTabs[0].link);
-      }
-
-      return nextTabs;
-    });
-  };
   return (
-    <header className="bg-zinc-500/50 backdrop-blur-2xl sticky top-0 z-40">
-      <div className="relative flex h-full items-center justify-start gap-10 px-6">
-        {/* Left Traffic Buttons */}
-        <div className="flex items-center gap-2">
-          <div className="h-3 w-3 rounded-full bg-[#ff5f57]" />
-          <div className="h-3 w-3 rounded-full bg-[#febc2e]" />
-          <div className="h-3 w-3 rounded-full bg-[#28c840]" />
-        </div>
+    <>
+      <header className="sticky top-0 z-50 border-b border-white/5 bg-black/70 backdrop-blur-2xl">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="font-mono text-lg font-semibold tracking-tight text-white"
+          >
+            {"<"}MK
+            <span className="text-emerald-400">.</span>
+            {" />"}
+          </Link>
 
-        {/* Browser Tabs */}
-        <div className="flex pt-3 items-center">
-          {tabs.map((tab, index) => {
-            const Icon = tab.icon;
-            const isActive =
-              pathname === tab.link ||
-              (tab.link !== "/" && pathname.startsWith(tab.link));
+          {/* Desktop Navigation */}
+          <nav className="hidden items-center gap-2 md:flex">
+            {navItems.map((item) => {
+              const isActive =
+                pathname === item.link ||
+                (item.link !== "/" && pathname.startsWith(item.link));
 
-            return (
-              <div key={tab.title} className="flex items-center">
+              return (
                 <Link
-                  href={tab.link}
+                  key={item.link}
+                  href={item.link}
                   className={`
-                    group
-                    relative
-                    flex
-                    items-center
-                    gap-2
-                    px-4
-                    py-3
-                    text-sm
-                    font-medium
-                    transition-all
-                    duration-300
-                    overflow-visible
+                    group relative flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm
+                    transition-all duration-300
                     ${
                       isActive
-                        ? "text-white"
-                        : "text-zinc-400 hover:text-zinc-200"
+                        ? "bg-white/6 text-white"
+                        : "text-zinc-400 hover:text-white"
                     }
                   `}
-                  style={isActive ? {
-                    borderRadius: "8px 8px 0 0",
-                    background: "linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.3) 100%)",
-                    boxShadow: "inset 0 -8px 8px -8px rgba(0,0,0,0.5)"
-                  } : {}}
-                  aria-current={isActive ? "page" : undefined}
                 >
-                  <Icon className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
-                  <span className="flex-1">{tab.title}</span>
+                  <span
+                    className={`
+                      h-1.5 w-1.5 rounded-full transition-all duration-300
+                      ${
+                        isActive
+                          ? "bg-emerald-400 scale-100"
+                          : "bg-zinc-700 scale-0 group-hover:scale-100"
+                      }
+                    `}
+                  />
 
-                  {/* Close Button */}
-                  <button
-                    className="ml-1 p-1 rounded  transition-all duration-200 hover:bg-white/20 text-zinc-400  hover:text-white  opacity-60   group-hover:opacity-100 "
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCloseTab(tab.link);
-                    }}
-                    aria-label={`Close ${tab.title} tab`}
-                  >
-                    <X className="h-3.5 w-3.5" />
-                  </button>
+                  <span>{item.title}</span>
+
+                  <span
+                    className={`
+                      absolute inset-0 -z-10 rounded-xl transition-all duration-300
+                      ${
+                        isActive
+                          ? "bg-white/4"
+                          : "bg-transparent group-hover:bg-white/[0.03]"
+                      }
+                    `}
+                  />
+
+                  {isActive && (
+                    <span className="absolute bottom-0 left-4 right-4 h-px bg-emerald-400" />
+                  )}
                 </Link>
+              );
+            })}
+          </nav>
 
-                {/* Separator */}
-                {index < tabs.length - 1 && (
-                  <div className="h-6 w-px bg-zinc-600/50" />
-                )}
-              </div>
-            );
-          })}
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(true)}
+            className="rounded-xl p-2 text-zinc-300 transition-colors hover:bg-white/5 md:hidden"
+            aria-label="Open menu"
+          >
+            <Menu className="h-5 w-5" />
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed inset-0 z-100 md:hidden transition-all duration-300 ${
+          isOpen
+            ? "pointer-events-auto translate-x-0 opacity-100"
+            : "pointer-events-none translate-x-full opacity-0"
+        }`}
+      >
+        <div className="flex h-full flex-col bg-zinc-950/95 backdrop-blur-2xl">
+          {/* Top Bar */}
+          <div className="flex h-16 items-center justify-between border-b border-white/10 px-6">
+            <Link
+              href="/"
+              onClick={() => setIsOpen(false)}
+              className="font-mono text-lg font-semibold"
+            >
+              {"<"}MK
+              <span className="text-emerald-400">.</span>
+              {" />"}
+            </Link>
+
+            <button
+              onClick={() => setIsOpen(false)}
+              className="rounded-xl p-2 hover:bg-white/5"
+              aria-label="Close menu"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </div>
+
+          {/* Navigation */}
+          <nav className="flex flex-1 flex-col justify-center px-6">
+            <div className="space-y-2">
+              {navItems.map((item, index) => {
+                const isActive =
+                  pathname === item.link ||
+                  (item.link !== "/" && pathname.startsWith(item.link));
+
+                return (
+                  <Link
+                    key={item.link}
+                    href={item.link}
+                    onClick={() => setIsOpen(false)}
+                    className={`
+                      group flex items-center justify-between rounded-2xl px-5 py-4
+                      text-2xl font-medium transition-all duration-300
+                      ${
+                        isActive
+                          ? "bg-white/10 text-white"
+                          : "text-zinc-400 hover:bg-white/5 hover:text-white"
+                      }
+                    `}
+                  >
+                    <div className="flex items-center">
+                      <span className="mr-4 text-sm text-zinc-600">
+                        {(index + 1).toString().padStart(2, "0")}
+                      </span>
+
+                      <span
+                        className={`
+                          mr-4 h-2 w-2 rounded-full transition-all
+                          ${
+                            isActive
+                              ? "bg-emerald-400"
+                              : "bg-transparent group-hover:bg-zinc-500"
+                          }
+                        `}
+                      />
+
+                      {item.title}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </nav>
+
+          {/* Footer */}
+          <div className="border-t border-white/10 p-6">
+            <div className="flex flex-wrap gap-5 text-sm text-zinc-400">
+              <Link
+                href="https://github.com"
+                target="_blank"
+                className="hover:text-white"
+              >
+                GitHub
+              </Link>
+
+              <Link
+                href="https://linkedin.com"
+                target="_blank"
+                className="hover:text-white"
+              >
+                LinkedIn
+              </Link>
+
+              <Link href="/resume" className="hover:text-white">
+                Resume
+              </Link>
+            </div>
+
+            <p className="mt-4 text-xs text-zinc-500">
+              Mukesh Kumar · Full Stack Developer
+            </p>
+          </div>
         </div>
       </div>
-    </header>
+    </>
   );
-};
-
-export default TopNavbar;
+}
