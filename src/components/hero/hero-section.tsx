@@ -5,6 +5,7 @@ import { TrendingUp } from 'lucide-react';
 import ActionCards from "./action-cards";
 import SearchBar from "./search-bar";
 import TrendingTags from "./trending-tags";
+import ProjectStrip from "./project-strip/project-strip";
 
 const HeroSection = () => {
   return (
@@ -37,6 +38,9 @@ const HeroSection = () => {
           items-center
         "
       >
+
+        
+
         {/* Intro */}
         
         <p
@@ -112,7 +116,7 @@ const HeroSection = () => {
         {/* Trending */}
         <div
           className="
-            mt-6
+            mt-8
             flex
             flex-col
             items-center
@@ -135,8 +139,13 @@ const HeroSection = () => {
           <TrendingTags />
         </div>
 
+        <div className="mt-12">
+          <ProjectStrip />
+        </div>
+
+
         {/* Action Cards */}
-        <div className="mt-10 w-full">
+        <div className="mt-12 w-full">
           <ActionCards />
         </div>
 

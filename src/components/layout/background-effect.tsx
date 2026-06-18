@@ -41,10 +41,7 @@ const BackgroundGrid = () => {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: `
-            radial-gradient(circle at 12% 18%, rgba(255,255,255,0.06), transparent 14%),
-            radial-gradient(circle at 82% 12%, rgba(255,255,255,0.05), transparent 12%),
-            radial-gradient(circle at 55% 78%, rgba(255,255,255,0.04), transparent 16%),
+          backgroundImage: ` 
             radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(255,255,255,0.16), transparent 10%)
           `,
           backgroundBlendMode: "screen",

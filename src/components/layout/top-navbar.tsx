@@ -79,7 +79,7 @@ export default function TopNavbar() {
                       ${
                         isActive
                           ? "bg-white/4"
-                          : "bg-transparent group-hover:bg-white/[0.03]"
+                          : "bg-transparent group-hover:bg-white/3"
                       }
                     `}
                   />
