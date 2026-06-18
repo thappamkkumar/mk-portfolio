@@ -3,12 +3,30 @@ import ProjectLink from "./project-link";
 
 export default function ProjectList() {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
-      {heroProjects.map((project) => (
-        <ProjectLink
+    <div
+      className="
+        flex
+        flex-wrap
+        items-center
+        justify-center
+
+        gap-x-4
+        gap-y-2
+      "
+    >
+      {heroProjects.map((project, index) => (
+        <div
           key={project.title}
-          {...project}
-        />
+          className="flex items-center gap-4"
+        >
+          <ProjectLink {...project} />
+
+          {index !== heroProjects.length - 1 && (
+            <span className="text-zinc-700">
+              ·
+            </span>
+          )}
+        </div>
       ))}
     </div>
   );

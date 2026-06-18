@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import CursorEffect from "@/components/layout/cursor-effect";
+import SiteBackground from "@/components/layout/site-background";
 import TopNavbar from "@/components/layout/top-navbar";
 
 const inter = Inter({
@@ -53,7 +54,8 @@ export default function RootLayout({
               overflow-x-hidden
             "
           >
-              <CursorEffect />
+            <SiteBackground />
+            <CursorEffect />
             {children}
           </section>
         </main>

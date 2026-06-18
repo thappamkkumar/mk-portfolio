@@ -1,6 +1,4 @@
-// components/hero/hero-section.tsx
-
-import { TrendingUp } from 'lucide-react';
+ 
 
 import ActionCards from "./action-cards";
 import SearchBar from "./search-bar";
@@ -9,151 +7,149 @@ import ProjectStrip from "./project-strip/project-strip";
 
 const HeroSection = () => {
   return (
-    <div
+    <section
       className="
         relative
         flex
-        min-h-screen
-        flex-col
+        min-h-[calc(100vh-4rem)]
         items-center
         justify-center
-        overflow-hidden
         px-4
-        pt-10
-        pb-16
-        md:px-6
+        py-16
+        sm:px-6
+        lg:px-8
       "
     >
-     
-
       <div
         className="
           relative
           z-10
+
           mx-auto
           flex
           w-full
           max-w-6xl
           flex-col
           items-center
+          text-center
         "
       >
-
-        
-
-        {/* Intro */}
-        
+        {/* Eyebrow */}
         <p
           className="
-            text-lg
-            tracking-wide
+            text-xs
+            font-medium
+            uppercase
+            tracking-[0.35em]
             text-emerald-400
           "
         >
-          Hello, I&apos;m
+          Full Stack Developer
         </p>
-        
 
         {/* Name */}
         <h1
           className="
+            mt-5
+
             bg-linear-to-b
-            from-white/90
-            via-zinc-100/80
-            to-zinc-500/70
+            from-white
+            via-zinc-100
+            to-zinc-500
+
             bg-clip-text
-            text-center
-            text-5xl
-            font-semibold
-            tracking-[-0.06em]
             text-transparent
+
+            text-5xl
+            font-bold
+            tracking-[-0.08em]
+
             sm:text-6xl
             md:text-7xl
+            lg:text-8xl
           "
         >
           Mukesh Kumar
         </h1>
 
-        {/* Role */}
-        <h2
-          className="
-            mt-4
-            text-center
-            text-2xl
-            font-medium
-            text-zinc-400
-            sm:text-3xl
-          "
-        >
-          Full Stack Developer
-        </h2>
-
         {/* Description */}
         <p
           className="
-            mt-5
-            max-w-3xl
-            text-center
-            text-base
-            leading-8
+            mt-6
+
+            max-w-2xl
+
+            text-sm
+            leading-7
             text-zinc-400
-            sm:text-lg
+
+            sm:text-base
+            md:text-lg
           "
         >
-          I build scalable,
+          Building modern web applications with{" "}
           <span className="text-emerald-400">
-            {" "}
-            realtime{" "}
+            React
           </span>
-          and performant web applications.
+          ,{" "}
+          <span className="text-emerald-400">
+            Next.js
+          </span>
+          ,{" "}
+          <span className="text-emerald-400">
+            Laravel
+          </span>{" "}
+          and TypeScript, with a focus on performance,
+          realtime systems and user experience.
         </p>
 
         {/* Search */}
-        <div className="mt-6 w-full">
+        <div className="mt-10 w-full">
           <SearchBar />
         </div>
 
-        {/* Trending */}
+        {/* Popular Searches */}
         <div
           className="
             mt-8
-            flex
-            flex-col
-            items-center
-            gap-5
+            
           "
         >
-          <p
-            className="
-              text-md
-              text-zinc-400
-              flex
-              items-center
-              gap-2
-            "
-          >
-            <TrendingUp className="w-4 h-4" />
-            Trending Searches
-          </p>
+           
 
           <TrendingTags />
         </div>
 
-        <div className="mt-12">
+        {/* Projects */}
+        <div className="mt-12 w-full">
           <ProjectStrip />
         </div>
 
-
-        {/* Action Cards */}
+        {/* Quick Links */}
         <div className="mt-12 w-full">
+          <div
+            className="
+              mb-5
+
+              flex
+              items-center
+              justify-center
+              gap-2
+
+              text-xs
+              font-semibold
+              uppercase
+              tracking-[0.25em]
+              text-zinc-500
+            "
+          > 
+            Quick Links
+          </div>
+
           <ActionCards />
         </div>
-
-       
-
-           
       </div>
-    </div>
+    </section>
   );
 };
 

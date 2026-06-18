@@ -61,7 +61,7 @@ export default function ActionCards() {
     <div
       className="
         mx-auto
-        mt-12
+        mt-6
         grid
         w-full
         max-w-5xl

@@ -3,21 +3,26 @@ import ProjectList from "./project-list";
 
 export default function ProjectStrip() {
   return (
-    <div className="flex flex-col items-center gap-4">
-      {/* Heading */}
-      <div className="flex items-center gap-2">
-        <span className="h-2 w-2 rounded-full bg-emerald-400" />
+    <section className="w-full">
+      <div className="flex flex-col items-center gap-5">
+         
+          <p
+            className="
+              text-xs
+              font-semibold
+              uppercase
+              tracking-[0.3em]
+              text-zinc-500
+            "
+          >
+            Project Highlights
+          </p>
+         
 
-        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">
-          Project Highlights
-        </span>
+        <ProjectList />
+
+        <ProjectGuide />
       </div>
-
-      {/* Projects */}
-      <ProjectList />
-
-      {/* Legend */}
-      <ProjectGuide />
-    </div>
+    </section>
   );
 }

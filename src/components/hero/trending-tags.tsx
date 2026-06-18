@@ -1,50 +1,93 @@
 const tags = [
+  "React",
+  "Laravel",
   "Next.js",
-  "TypeScript",
-  "Realtime Apps",
-  "System Design",
-  "WebSockets",
+  "SkillVilla",
+  "WebRTC",
   "PostgreSQL",
 ];
 
-const TrendingTags = () => {
+export default function TrendingTags() {
   return (
-    <div
-      className="
-        flex
-        flex-wrap
-        items-center
-        justify-center
-        gap-3
-      "
-    >
-      {tags.map((tag) => (
-        <button
-          key={tag}
+    <section className="w-full">
+      <div className="flex flex-col items-center gap-4">
+         
+          <span
+            className="
+              text-xs
+              font-semibold
+              uppercase
+              tracking-[0.3em]
+              text-zinc-500
+            "
+          >
+            Popular Searches
+          </span>
+         
+         
+
+        <div
           className="
-            rounded-full
-            border
-            border-zinc-800
-            bg-zinc-900/70
-            px-4
-            py-2
-            text-xs
-            text-white
-            backdrop-blur-xl
-            transition-all
-            duration-300
-            cursor-pointer
-            hover:border-zinc-700
-            hover:bg-zinc-800
-            hover:text-zinc-200
+            flex
+            flex-wrap
+            items-center
+            justify-center
+            gap-2
+            sm:gap-3
           "
         >
-          <span className="text-emerald-400 pe-2">#</span>
-          {tag}
-        </button>
-      ))}
-    </div>
-  );
-};
+          {tags.map((tag) => (
+            <button
+              key={tag}
+              type="button"
+              className="
+                group
+                flex
+                items-center
+                gap-1.5
 
-export default TrendingTags;
+                rounded-full
+
+                border
+                border-white/10
+
+                bg-zinc-900/40
+
+                px-3
+                py-2
+
+                text-xs
+                text-zinc-300
+
+                backdrop-blur-xl
+
+                transition-all
+                duration-300
+
+                hover:-translate-y-0.5
+                hover:border-emerald-500/30
+                hover:bg-zinc-900/70
+                hover:text-white
+
+                sm:px-4
+              "
+            >
+              <span
+                className="
+                  text-emerald-400
+                  transition-transform
+                  duration-300
+                  group-hover:scale-110
+                "
+              >
+                #
+              </span>
+
+              {tag}
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

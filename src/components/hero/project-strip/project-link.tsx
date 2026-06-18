@@ -6,6 +6,8 @@ export default function ProjectLink({
   href,
   type,
 }: HeroProject) {
+  const isPersonal = type === "Personal";
+
   return (
     <Link
       href={href}
@@ -13,25 +15,46 @@ export default function ProjectLink({
         group
         flex
         items-center
-        gap-1.5
+        gap-2
+
         text-sm
         text-zinc-400
+
         transition-all
         duration-300
+
         hover:text-white
       "
     >
       <span
-        className={`transition-transform duration-300 group-hover:scale-110 ${
-          type === "Personal"
-            ? "text-emerald-400"
-            : "text-zinc-500"
-        }`}
+        className={`
+          transition-transform
+          duration-300
+          group-hover:scale-110
+
+          ${
+            isPersonal
+              ? "text-emerald-400"
+              : "text-zinc-500"
+          }
+        `}
       >
-        {type === "Personal" ? "★" : "☆"}
+        {isPersonal ? "★" : "◈"}
       </span>
 
-      <span>{title}</span>
+      <span
+        className="
+          border-b
+          border-transparent
+
+          transition-all
+          duration-300
+
+          group-hover:border-emerald-400/60
+        "
+      >
+        {title}
+      </span>
     </Link>
   );
 }
