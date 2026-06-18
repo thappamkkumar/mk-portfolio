@@ -12,12 +12,12 @@ export default function SkillSection({
   categories,
 }: SkillsPageProps) {
   return (
-    <div>
+    <>
       <SkillsHeader />
 
       <SkillsGrid categories={categories} />
 
       <SkillsGuide />
-    </div>
+    </>
   );
 }

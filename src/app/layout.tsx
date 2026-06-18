@@ -1,3 +1,5 @@
+// app/layout.tsx
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -27,40 +29,36 @@ export default function RootLayout({
       <body
         className={`
           ${inter.className}
-          overflow-hidden
           bg-black
           text-white
           antialiased
+          overflow-auto
         `}
       >
+          {/* Navigation */}
+          <TopNavbar />
         <main
           className="
-            relative
-            flex
-            h-screen
-            flex-col
-            overflow-hidden
-            bg-black/30
+            relative 
+            bg-black
           "
         >
-          
+          {/* Global Background */}
+          <SiteBackground />
 
-          <TopNavbar />
+          {/* Cursor Effect */}
+          <CursorEffect />
 
-          <section
-            className="
-              relative
-              flex-1
-              overflow-y-auto
-              overflow-x-hidden
-            "
-          >
-            <SiteBackground />
-            <CursorEffect />
+        
+
+          {/* Page Content */}
+          <section className="relative z-10 mx-auto max-w-7xl  px-4 pt-10 pb-30 md:px-6" >
             {children}
           </section>
+
+          {/* Footer */}
+          <Footer />
         </main>
-        <Footer />
       </body>
     </html>
   );

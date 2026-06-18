@@ -7,11 +7,10 @@ import ProjectStrip from "./project-strip/project-strip";
 
 const HeroSection = () => {
   return (
-    <section
+    <div
       className="
-        relative
-        flex
-        min-h-[calc(100vh-4rem)]
+       
+        flex 
         items-center
         justify-center
         px-4
@@ -22,8 +21,7 @@ const HeroSection = () => {
     >
       <div
         className="
-          relative
-          z-10
+          
 
           mx-auto
           flex
@@ -149,7 +147,7 @@ const HeroSection = () => {
           <ActionCards />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

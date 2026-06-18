@@ -15,11 +15,10 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="relative min-h-screen overflow-hidden mx-auto max-w-7xl px-4 pt-10 pb-30 md:px-6">
-      <AboutSection
+       <AboutSection
         aboutInfo={ABOUT_INFO}
         stats={STATS}
       />
-    </div>
+     
   );
 }

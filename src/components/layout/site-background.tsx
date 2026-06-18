@@ -6,9 +6,9 @@ export default function SiteBackground() {
         className="
           fixed
           inset-0
+          z-1
           
-
-          bg-[radial-gradient(circle,rgba(255,255,255,0.10)_1px,transparent_1px)]
+          bg-[radial-gradient(circle,rgba(255,255,255,0.06)_1px,transparent_1px)]
           bg-size-[32px_32px]
            
         "
@@ -22,7 +22,7 @@ export default function SiteBackground() {
           fixed
           inset-0
           
-
+          z-2
           flex
           items-center
           justify-center
@@ -42,7 +42,7 @@ export default function SiteBackground() {
 
             -tracking-widest
 
-            text-white/2
+            text-zinc-900/20
           "
         >
           DEVELOPER
