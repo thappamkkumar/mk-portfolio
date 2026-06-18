@@ -3,10 +3,11 @@ import type { LucideIcon } from "lucide-react";
 import { contact } from "@/data/contact";
 
 import {
-  ExternalLink,
+  ArrowUpRight,
   FileText,
   Mail,
   GitBranch,
+  ExternalLink,
 } from "lucide-react";
 
 type ActionCard = {
@@ -20,17 +21,16 @@ type ActionCard = {
 const cards: ActionCard[] = [
   {
     title: "Resume",
-    description: "View or download my resume",
+    description: "View or download resume",
     icon: FileText,
     href: contact.resumeUrl ?? "/resume.pdf",
     external: true,
   },
   {
     title: "Contact",
-    description: "Open the contact page",
+    description: "Let's discuss opportunities",
     icon: Mail,
     href: "/contact",
-    external: false,
   },
   ...(contact.linkedinUrl
     ? [
@@ -47,7 +47,7 @@ const cards: ActionCard[] = [
     ? [
         {
           title: "GitHub",
-          description: "Explore my repositories",
+          description: "Explore repositories",
           icon: GitBranch,
           href: contact.githubUrl,
           external: true,
@@ -56,14 +56,18 @@ const cards: ActionCard[] = [
     : []),
 ];
 
-const ActionCards = () => {
+export default function ActionCards() {
   return (
     <div
       className="
         mx-auto
+        mt-12
         grid
+        w-full
         max-w-5xl
+        grid-cols-1
         gap-4
+
         sm:grid-cols-2
         lg:grid-cols-4
       "
@@ -79,72 +83,129 @@ const ActionCards = () => {
             rel={card.external ? "noreferrer" : undefined}
             className="
               group
-              flex
-              items-center
-              gap-4
+              relative
+              overflow-hidden
+
               rounded-2xl
               border
-              border-zinc-800
-              bg-zinc-900/70
+              border-white/10
+
+              bg-linear-to-b
+              from-zinc-900/70
+              to-zinc-950/70
+
               p-5
-              text-left
+
               backdrop-blur-xl
+
               transition-all
               duration-300
-              hover:-translate-y-0.5
-              hover:border-zinc-700
-              hover:bg-zinc-900
+
+              hover:-translate-y-1
+              hover:border-emerald-500/30
+              hover:shadow-[0_0_30px_rgba(16,185,129,0.08)]
             "
           >
+            {/* Glow */}
             <div
               className="
-                flex
-                h-14
-                w-14
-                shrink-0
-                items-center
-                justify-center
-                rounded-xl
-                border
-                border-zinc-800
-                bg-zinc-950
+                absolute
+                inset-0
+                opacity-0
+                transition-opacity
+                duration-300
+                group-hover:opacity-100
+                bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12),transparent_60%)]
               "
-            >
-              <Icon
-                className="
-                  h-6
-                  w-6
-                  text-emerald-400
-                "
-              />
-            </div>
+            />
 
-            <div>
-              <h3
+            <div className="relative flex h-full flex-col">
+              {/* Top */}
+              <div className="flex items-center justify-between">
+                <div
+                  className="
+                    flex
+                    h-11
+                    w-11
+                    items-center
+                    justify-center
+
+                    rounded-xl
+
+                    border
+                    border-white/10
+
+                    bg-black/30
+                  "
+                >
+                  <Icon className="h-5 w-5 text-emerald-400" />
+                </div>
+
+                <ArrowUpRight
+                  className="
+                    h-4
+                    w-4
+
+                    text-zinc-600
+
+                    transition-all
+                    duration-300
+
+                    group-hover:text-white
+                    group-hover:translate-x-0.5
+                    group-hover:-translate-y-0.5
+                  "
+                />
+              </div>
+
+              {/* Content */}
+              <div className="mt-6">
+                <h3
+                  className="
+                    text-lg
+                    font-semibold
+                    text-white
+                  "
+                >
+                  {card.title}
+                </h3>
+
+                <p
+                  className="
+                    mt-1
+                    text-sm
+                    text-zinc-400
+                  "
+                >
+                  {card.description}
+                </p>
+              </div>
+
+              {/* Bottom indicator */}
+              <div
                 className="
-                  text-lg
-                  font-semibold
-                  text-white
+                  mt-5
+
+                  flex
+                  items-center
+                  gap-2
+
+                  text-xs
+                  text-zinc-600
+
+                  transition-colors
+                  duration-300
+
+                  group-hover:text-emerald-400
                 "
               >
-                {card.title}
-              </h3>
-
-              <p
-                className="
-                  mt-1
-                  text-sm
-                  text-zinc-400
-                "
-              >
-                {card.description}
-              </p>
+                <span>$</span>
+                <span>open {card.title.toLowerCase()}</span>
+              </div>
             </div>
           </Link>
         );
       })}
     </div>
   );
-};
-
-export default ActionCards;
+}

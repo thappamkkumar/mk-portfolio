@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const BackgroundGrid = () => {
+const CursorEffect = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(false);
 
@@ -86,4 +86,4 @@ const BackgroundGrid = () => {
   );
 };
 
-export default BackgroundGrid;
+export default CursorEffect;
