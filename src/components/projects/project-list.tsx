@@ -1,3 +1,5 @@
+// components/projects/project-list.tsx
+
 import { Project } from "@/types/project";
 import ProjectCard from "./project-card";
 
@@ -9,7 +11,10 @@ export default function ProjectList({
   projects,
 }: ProjectListProps) {
   return (
-    <div>
+    <section
+      aria-label="Projects"
+      className="space-y-2"
+    >
       {projects.map((project, index) => (
         <ProjectCard
           key={project.id}
@@ -17,6 +22,6 @@ export default function ProjectList({
           index={index + 1}
         />
       ))}
-    </div>
+    </section>
   );
 }

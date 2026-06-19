@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Project } from "@/types/project";
 
 import ProjectGallery from "./project-gallery";
+import ProjectTechStack from "./project-tech-stack";
 
 interface ProjectCardProps {
   project: Project;
@@ -21,6 +22,9 @@ export default function ProjectCard({
         border-b
         border-white/10
         py-16
+        transition-colors
+        duration-300
+        hover:border-emerald-400/10
         md:py-24
       "
     >
@@ -28,7 +32,7 @@ export default function ProjectCard({
         className="
           grid
           gap-12
-          lg:grid-cols-[minmax(0,1fr)_520px]
+          lg:grid-cols-[minmax(0,1fr)_500px]
           lg:items-start
         "
       >
@@ -36,29 +40,55 @@ export default function ProjectCard({
         <div>
           <span
             className="
-              text-sm
-              tracking-widest
-              text-white/40
+              inline-flex
+              items-center
+              rounded-full
+              border
+              border-emerald-400/20
+              bg-emerald-400/5
+              px-3
+              py-1
+              text-xs
+              font-medium
+              tracking-[0.2em]
+              text-emerald-400
             "
           >
             {String(index).padStart(2, "0")}
           </span>
 
-          <h2
-            className="
-              mt-5
-              text-3xl
-              font-semibold
-              md:text-4xl
-            "
-          >
-            {project.name}
-          </h2>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <h2
+              className="
+                text-4xl
+                font-semibold
+                tracking-tight
+                md:text-5xl
+              "
+            >
+              {project.name}
+            </h2>
+
+            <span
+              className="
+                rounded-full
+                border
+                border-white/10
+                px-3
+                py-1
+                text-xs
+                text-white/50
+              "
+            >
+              {project.period}
+            </span>
+          </div>
 
           <p
             className="
-              mt-2
+              mt-4
               text-lg
+              leading-relaxed
               text-white/60
             "
           >
@@ -67,71 +97,64 @@ export default function ProjectCard({
 
           <p
             className="
-              mt-4
-              text-sm
-              text-white/40
-            "
-          >
-            {project.period}
-          </p>
-
-          <p
-            className="
               mt-8
               max-w-2xl
-              leading-8
+              leading-relaxed
               text-white/70
+              md:text-[15px]
             "
           >
             {project.summary}
           </p>
 
-          <div
-            className="
-              mt-8
-              flex
-              flex-wrap
-              gap-2
-            "
-          >
-            {project.technologies.map((technology) => (
-              <span
-                key={technology}
-                className="
-                  rounded-full
-                  border
-                  border-white/10
-                  bg-white/2
-                  px-3
-                  py-1.5
-                  text-sm
-                  text-white/70
-                "
-              >
-                {technology}
-              </span>
-            ))}
-          </div>
+          <ProjectTechStack
+            technologies={project.technologies}
+          />
 
           <div
             className="
               mt-10
               flex
               flex-wrap
-              gap-6
+              items-center
+              gap-3
+              border-t
+              border-white/10
+              pt-8
             "
           >
-            {project.githubUrl && (
+            {project.caseStudyUrl && (
               <Link
-                href={project.githubUrl}
-                target="_blank"
+                href={project.caseStudyUrl}
                 className="
-                  text-white/70
-                  transition-colors
-                  hover:text-white
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-full
+                  bg-emerald-400
+                  px-5
+                  py-2.5
+                  font-medium
+                  text-black
+                  shadow-lg
+                  shadow-emerald-400/10
+                  transition-all
+                  duration-300
+                  hover:scale-[1.02]
+                  hover:bg-emerald-300
                 "
               >
-                GitHub
+                View Case Study
+
+                <ArrowUpRight
+                  size={16}
+                  className="
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-0.5
+                    group-hover:-translate-y-0.5
+                  "
+                />
               </Link>
             )}
 
@@ -140,8 +163,16 @@ export default function ProjectCard({
                 href={project.liveUrl}
                 target="_blank"
                 className="
+                  rounded-full
+                  border
+                  border-white/10
+                  px-5
+                  py-2.5
                   text-white/70
-                  transition-colors
+                  transition-all
+                  duration-300
+                  hover:border-emerald-400/30
+                  hover:bg-emerald-400/5
                   hover:text-white
                 "
               >
@@ -149,19 +180,25 @@ export default function ProjectCard({
               </Link>
             )}
 
-            {project.caseStudyUrl && (
+            {project.githubUrl && (
               <Link
-                href={project.caseStudyUrl}
+                href={project.githubUrl}
+                target="_blank"
                 className="
-                  inline-flex
-                  items-center
-                  gap-2
-                  text-white
+                  rounded-full
+                  border
+                  border-white/10
+                  px-5
+                  py-2.5
+                  text-white/70
+                  transition-all
+                  duration-300
+                  hover:border-emerald-400/30
+                  hover:bg-emerald-400/5
+                  hover:text-white
                 "
               >
-                Case Study
-
-                <ArrowUpRight size={16} />
+                GitHub
               </Link>
             )}
           </div>
