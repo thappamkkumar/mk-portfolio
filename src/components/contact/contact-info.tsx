@@ -11,16 +11,29 @@ import ContactRow from "./contact-row";
 
 export default function ContactInfo() {
   return (
-    <div className="space-y-6">
-      <div
+    <div
+      className="
+        grid
+        gap-6
+        lg:grid-cols-2
+      "
+    >
+      {/* Details */}
+      <section
         className="
           overflow-hidden
-          rounded-2xl
+          rounded-3xl
           border
           border-white/10
-          bg-white/2
+          bg-white/[0.02]
         "
       >
+        <div className="border-b border-white/10 p-5">
+          <h2 className="font-medium">
+            Contact Details
+          </h2>
+        </div>
+
         <ContactRow
           icon={<Mail size={18} />}
           label="Email"
@@ -45,37 +58,47 @@ export default function ContactInfo() {
           value={contact.availability}
           last
         />
-      </div>
+      </section>
 
-      <div
+      {/* Looking For */}
+      <section
         className="
-          rounded-2xl
+          rounded-3xl
           border
           border-white/10
-          bg-white/2
-          p-5
+          bg-white/[0.02]
+          p-6
         "
       >
-        <h3 className="font-medium">
-          Current Focus
-        </h3>
+        <h2 className="font-medium">
+          Looking For
+        </h2>
 
-       <ul
-          className="
-            mt-4
-            space-y-2
-            text-sm
-            text-white/60
-            list-disc
-            pl-5
-          "
-        >
-          <li>Full Stack Development</li>
-          <li>Next.js & TypeScript</li>
-          <li>Laravel & PHP</li>
-          <li>Remote Opportunities</li>
+        <ul className="mt-5 space-y-3">
+          {contact.lookingFor.map((item) => (
+            <li
+              key={item}
+              className="
+                flex
+                items-center
+                gap-3
+                text-white/70
+              "
+            >
+              <span
+                className="
+                  h-2
+                  w-2
+                  rounded-full
+                  bg-emerald-400
+                "
+              />
+
+              {item}
+            </li>
+          ))}
         </ul>
-      </div>
+      </section>
     </div>
   );
 }

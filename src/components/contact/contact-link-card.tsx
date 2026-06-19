@@ -1,4 +1,3 @@
- 
 import { ArrowUpRight } from "lucide-react";
 
 interface ContactLinkCardProps {
@@ -12,38 +11,77 @@ export default function ContactLinkCard({
   description,
   href,
 }: ContactLinkCardProps) {
-  const className = `
-    group
-    rounded-2xl
-    border
-    border-white/10
-    bg-white/2
-    p-6
-    transition-all
-    hover:border-emerald-500/30
-  `;
- 
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        group
+        rounded-3xl
+        border
+        border-white/10
+        bg-white/[0.02]
+        p-6
+        transition-all
+        duration-300
+        hover:border-emerald-400/20
+        hover:bg-white/[0.03]
+      "
+    >
+      <div className="flex h-full flex-col">
+        <div className="flex items-start justify-between">
+          <h3
+            className="
+              text-lg
+              font-medium
+              transition-colors
+              duration-300
+              group-hover:text-emerald-400
+            "
+          >
+            {title}
+          </h3>
 
-  const content = (
-    <div className="flex items-start justify-between">
-      <div>
-        <h3 className="font-medium">{title}</h3>
+          <div
+            className="
+              flex
+              h-10
+              w-10
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-white/10
+              transition-all
+              duration-300
+              group-hover:border-emerald-400/20
+              group-hover:bg-emerald-400/5
+            "
+          >
+            <ArrowUpRight
+              size={18}
+              className="
+                transition-transform
+                duration-300
+                group-hover:translate-x-0.5
+                group-hover:-translate-y-0.5
+              "
+            />
+          </div>
+        </div>
 
-        <p className="mt-2 text-sm text-white/60">{description}</p>
+        <p
+          className="
+            mt-4
+            text-sm
+            leading-relaxed
+            text-white/60
+          "
+        >
+          {description}
+        </p>
       </div>
-
-      <ArrowUpRight
-        size={18}
-        className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-      />
-    </div>
+    </a>
   );
-
- 
-    return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
-        {content}
-      </a>
-    );
-  
 }

@@ -1,9 +1,15 @@
+import { contact } from "@/data/contact";
+
 export default function ContactHeader() {
   return (
-    <section className=" pb-16">
+    <section className="pb-16 md:pb-24">
       <p
         className="
+          mb-4
           text-sm
+          font-medium
+          uppercase
+          tracking-[0.2em]
           text-emerald-400
         "
       >
@@ -12,30 +18,28 @@ export default function ContactHeader() {
 
       <h1
         className="
-          mt-4
-          text-4xl
-          font-medium
-          md:text-5xl
+          max-w-4xl
+          text-5xl
+          font-semibold
+          tracking-tight
+          md:text-6xl
+          lg:text-7xl
         "
       >
-        Open to
-        <br />
-        <span className="text-emerald-400">
-          Opportunities.
-        </span>
+        {contact.headline}
       </h1>
 
       <p
         className="
           mt-6
           max-w-2xl
-          text-white/60
+          text-base
+          leading-relaxed
+          text-white/70
+          md:text-lg
         "
       >
-        I&apos;m a Full Stack Developer focused on
-        building modern web applications with
-        Next.js, Laravel, TypeScript and
-        scalable backend systems.
+        {contact.description}
       </p>
     </section>
   );
