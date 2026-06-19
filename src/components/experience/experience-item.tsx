@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Experience } from "@/types/experience";
 
 import ExperienceGallery from "./experience-gallery";
+import ExperienceTechStack from "./experience-tech-stack";
 
 interface ExperienceItemProps {
   experience: Experience;
@@ -22,7 +23,10 @@ export default function ExperienceItem({
       className="
         border-b
         border-white/10
-         py-16
+        py-16
+        transition-colors
+        duration-300
+        hover:border-emerald-400/10
         md:py-24
       "
     >
@@ -31,8 +35,8 @@ export default function ExperienceItem({
           hasImages
             ? `
               grid
-              gap-10
-              lg:grid-cols-[1fr_500px]
+              gap-12
+              lg:grid-cols-[minmax(0,1fr)_500px]
               lg:items-start
             `
             : `
@@ -41,78 +45,75 @@ export default function ExperienceItem({
         }
       >
         <div>
-          <p
+          <span
             className="
-              text-sm
-              text-white/40
-            "
-          >
-            {experience.period}
-          </p>
-
-          <h2
-            className="
-              mt-3
-              text-3xl
-              font-bold
-            "
-          >
-            {experience.role}
-          </h2>
-
-          <p
-            className="
-              mt-2
-              text-lg
+              inline-flex
+              items-center
+              rounded-full
+              border
+              border-emerald-400/20
+              bg-emerald-400/5
+              px-3
+              py-1
+              text-xs
+              font-medium
+              tracking-[0.2em]
               text-emerald-400
             "
           >
-            {experience.company}
-          </p>
+            {experience.period}
+          </span>
+
+          <div className="mt-6">
+            <h2
+              className="
+                text-4xl
+                font-semibold
+                tracking-tight
+                md:text-5xl
+              "
+            >
+              {experience.role}
+            </h2>
+
+            <p
+              className="
+                mt-3
+                text-lg
+                font-medium
+                text-emerald-400
+              "
+            >
+              {experience.company}
+            </p>
+          </div>
 
           <p
             className="
-              mt-6
-              leading-8
-              text-white/60
+              mt-8
+              max-w-2xl
+              leading-relaxed
+              text-white/70
+              md:text-[15px]
             "
           >
             {experience.description}
           </p>
 
+          <ExperienceTechStack
+            technologies={experience.technologies}
+          />
+
           <div
-            className="
-              mt-6
-              flex
-              flex-wrap
-              gap-2
-            "
-          >
-            {experience.technologies.map(
-              (technology) => (
-                <span
-                  key={technology}
-                  className="
-                    rounded-full
-                    border
-                    border-white/10
-                    px-3
-                    py-1
-                    text-xs
-                    text-white/60
-                  "
-                >
-                  {technology}
-                </span>
-              )
-            )}
-          </div>
-           <div
             className="
               mt-10
               flex
               flex-wrap
-              gap-6
+              items-center
+              gap-3
+              border-t
+              border-white/10
+              pt-8
             "
           >
             {experience.liveUrl && (
@@ -120,39 +121,59 @@ export default function ExperienceItem({
                 href={experience.liveUrl}
                 target="_blank"
                 className="
-                  
+                  group
                   inline-flex
                   items-center
                   gap-2
-                  
-                  text-white
+                  rounded-full
+                  bg-emerald-400
+                  px-5
+                  py-2.5
+                  font-medium
+                  text-black
+                  shadow-lg
+                  shadow-emerald-400/10
+                  transition-all
+                  duration-300
+                  hover:scale-[1.02]
+                  hover:bg-emerald-300
                 "
               >
                 Visit Website
 
-                <ArrowUpRight size={16} />
+                <ArrowUpRight
+                  size={16}
+                  className="
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-0.5
+                    group-hover:-translate-y-0.5
+                  "
+                />
               </Link>
             )}
+
             {experience.caseStudyUrl && (
               <Link
                 href={experience.caseStudyUrl}
                 className="
-                  inline-flex
-                  items-center
-                  gap-2
-                  text-white
+                  rounded-full
+                  border
+                  border-white/10
+                  px-5
+                  py-2.5
+                  text-white/70
+                  transition-all
+                  duration-300
+                  hover:border-emerald-400/30
+                  hover:bg-emerald-400/5
+                  hover:text-white
                 "
               >
                 Case Study
-
-                <ArrowUpRight size={16} />
               </Link>
             )}
-
           </div>
-         
-
-           
         </div>
 
         {hasImages && (

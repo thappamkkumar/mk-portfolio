@@ -10,13 +10,16 @@ export default function ExperienceList({
   experiences,
 }: ExperienceListProps) {
   return (
-    <>
+    <div
+      aria-label="Projects"
+      className="space-y-2"
+    >
       {experiences.map((experience) => (
         <ExperienceItem
           key={experience.id}
           experience={experience}
         />
       ))}
-    </>
+    </div>
   );
 }

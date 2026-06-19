@@ -11,7 +11,7 @@ export default function ProjectList({
   projects,
 }: ProjectListProps) {
   return (
-    <section
+    <div
       aria-label="Projects"
       className="space-y-2"
     >
@@ -22,6 +22,6 @@ export default function ProjectList({
           index={index + 1}
         />
       ))}
-    </section>
+    </div>
   );
 }
