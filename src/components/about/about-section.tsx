@@ -19,13 +19,18 @@ export default function AboutSection({
   stats,
 }: AboutSectionProps) {
   return (
-    <div className="space-y-8">
-      {/* Intro + Image */}
+    <section className="space-y-12 md:space-y-16">
+      {/* Hero */}
 
-      <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-        <IntroContent
-          description={aboutInfo.description}
-        />
+      <div
+        className="
+          grid
+          gap-10
+          lg:grid-cols-[1.2fr_0.8fr]
+          lg:items-center
+        "
+      >
+        <IntroContent />
 
         <ProfileImage
           image={aboutInfo.image}
@@ -33,20 +38,26 @@ export default function AboutSection({
         />
       </div>
 
-      {/* About Info + Code */}
-
-      <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] items-start">
-        <AboutInfoCard
-          aboutInfo={aboutInfo}
-          className="order-1 lg:order-2"
-        />
-
-        <CodeSnippetCard
-          className="order-2 lg:order-1"
-        />
-      </div>
+      {/* Stats */}
 
       <StatsGrid stats={stats} />
-    </div>
+
+      {/* Details */}
+
+      <div
+        className="
+          grid
+          gap-8
+          lg:grid-cols-[420px_minmax(0,1fr)]
+          lg:items-start
+        "
+      >
+        <AboutInfoCard
+          aboutInfo={aboutInfo}
+        />
+
+        <CodeSnippetCard />
+      </div>
+    </section>
   );
 }

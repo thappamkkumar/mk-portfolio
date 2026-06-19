@@ -12,16 +12,17 @@ export default function ProfileImage({
   return (
     <div
       className="
+        group
         relative
-          
-        min-h-87
         overflow-hidden
-        rounded-2xl
+        rounded-3xl
         border
         border-white/10
-        bg-white/2
+        bg-white/[0.02]
 
-        md:min-h-112
+        min-h-[420px]
+        md:min-h-[520px]
+        backdrop-blur-sm
       "
     >
       <Image
@@ -29,9 +30,49 @@ export default function ProfileImage({
         priority
         src={image}
         alt={name}
-        sizes="(max-width: 768px) 100vw, 50vw"  
-        className="object-contain"
+        sizes="(max-width: 1024px) 100vw, 40vw"
+        className="
+          object-contain
+          transition-transform
+          duration-500
+          group-hover:scale-[1.02]
+        "
       />
+
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-t
+          from-black/50
+          via-transparent
+          to-transparent
+        "
+      />
+
+      <div
+        className="
+          absolute
+          left-6
+          bottom-6
+          rounded-full
+          border
+          border-emerald-400/20
+          bg-black/50
+          px-4
+          py-2
+          backdrop-blur-sm
+        "
+      >
+        <span
+          className="
+            text-sm
+            text-emerald-400
+          "
+        >
+          Full Stack Developer
+        </span>
+      </div>
     </div>
   );
 }

@@ -23,12 +23,20 @@ export const ABOUT_INFO: AboutInfo = {
 
   image: "/images/profile-image.png",
 
+  headline:
+    "Full Stack Developer focused on building modern web applications.",
+
+  yearsExperience: "3+",
+
+  availability:
+    "Available for Full-Time, Remote, Hybrid and Freelance Opportunities",
+ 
   description: [
-    "I build modern web applications using Next.js, TypeScript, Laravel and PostgreSQL.",
+    "I'm a Full Stack Developer specializing in React, Next.js, Laravel, TypeScript, and modern web technologies.",
 
-    "My experience includes business websites, e-commerce platforms, realtime applications, admin dashboards and booking systems.",
+    "I enjoy building products from idea to deployment, creating scalable applications with clean user experiences and reliable backend systems.",
 
-    "I enjoy working across the entire stack—from frontend interfaces to backend systems, databases and deployment.",
+    "My experience includes business websites, e-commerce platforms, admin dashboards, booking systems, and real-time applications. I'm always looking for opportunities to learn, solve challenging problems, and build meaningful digital products.",
   ],
 };
 
@@ -46,11 +54,11 @@ export const STATS: Stat[] = [
   {
     icon: Code2,
     value: "15+",
-    label: "Technologies",
+    label: "Technologies Used",
   },
   {
     icon: Layers3,
     value: "Full Stack",
-    label: "End-to-End",
+    label: "Development",
   },
 ];

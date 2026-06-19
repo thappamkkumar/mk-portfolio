@@ -5,104 +5,86 @@ interface CodeSnippetCardProps {
 export default function CodeSnippetCard({
   className,
 }: CodeSnippetCardProps) {
+  const items = [
+    {
+      title: "Frontend",
+      value:
+        "React, Next.js, TypeScript, Tailwind CSS",
+    },
+    {
+      title: "Backend",
+      value:
+        "Laravel, PHP, REST APIs",
+    },
+    {
+      title: "Database",
+      value:
+        "PostgreSQL, MySQL",
+    },
+    {
+      title: "Currently Exploring",
+      value:
+        "Node.js, Docker, AWS",
+    },
+  ];
+
   return (
-    <div
+    <section
       className={`
-        overflow-hidden
-        rounded-2xl
+        rounded-3xl
         border
         border-white/10
-        bg-zinc-900
+        bg-white/[0.02]
+        p-6
         ${className}
       `}
     >
-      <div
+      <p
         className="
-          flex
-          items-center
-          gap-2
-          border-b
-          border-white/10
-          px-4
-          py-3
+          text-xs
+          uppercase
+          tracking-[0.2em]
+          text-emerald-400
         "
       >
-        <div className="h-3 w-3 rounded-full bg-red-500" />
-        <div className="h-3 w-3 rounded-full bg-yellow-500" />
-        <div className="h-3 w-3 rounded-full bg-green-500" />
-      </div>
+        Developer Snapshot
+      </p>
 
-      <pre className="overflow-x-auto p-6 text-sm leading-7">
-        <code>
-          <span className="text-purple-400">
-            const
-          </span>{" "}
-          <span className="text-blue-400">
-            developer
-          </span>{" "}
-          = {"{"}
-          {"\n"}
-          {"  "}
-          <span className="text-green-400">
-            name
-          </span>
-          :{" "}
-          <span className="text-orange-300">
-            &quot;Mukesh Kumar&quot;
-          </span>
-          ,
-          {"\n"}
-          {"  "}
-          <span className="text-green-400">
-            role
-          </span>
-          :{" "}
-          <span className="text-orange-300">
-            &quot;Full Stack Developer&quot;
-          </span>
-          ,
-          {"\n"}
-          {"  "}
-          <span className="text-green-400">
-            stack
-          </span>
-          : [
-          {"\n"}
-          {"    "}
-          <span className="text-orange-300">
-            &quot;Next.js&quot;
-          </span>
-          ,
-          {"\n"}
-          {"    "}
-          <span className="text-orange-300">
-            &quot;TypeScript&quot;
-          </span>
-          ,
-          {"\n"}
-          {"    "}
-          <span className="text-orange-300">
-            &quot;Laravel&quot;
-          </span>
-          ,
-          {"\n"}
-          {"    "}
-          <span className="text-orange-300">
-            &quot;Mysql&quot;
-          </span>
-          ,
-          {"\n"}
-          {"    "}
-          <span className="text-orange-300">
-            &quot;Tailwind&quot;
-          </span>
-          ,
-          {"\n"}
-          {"  "}],
-          {"\n"}
-          {"}"}
-        </code>
-      </pre>
-    </div>
+      <div className="mt-6 space-y-6">
+        {items.map((item) => (
+          <div
+            key={item.title}
+            className="
+              border-b
+              border-white/10
+              pb-5
+              last:border-0
+              last:pb-0
+            "
+          >
+            <h3
+              className="
+                text-sm
+                font-medium
+                text-white
+              "
+            >
+              {item.title}
+            </h3>
+
+            <p
+              className="
+                mt-2
+                text-sm
+                leading-relaxed
+                text-white/60
+              "
+            >
+              {item.value}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
