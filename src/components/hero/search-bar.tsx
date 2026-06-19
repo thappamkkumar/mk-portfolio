@@ -22,13 +22,7 @@ export default function SearchBar() {
     <div className="relative mx-auto w-full max-w-3xl">
       {/* Background Glow */}
       <div
-        className="
-          absolute
-          inset-0
-          rounded-3xl
-          bg-emerald-500/10
-          blur-3xl
-        "
+        className="absolute inset-0 rounded-3xl bg-emerald-500/10 blur-3xl "
       />
 
       <form
@@ -36,26 +30,7 @@ export default function SearchBar() {
           e.preventDefault();
           handleSearch();
         }}
-        className="
-          group
-          relative
-
-          flex
-          h-16
-          w-full
-          items-center
-          gap-4
-
-          rounded-2xl
-
-          border
-          border-white/10
-
-          bg-zinc-900/70
-
-          px-5
-
-          backdrop-blur-xl
+        className={` group relative flex h-16 w-full items-center gap-4 rounded-2xl border border-white/10 bg-zinc-900/70 px-5 backdrop-blur-xl
 
           transition-all
           duration-300
@@ -65,11 +40,11 @@ export default function SearchBar() {
           focus-within:border-emerald-500/40
           focus-within:bg-zinc-900/80
           focus-within:shadow-[0_0_40px_rgba(16,185,129,0.08)]
-        "
+        `}
       >
         {/* Search Icon */}
         <Search
-          className="
+          className={` 
             h-5
             w-5
             shrink-0
@@ -79,7 +54,7 @@ export default function SearchBar() {
             duration-300
 
             group-focus-within:text-emerald-400
-          "
+          `} 
         />
 
         {/* Input */}
@@ -88,7 +63,7 @@ export default function SearchBar() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search React, Laravel, SkillVilla..."
-          className="
+          className={`
             h-full
             w-full
 
@@ -102,12 +77,12 @@ export default function SearchBar() {
             placeholder:text-zinc-500
 
             sm:text-base
-          "
+          `}
         />
 
         {/* Desktop Hint */}
         <div
-          className="
+          className={`
             hidden
             shrink-0
             items-center
@@ -129,7 +104,7 @@ export default function SearchBar() {
             backdrop-blur
 
             lg:flex
-          "
+          `}
         >
           <span className="h-2 w-2 rounded-full bg-emerald-400" />
           Try &rdquo;React&ldquo;
@@ -138,14 +113,14 @@ export default function SearchBar() {
 
       {/* Mobile Hint */}
       <p
-        className="
+        className={`
           mt-3
           text-center
           text-xs
           text-zinc-600
 
           lg:hidden
-        "
+        `}
       >
         Try searching: React, Laravel, SkillVilla
       </p>
