@@ -1,4 +1,5 @@
 import { CaseStudy } from "@/types/case-study";
+
 export const skillVilla: CaseStudy = {
   slug: "skillvilla",
 
