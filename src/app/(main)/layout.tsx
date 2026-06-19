@@ -1,5 +1,4 @@
 import CursorEffect from "@/components/layout/cursor-effect";
-import SiteBackground from "@/components/layout/site-background";
 import TopNavbar from "@/components/layout/top-navbar";
 import Footer from "@/components/layout/footer";
 
@@ -18,7 +17,7 @@ export default function MainLayout({
           bg-black
         "
       >
-        <SiteBackground />
+         
 
         <CursorEffect />
 

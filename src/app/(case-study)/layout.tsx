@@ -1,6 +1,7 @@
-import SiteBackground from "@/components/layout/site-background";
+ 
 import CursorEffect from "@/components/layout/cursor-effect";
 import CaseStudyHeader from "@/components/case-study/case-study-header";
+import Footer from "@/components/layout/footer";
 
 export default function CaseStudyLayout({
   children,
@@ -16,8 +17,7 @@ export default function CaseStudyLayout({
           relative
           bg-black
         "
-      >
-        <SiteBackground />
+      > 
 
         <section
           className="
@@ -34,6 +34,7 @@ export default function CaseStudyLayout({
           {children}
         </section>
       </main>
+      <Footer />
     </>
   );
 }
