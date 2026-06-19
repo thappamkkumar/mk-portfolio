@@ -45,8 +45,8 @@ export const projects: Project[] = [
       },
     ],
 
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/thappamkkumar/skillvilla",
+    liveUrl: "http://52.53.160.90/",
     caseStudyUrl: "/projects/skillvilla",
   },
 
@@ -90,8 +90,8 @@ export const projects: Project[] = [
       },
     ],
 
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/thappamkkumar/multi-vendor-ecommerse",
+    liveUrl: "https://shophub.zya.me/",
     caseStudyUrl: "/projects/shophub",
   },
 
@@ -135,8 +135,8 @@ export const projects: Project[] = [
       },
     ],
 
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/thappamkkumar/E-commerse",
+    liveUrl: "https://styleloop.page.gd/",
     caseStudyUrl: "/projects/styleloop",
   },
 ];

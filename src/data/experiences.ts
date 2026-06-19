@@ -22,6 +22,7 @@ export const experiences: Experience[] = [
     ],
 
     liveUrl: "https://vk-salon.vercel.app/",
+    caseStudyUrl: "/experience/vk-salon",
 
     images: [
       {
@@ -63,7 +64,7 @@ export const experiences: Experience[] = [
     ],
 
     liveUrl: "https://kundal-makeover.vercel.app/",
-
+    caseStudyUrl: "",
     images: [
       {
         src: "/experience/kundal/home.png",
@@ -106,7 +107,7 @@ export const experiences: Experience[] = [
     ],
 
     liveUrl: "",
-
+    caseStudyUrl: "",
     images: [ ],
   },
 

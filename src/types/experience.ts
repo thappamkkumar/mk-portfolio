@@ -17,6 +17,7 @@ export interface Experience {
   technologies: string[];
 
   liveUrl?: string;
-
+  caseStudyUrl?: string;
+  
   images?: ExperienceImage[];
 }

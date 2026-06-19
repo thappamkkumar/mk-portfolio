@@ -107,25 +107,50 @@ export default function ExperienceItem({
               )
             )}
           </div>
+           <div
+            className="
+              mt-10
+              flex
+              flex-wrap
+              gap-6
+            "
+          >
+            {experience.liveUrl && (
+              <Link
+                href={experience.liveUrl}
+                target="_blank"
+                className="
+                  
+                  inline-flex
+                  items-center
+                  gap-2
+                  
+                  text-white
+                "
+              >
+                Visit Website
 
-          {experience.liveUrl && (
-            <Link
-              href={experience.liveUrl}
-              target="_blank"
-              className="
-                mt-8
-                inline-flex
-                items-center
-                gap-2
-                text-sm
-                text-white
-              "
-            >
-              Visit Website
+                <ArrowUpRight size={16} />
+              </Link>
+            )}
+            {experience.caseStudyUrl && (
+              <Link
+                href={experience.caseStudyUrl}
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  text-white
+                "
+              >
+                Case Study
 
-              <ArrowUpRight size={16} />
-            </Link>
-          )}
+                <ArrowUpRight size={16} />
+              </Link>
+            )}
+
+          </div>
+         
 
            
         </div>
