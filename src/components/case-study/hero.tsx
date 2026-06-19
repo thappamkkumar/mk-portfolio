@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, GitBranch  } from "lucide-react";
+import { ExternalLink, GitBranch } from "lucide-react";
 
 import { CaseStudy } from "@/types/case-study";
 
@@ -11,42 +11,45 @@ interface HeroProps {
 export default function Hero({ project }: HeroProps) {
   return (
     <section className="py-12 md:py-16">
-      {/* Hero Content */}
       <div
         className="
           grid
           gap-12
-          lg:grid-cols-[1.2fr_0.8fr]
+          lg:grid-cols-[1.1fr_0.9fr]
           lg:items-center
         "
       >
-        {/* Left */}
+        {/* Content */}
         <div>
           <span
             className="
               inline-flex
+              items-center
               rounded-full
               border
               border-emerald-500/20
               bg-emerald-500/10
               px-3
-              py-1
+              py-1.5
               text-xs
               font-medium
-              tracking-wider
+              tracking-[0.2em]
               text-emerald-400
+              uppercase
             "
           >
-             {project.type.toUpperCase()}
+            {project.type}
           </span>
 
           <h1
             className="
               mt-6
+              max-w-4xl
               text-5xl
               font-bold
               tracking-tight
-              md:text-7xl
+              sm:text-6xl
+              lg:text-7xl
             "
           >
             {project.title}
@@ -55,7 +58,9 @@ export default function Hero({ project }: HeroProps) {
           <p
             className="
               mt-4
-              text-xl
+              max-w-2xl
+              text-lg
+              leading-8
               text-zinc-400
               md:text-2xl
             "
@@ -75,14 +80,15 @@ export default function Hero({ project }: HeroProps) {
                     items-center
                     gap-2
                     rounded-xl
-                    bg-white
-                    px-4
-                    py-2.5
+                    bg-emerald-400
+                    px-5
+                    py-3
                     text-sm
                     font-medium
                     text-black
-                    transition-opacity
-                    hover:opacity-90
+                    transition-all
+                    hover:scale-[1.02]
+                    hover:bg-emerald-300
                   "
                 >
                   <ExternalLink className="h-4 w-4" />
@@ -102,35 +108,50 @@ export default function Hero({ project }: HeroProps) {
                     rounded-xl
                     border
                     border-white/10
-                    bg-white/[0.03]
-                    px-4
-                    py-2.5
+                    bg-white/3
+                    px-5
+                    py-3
                     text-sm
                     font-medium
                     text-white
-                    transition-colors
-                    hover:bg-white/5
+                    transition-all
+                    hover:border-white/20
+                    hover:bg-white/6
                   "
                 >
-                  <GitBranch  className="h-4 w-4" />
+                  <GitBranch className="h-4 w-4" />
                   Source Code
                 </Link>
               )}
             </div>
           )}
 
-
-          {/* Overview Card */}
+          {/* Overview */}
           <div
             className="
               mt-8
               rounded-3xl
               border
               border-white/10
-              bg-white/[0.02]
+              bg-linear-to-br
+              from-white/4
+              to-white/1]
               p-6
+              backdrop-blur-sm
             "
           >
+            <p
+              className="
+                mb-3
+                text-xs
+                uppercase
+                tracking-[0.2em]
+                text-zinc-500
+              "
+            >
+              Project Overview
+            </p>
+
             <p
               className="
                 text-base
@@ -142,45 +163,25 @@ export default function Hero({ project }: HeroProps) {
               {project.overview}
             </p>
           </div>
-
-          {/* Technologies */}
-          <div className="mt-8 flex flex-wrap gap-3">
-            {project.technologies.map((tech) => (
-              <span
-                key={tech}
-                className="
-                  rounded-full
-                  border
-                  border-white/10
-                  bg-white/5
-                  px-3
-                  py-1.5
-                  text-xs
-                  text-zinc-300
-                "
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
         </div>
 
-        {/* Right */}
+        {/* Screenshot */}
         <div>
           <div
             className="
+              group
               overflow-hidden
               rounded-3xl
               border
               border-white/10
-              bg-white/[0.02]
+              bg-white/2
               p-3
             "
           >
             <div
               className="
                 relative
-                aspect-[16/10]
+                aspect-16/10
                 overflow-hidden
                 rounded-2xl
               "
@@ -189,8 +190,13 @@ export default function Hero({ project }: HeroProps) {
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover"
                 priority
+                className="
+                  object-cover
+                  transition-transform
+                  duration-700
+                  group-hover:scale-105
+                "
               />
             </div>
           </div>
@@ -208,7 +214,8 @@ export default function Hero({ project }: HeroProps) {
           border
           border-white/10
           bg-white/10
-          md:grid-cols-4
+          sm:grid-cols-2
+          lg:grid-cols-4
         "
       >
         {project.metrics.map((metric) => (
@@ -219,15 +226,65 @@ export default function Hero({ project }: HeroProps) {
               p-6
             "
           >
-            <p className="text-sm text-zinc-500">
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-[0.2em]
+                text-zinc-500
+              "
+            >
               {metric.label}
             </p>
 
-            <p className="mt-2 text-lg font-semibold text-white">
+            <p
+              className="
+                mt-3
+                text-xl
+                font-bold
+                text-white
+                md:text-2xl
+              "
+            >
               {metric.value}
             </p>
           </div>
         ))}
+      </div>
+
+      {/* Technologies */}
+      <div className="mt-8">
+        <p
+          className="
+            mb-4
+            text-xs
+            uppercase
+            tracking-[0.2em]
+            text-zinc-500
+          "
+        >
+          Technology Stack
+        </p>
+
+        <div className="flex flex-wrap gap-3">
+          {project.technologies.map((tech) => (
+            <span
+              key={tech}
+              className="
+                rounded-full
+                border
+                border-white/10
+                bg-white/3
+                px-4
+                py-2
+                text-sm
+                text-zinc-300
+              "
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );

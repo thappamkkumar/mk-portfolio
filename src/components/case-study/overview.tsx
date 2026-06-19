@@ -8,37 +8,82 @@ export default function Overview({
   project,
 }: OverviewProps) {
   return (
-    <section className="py-12 md:py-16">
-      <div className="max-w-4xl">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">
-          Overview
+    <section className="py-16">
+      <div className="max-w-3xl">
+        <p
+          className="
+            text-xs
+            font-medium
+            uppercase
+            tracking-[0.2em]
+            text-emerald-400
+          "
+        >
+          Context
         </p>
 
-        <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-          Project Overview
+        <h2
+          className="
+            mt-3
+            text-3xl
+            font-bold
+            tracking-tight
+            md:text-4xl
+          "
+        >
+          The Challenge & My Role
         </h2>
 
-        <p className="mt-6 text-zinc-300 leading-8">
-          {project.overview}
+        <p
+          className="
+            mt-6
+            text-lg
+            leading-8
+            text-zinc-400
+          "
+        >
+          Every project starts with a problem to solve. This section
+          outlines the challenge behind the project and my
+          responsibilities throughout the development process.
         </p>
       </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
+      <div className="mt-12 grid gap-6 lg:grid-cols-2">
         {/* Problem */}
         <div
           className="
             rounded-3xl
             border
             border-white/10
-            bg-white/[0.02]
+            bg-linear-to-br
+            from-white/4
+            to-white/1
             p-6
+            backdrop-blur-sm
           "
         >
-          <h3 className="text-lg font-semibold">
+          <p
+            className="
+              text-xs
+              uppercase
+              tracking-[0.2em]
+              text-zinc-500
+            "
+          >
             Problem
+          </p>
+
+          <h3 className="mt-3 text-xl font-semibold">
+            Why This Project Was Built
           </h3>
 
-          <p className="mt-4 text-sm leading-7 text-zinc-400">
+          <p
+            className="
+              mt-5
+              leading-8
+              text-zinc-400
+            "
+          >
             {project.problem}
           </p>
         </div>
@@ -49,15 +94,35 @@ export default function Overview({
             rounded-3xl
             border
             border-white/10
-            bg-white/[0.02]
+            bg-linear-to-br
+            from-white/4
+            to-white/1
             p-6
+            backdrop-blur-sm
           "
         >
-          <h3 className="text-lg font-semibold">
+          <p
+            className="
+              text-xs
+              uppercase
+              tracking-[0.2em]
+              text-zinc-500
+            "
+          >
+            Responsibility
+          </p>
+
+          <h3 className="mt-3 text-xl font-semibold">
             My Role
           </h3>
 
-          <p className="mt-4 text-sm leading-7 text-zinc-400">
+          <p
+            className="
+              mt-5
+              leading-8
+              text-zinc-400
+            "
+          >
             {project.role}
           </p>
         </div>
