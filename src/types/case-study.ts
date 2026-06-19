@@ -19,6 +19,13 @@ export interface CaseStudyArchitectureLayer {
   items: string[];
 }
 
+export interface CaseStudyScreenshot {
+  title: string;
+  image: string;
+}
+  
+
+
 export interface CaseStudy {
   slug: string;
 
@@ -33,10 +40,12 @@ export interface CaseStudy {
 
   image: string;
 
+  screenshots?: CaseStudyScreenshot[];
+  
   liveUrl?: string;
 
   githubUrl?: string;
-  
+
   technologies: string[];
 
   metrics: CaseStudyMetric[];

@@ -2,6 +2,7 @@
 
 import { skillVilla } from "@/data/projects/skillvilla";
 import Hero from "@/components/case-study/hero";
+import ScreenshotGallery from "@/components/case-study/screenshot-gallery";
 import Overview from "@/components/case-study/overview";
 import Architecture from "@/components/case-study/architecture";
 import PlatformModules from "@/components/case-study/platform-modules";
@@ -17,6 +18,7 @@ export default function ProjectPage() {
     <>
       <Hero project={project} />
       <Overview project={project} />
+      <ScreenshotGallery project={project} />
       <Architecture project={project} />
       <PlatformModules project={project} />
       <Challenges project={project} />

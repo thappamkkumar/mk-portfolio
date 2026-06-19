@@ -10,7 +10,30 @@ export const skillVilla: CaseStudy = {
 
   type: "Personal Project",
 
-  image: "/case-study/projects/skillvilla/hero.webp",
+  image: "/case-study/projects/skillvilla/hero.webp",//feed,community,chat,jobs
+
+  screenshots: [
+    {
+      title: "Home Feed",
+      image: "/case-study/projects/skillvilla/hero.webp",
+    },
+
+    {
+      title: "Workfolio Showcase",
+      image: "/case-study/projects/skillvilla/hero.webp",
+    },
+
+    {
+      title: "Communities",
+      image: "/case-study/projects/skillvilla/hero.webp",
+    },
+
+    {
+      title: "Realtime Communication", //call image
+      image: "/case-study/projects/skillvilla/hero.webp",
+    },
+ 
+  ],
 
   liveUrl: "http://52.53.160.90/",
 
