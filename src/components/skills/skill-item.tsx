@@ -9,7 +9,7 @@ interface SkillItemProps {
 const levelStyles = {
   comfortable: "bg-emerald-400",
   working: "bg-emerald-400/40",
-  familiar: "border border-zinc-500",
+  familiar: "border border-white/30",
 };
 
 export default function SkillItem({
@@ -21,19 +21,20 @@ export default function SkillItem({
         className="
           inline-flex
           items-center
-          gap-2
-          rounded-md
+          gap-2.5
+          rounded-full
           border
           border-white/10
-          bg-white/2
-          px-3
-          py-1.5
-          text-xs
-          text-zinc-400
+          bg-white/[0.03]
+          px-4
+          py-2
+          text-sm
+          text-white/70
           transition-all
-          duration-200
-          hover:border-emerald-500/30
-          hover:bg-white/4 
+          duration-300
+          hover:border-emerald-400/20
+          hover:bg-emerald-400/5
+          hover:text-white
         "
       >
         <span>{skill.name}</span>
@@ -41,7 +42,7 @@ export default function SkillItem({
         <span
           aria-hidden="true"
           className={clsx(
-            "h-1.5 w-1.5 rounded-full",
+            "h-2 w-2 rounded-full",
             levelStyles[skill.level]
           )}
         />
