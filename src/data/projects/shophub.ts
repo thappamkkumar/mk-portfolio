@@ -5,7 +5,7 @@ export const shopHub: CaseStudy = {
 
   title: "ShopHub",
 
-  subtitle: "Multi-Vendor E-Commerce Platform",
+  subtitle: "Multi-Vendor E-Commerce Marketplace",
 
   category: "project",
 
@@ -15,7 +15,7 @@ export const shopHub: CaseStudy = {
 
   screenshots: [
     {
-      title: "Storefront",
+      title: "Marketplace Storefront",
       image: "/case-study/projects/shophub/storefront.webp",
     },
 
@@ -25,20 +25,22 @@ export const shopHub: CaseStudy = {
     },
 
     {
-      title: "Admin Panel",
-      image: "/case-study/projects/shophub/admin-panel.webp",
-    },
-
-    {
       title: "Product Management",
       image: "/case-study/projects/shophub/products.webp",
     },
+
+    {
+      title: "Admin Dashboard",
+      image: "/case-study/projects/shophub/admin-panel.webp",
+    },
   ],
+
+  liveUrl: "https://shophub.zya.me/",
 
   githubUrl: "https://github.com/thappamkkumar/shophub",
 
   overview:
-    "ShopHub is a multi-vendor e-commerce platform that allows multiple vendors to manage products, process orders, and sell through a shared marketplace. The platform includes vendor management, product catalog management, order processing, payments, and administrative controls.",
+    "ShopHub is a multi-vendor e-commerce marketplace that allows multiple vendors to sell products through a shared platform. Vendors can manage products, inventory, and orders independently while administrators maintain control over the marketplace. The platform includes vendor dashboards, customer accounts, order management, product catalogs, and centralized administration.",
 
   technologies: [
     "Laravel",
@@ -62,20 +64,20 @@ export const shopHub: CaseStudy = {
 
     {
       label: "Architecture",
-      value: "Multi Vendor",
+      value: "Marketplace",
     },
 
     {
       label: "Status",
-      value: "Completed",
+      value: "Deployed",
     },
   ],
 
   problem:
-    "Traditional online stores are often limited to a single seller. Building a marketplace where multiple vendors can manage their own products, orders, and inventory requires proper access control, product management workflows, and centralized administration.",
+    "Traditional online stores are limited to a single seller. Building a marketplace requires multiple vendors to independently manage products, inventory, and orders while administrators maintain overall platform control. ShopHub was built to provide a structured marketplace where vendors and customers can interact through a single platform.",
 
   role:
-    "Designed and developed the complete platform including storefront development, vendor management, product management, order processing, payment workflows, database design, and administration features.",
+    "Designed and developed the complete marketplace including storefront development, vendor dashboards, product management, order processing, authentication, database architecture, and administration tools.",
 
   architecture: {
     layers: [
@@ -101,10 +103,11 @@ export const shopHub: CaseStudy = {
         items: [
           "Products",
           "Vendors",
+          "Customers",
           "Orders",
           "Payments",
-          "Admin Panel",
-          "Customers",
+          "Vendor Dashboard",
+          "Admin Dashboard",
         ],
       },
 
@@ -127,7 +130,7 @@ export const shopHub: CaseStudy = {
       {
         title: "Infrastructure",
         items: [
-          "Local Hosting",
+          "Shared Hosting",
           "File Storage",
         ],
       },
@@ -136,21 +139,27 @@ export const shopHub: CaseStudy = {
 
   systems: [
     {
-      title: "Product Catalog",
+      title: "Marketplace Storefront",
       content:
-        "Vendors can create, update, and manage product listings with categories, pricing, images, and inventory information.",
+        "Customers can browse products from multiple vendors through a unified shopping experience.",
     },
 
     {
-      title: "Vendor Management",
+      title: "Vendor Dashboard",
       content:
-        "Dedicated vendor accounts allow sellers to manage products, monitor orders, and track marketplace activity.",
+        "Dedicated vendor dashboards allow sellers to manage products, inventory, orders, and marketplace activity independently.",
+    },
+
+    {
+      title: "Product Management",
+      content:
+        "Vendors can create, update, and organize products with categories, pricing, images, and stock information.",
     },
 
     {
       title: "Order Management",
       content:
-        "Customers can place orders while vendors and administrators can track and manage order lifecycles.",
+        "Customers can place orders while vendors and administrators track and manage order lifecycles.",
     },
 
     {
@@ -162,13 +171,7 @@ export const shopHub: CaseStudy = {
     {
       title: "Admin Dashboard",
       content:
-        "Centralized management system for vendors, products, users, orders, and marketplace operations.",
-    },
-
-    {
-      title: "Search & Filtering",
-      content:
-        "Product discovery through category browsing, filtering, and search functionality.",
+        "Centralized administration for vendors, products, customers, orders, and marketplace operations.",
     },
   ],
 
@@ -177,17 +180,17 @@ export const shopHub: CaseStudy = {
       title: "Multi-Role Authorization",
 
       problem:
-        "Different users such as administrators, vendors, and customers required separate permissions and workflows.",
+        "Administrators, vendors, and customers required different permissions and workflows throughout the platform.",
 
       solution:
-        "Implemented role-based access control to ensure each user type could only access relevant functionality.",
+        "Implemented role-based access control to ensure users only access features and resources relevant to their role.",
     },
 
     {
       title: "Vendor Product Ownership",
 
       problem:
-        "Products and orders needed to remain isolated between vendors while still operating inside a shared marketplace.",
+        "Products and orders needed to remain isolated between vendors while operating inside a shared marketplace.",
 
       solution:
         "Designed database relationships and ownership rules to securely separate vendor resources.",
@@ -197,43 +200,43 @@ export const shopHub: CaseStudy = {
       title: "Order Processing Workflow",
 
       problem:
-        "Managing customer orders across multiple vendors required consistent order tracking and status updates.",
+        "Managing customer orders across multiple vendors required consistent order tracking and status management.",
 
       solution:
-        "Created centralized order management workflows for customers, vendors, and administrators.",
+        "Created centralized order workflows for customers, vendors, and administrators.",
     },
 
     {
-      title: "Product Search & Filtering",
+      title: "Marketplace Product Discovery",
 
       problem:
-        "Large product catalogs become difficult to navigate without effective filtering and search mechanisms.",
+        "Large product catalogs become difficult to navigate without proper search and filtering mechanisms.",
 
       solution:
-        "Implemented category-based filtering and search functionality to improve product discovery.",
+        "Implemented category-based navigation, filtering, and search functionality to improve product discovery.",
     },
   ],
 
   achievements: [
     "Built a complete multi-vendor marketplace platform",
-    "Implemented vendor-specific product management",
-    "Developed role-based authentication and authorization",
-    "Created centralized order management workflows",
+    "Implemented separate admin, vendor, and customer workflows",
+    "Developed vendor-specific dashboards and product management",
+    "Created centralized marketplace administration",
+    "Built product, order, and inventory management systems",
     "Designed relational database architecture",
-    "Built product search and filtering functionality",
-    "Developed vendor and admin dashboards",
-    "Implemented marketplace management features",
+    "Implemented product search and filtering",
+    "Deployed the marketplace for public access",
   ],
 
   deployment: [
-    "Completed full-stack marketplace implementation",
-    "Built as a portfolio and learning project",
-    "Demonstrates multi-vendor commerce architecture",
+    "Deployed on shared hosting",
+    "Integrated MySQL database and file storage",
+    "Implemented vendor, customer, and admin workflows",
   ],
 
   outcomes: [
-    "Gained experience building large CRUD-based applications.",
-    "Learned marketplace architecture and role-based system design.",
-    "Implemented product, order, vendor, and customer workflows.",
+    "Successfully developed a multi-vendor marketplace architecture.",
+    "Implemented vendor, customer, and administrator workflows.",
+    "Gained experience building role-based commerce platforms and marketplace systems.",
   ],
 };

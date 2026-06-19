@@ -20,8 +20,8 @@ export const styleLoop: CaseStudy = {
     },
 
     {
-      title: "Product Catalog",
-      image: "/case-study/projects/styleloop/products.webp",
+      title: "Product Details",
+      image: "/case-study/projects/styleloop/product-details.webp",
     },
 
     {
@@ -35,11 +35,12 @@ export const styleLoop: CaseStudy = {
     },
   ],
 
-  githubUrl:
-    "https://github.com/thappamkkumar/styleloop",
+  liveUrl: "https://styleloop.page.gd/",
+
+  githubUrl: "https://github.com/thappamkkumar/styleloop",
 
   overview:
-    "StyleLoop is a fashion-focused e-commerce platform where customers can browse products, manage shopping carts, place orders, and track purchases. The platform includes product management, inventory control, order processing, authentication, and administrative tools.",
+    "StyleLoop is a single-vendor fashion e-commerce platform that enables customers to browse products, manage shopping carts, place orders, and track purchases. The platform includes product management, inventory control, customer accounts, and an administrative dashboard for managing store operations.",
 
   technologies: [
     "Laravel",
@@ -68,15 +69,15 @@ export const styleLoop: CaseStudy = {
 
     {
       label: "Status",
-      value: "Completed",
+      value: "Deployed",
     },
   ],
 
   problem:
-    "Many small businesses need an online storefront to manage products, process customer orders, and handle inventory without relying on third-party marketplace platforms. StyleLoop was created as a complete e-commerce solution for managing online sales and operations.",
+    "Small businesses need an online platform to showcase products, manage inventory, process orders, and serve customers efficiently. StyleLoop was built as a complete e-commerce solution that provides both customer-facing shopping experiences and administrative management tools.",
 
   role:
-    "Designed and developed the entire platform including customer-facing storefronts, product management, authentication, shopping cart workflows, order processing, database design, and administration features.",
+    "Designed and developed the entire platform including frontend interfaces, backend APIs, database design, authentication, shopping cart workflows, order processing, inventory management, and administration features.",
 
   architecture: {
     layers: [
@@ -127,7 +128,7 @@ export const styleLoop: CaseStudy = {
       {
         title: "Infrastructure",
         items: [
-          "Local Hosting",
+          "Shared Hosting",
           "File Storage",
         ],
       },
@@ -138,7 +139,7 @@ export const styleLoop: CaseStudy = {
     {
       title: "Product Catalog",
       content:
-        "Browse products with categories, pricing, descriptions, and product images.",
+        "Browse products with categories, pricing, descriptions, product images, and detailed product information.",
     },
 
     {
@@ -168,7 +169,7 @@ export const styleLoop: CaseStudy = {
     {
       title: "Admin Dashboard",
       content:
-        "Centralized management for products, orders, customers, and store operations.",
+        "Centralized management for products, orders, customers, inventory, and store operations.",
     },
   ],
 
@@ -177,63 +178,63 @@ export const styleLoop: CaseStudy = {
       title: "Shopping Cart Workflow",
 
       problem:
-        "Maintaining cart state while allowing customers to modify quantities and products before checkout.",
+        "Maintaining cart state while allowing customers to update quantities and manage products before checkout.",
 
       solution:
-        "Implemented session-based cart management with dynamic cart updates.",
+        "Implemented session-based cart management with dynamic cart updates and checkout validation.",
     },
 
     {
       title: "Order Processing",
 
       problem:
-        "Managing order creation, status updates, and purchase tracking across the application.",
+        "Managing order creation, order status updates, and customer purchase tracking.",
 
       solution:
-        "Created a structured order workflow from checkout through fulfillment.",
+        "Built a structured order workflow covering checkout, order creation, and order management.",
     },
 
     {
       title: "Inventory Management",
 
       problem:
-        "Preventing inventory inconsistencies while products are being purchased.",
+        "Preventing inventory inconsistencies while products are being purchased by customers.",
 
       solution:
-        "Integrated inventory validation and stock updates during order processing.",
+        "Integrated inventory validation and stock updates throughout the order lifecycle.",
     },
 
     {
       title: "Product Search & Filtering",
 
       problem:
-        "Helping customers quickly find relevant products within a growing catalog.",
+        "Helping customers quickly discover products within a growing catalog.",
 
       solution:
-        "Implemented category-based navigation and filtering features.",
+        "Implemented category-based navigation, filtering, and search functionality.",
     },
   ],
 
   achievements: [
     "Built a complete single-vendor e-commerce platform",
-    "Implemented shopping cart and checkout workflows",
-    "Developed order management functionality",
+    "Implemented customer authentication and account management",
+    "Developed shopping cart and checkout workflows",
     "Created product and inventory management systems",
-    "Built customer authentication and account management",
+    "Built order tracking and management functionality",
     "Designed relational database architecture",
     "Implemented product search and filtering",
-    "Developed an admin management dashboard",
+    "Deployed the application for public access",
   ],
 
   deployment: [
-    "Completed full-stack e-commerce implementation",
-    "Built as a portfolio and learning project",
-    "Demonstrates end-to-end commerce workflows",
+    "Deployed on shared hosting",
+    "Integrated MySQL database and file storage",
+    "Implemented product, cart, and order workflows",
   ],
 
   outcomes: [
-    "Gained experience building complete e-commerce systems.",
-    "Implemented customer, product, and order management workflows.",
-    "Strengthened backend architecture and database design skills.",
+    "Successfully built a complete e-commerce application from scratch.",
+    "Gained experience with customer, product, and order management systems.",
+    "Strengthened backend development and database design skills.",
   ],
 };
