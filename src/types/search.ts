@@ -2,18 +2,21 @@ export type SearchItemType =
   | "skill"
   | "project"
   | "experience"
-  | "page";
+  | "contact"
+  | "info";
 
 export interface SearchItem {
   id: string;
 
-  title: string;
-
-  description: string;
-
   type: SearchItemType;
 
-  href: string;
+  title: string;
+
+  description?: string;
+
+  value?: string;
+
+  href?: string;
 
   keywords: string[];
 }

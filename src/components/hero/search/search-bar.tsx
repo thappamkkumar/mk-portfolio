@@ -20,16 +20,11 @@ export default function SearchBar() {
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   const [query, setQuery] = useState("");
-  const [activeIndex, setActiveIndex] = useState(-1);
 
   const results = useMemo(
     () => searchPortfolio(query),
     [query]
   );
-
-  useEffect(() => {
-    setActiveIndex(-1);
-  }, [query]);
 
   useEffect(() => {
     const handleClickOutside = (
@@ -42,7 +37,6 @@ export default function SearchBar() {
         )
       ) {
         setQuery("");
-        setActiveIndex(-1);
       }
     };
 
@@ -63,52 +57,13 @@ export default function SearchBar() {
     router.push(href);
 
     setQuery("");
-    setActiveIndex(-1);
   };
 
   const handleKeyDown = (
     e: React.KeyboardEvent<HTMLInputElement>
   ) => {
-    if (!results.length) return;
-
-    switch (e.key) {
-      case "ArrowDown":
-        e.preventDefault();
-
-        setActiveIndex((prev) =>
-          prev < results.length - 1
-            ? prev + 1
-            : 0
-        );
-
-        break;
-
-      case "ArrowUp":
-        e.preventDefault();
-
-        setActiveIndex((prev) =>
-          prev > 0
-            ? prev - 1
-            : results.length - 1
-        );
-
-        break;
-
-      case "Escape":
-        setQuery("");
-        setActiveIndex(-1);
-        break;
-
-      case "Enter":
-        if (activeIndex >= 0) {
-          e.preventDefault();
-
-          navigateToResult(
-            results[activeIndex].href
-          );
-        }
-
-        break;
+    if (e.key === "Escape") {
+      setQuery("");
     }
   };
 
@@ -203,7 +158,6 @@ export default function SearchBar() {
       <SearchResults
         query={query}
         results={results}
-        activeIndex={activeIndex}
         onSelect={navigateToResult}
       />
 
