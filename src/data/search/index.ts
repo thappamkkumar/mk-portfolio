@@ -52,6 +52,7 @@ export const SEARCH_INDEX: SearchItem[] = [
       "jammu",
       "kashmir",
       "remote",
+      "contact",
     ],
   },
 
@@ -67,6 +68,7 @@ export const SEARCH_INDEX: SearchItem[] = [
       "network",
       "professional",
       "resume",
+      "contact",
     ],
   },
 
@@ -82,6 +84,7 @@ export const SEARCH_INDEX: SearchItem[] = [
       "source code",
       "code",
       "projects",
+      "contact",
     ],
   },
 
@@ -97,7 +100,7 @@ export const SEARCH_INDEX: SearchItem[] = [
   value:
     "2.5+ Years (Freelance & Personal Projects)",
   keywords: [
-     "freelance",
+    "freelance",
     "client",
     "client project",
     "real client",
@@ -342,7 +345,7 @@ export const SEARCH_INDEX: SearchItem[] = [
 
 {
   id: "react",
-  type: "skill",
+  type: "skills",
   title: "React",
   description:
     "Building modern SPA applications with hooks, context, routing and reusable components.",
@@ -354,13 +357,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "context api",
     "spa",
     "frontend",
-    "component",
+    "component", 
   ],
 },
 
 {
   id: "nextjs",
-  type: "skill",
+  type: "skills",
   title: "Next.js",
   description:
     "App Router, Server Components, API Routes, SSR, SSG and ISR.",
@@ -372,13 +375,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "server component",
     "ssr",
     "ssg",
-    "isr",
+    "isr", 
   ],
 },
 
 {
   id: "typescript",
-  type: "skill",
+  type: "skills",
   title: "TypeScript",
   description:
     "Type-safe JavaScript for scalable frontend and backend applications.",
@@ -388,13 +391,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "ts",
     "typing",
     "generics",
-    "interfaces",
+    "interfaces", 
   ],
 },
 
 {
   id: "javascript",
-  type: "skill",
+  type: "skills",
   title: "JavaScript",
   description:
     "Core language for modern frontend and backend web development.",
@@ -405,13 +408,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "es6",
     "dom",
     "async",
-    "promise",
+    "promise", 
   ],
 },
 
 {
   id: "laravel",
-  type: "skill",
+  type: "skills",
   title: "Laravel",
   description:
     "REST APIs, authentication, database management and scalable backend systems.",
@@ -422,13 +425,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "api",
     "sanctum",
     "backend",
-    "mvc",
+    "mvc", 
   ],
 },
 
 {
   id: "php",
-  type: "skill",
+  type: "skills",
   title: "PHP",
   description:
     "Backend development, APIs, authentication and database-driven applications.",
@@ -437,13 +440,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "php",
     "backend",
     "server",
-    "web",
+    "web", 
   ],
 },
 
 {
   id: "mysql",
-  type: "skill",
+  type: "skills",
   title: "MySQL",
   description:
     "Relational database design, queries, optimization and data management.",
@@ -453,13 +456,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "sql",
     "database",
     "query",
-    "relational",
+    "relational", 
   ],
 },
 
 {
   id: "postgresql",
-  type: "skill",
+  type: "skills",
   title: "PostgreSQL",
   description:
     "Advanced SQL database used in modern scalable applications.",
@@ -468,13 +471,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "postgresql",
     "postgres",
     "sql",
-    "database",
+    "database", 
   ],
 },
 
 {
   id: "tailwind",
-  type: "skill",
+  type: "skills",
   title: "Tailwind CSS",
   description:
     "Utility-first CSS framework for fast and consistent UI development.",
@@ -484,13 +487,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "tailwindcss",
     "css",
     "ui",
-    "responsive",
+    "responsive", 
   ],
 },
 
 {
   id: "bootstrap",
-  type: "skill",
+  type: "skills",
   title: "Bootstrap",
   description:
     "Responsive UI framework for rapid frontend development.",
@@ -499,13 +502,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "bootstrap",
     "css",
     "responsive",
-    "frontend",
+    "frontend", 
   ],
 },
 
 {
   id: "git",
-  type: "skill",
+  type: "skills",
   title: "Git",
   description:
     "Version control, branching, collaboration and deployment workflows.",
@@ -515,13 +518,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "github",
     "version control",
     "branch",
-    "merge",
+    "merge", 
   ],
 },
 
 {
   id: "aws",
-  type: "skill",
+  type: "skills",
   title: "AWS",
   description:
     "Cloud hosting, deployment and infrastructure management.",
@@ -530,13 +533,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "aws",
     "cloud",
     "hosting",
-    "deployment",
+    "deployment", 
   ],
 },
 
 {
   id: "webrtc",
-  type: "skill",
+  type: "skills",
   title: "WebRTC",
   description:
     "Real-time audio and video communication between browsers.",
@@ -546,13 +549,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "video call",
     "audio call",
     "peer connection",
-    "rtc",
+    "rtc", 
   ],
 },
 
 {
   id: "websocket",
-  type: "skill",
+  type: "skills",
   title: "WebSockets",
   description:
     "Real-time communication using Laravel Reverb and Pusher.",
@@ -563,7 +566,7 @@ export const SEARCH_INDEX: SearchItem[] = [
     "pusher",
     "real time",
     "chat",
-    "broadcast",
+    "broadcast", 
   ],
 },
 
@@ -578,12 +581,12 @@ export const SEARCH_INDEX: SearchItem[] = [
   {
   id: "skillvilla",
 
-  type: "project",
+  type: "projects",
 
   title: "SkillVilla",
 
   description:
-    "Personal Project • Professional social platform for developers and professionals.",
+    "Personal Project • Professional media platform for professionals.",
 
   href: "/projects/skillvilla",
 
@@ -623,8 +626,7 @@ export const SEARCH_INDEX: SearchItem[] = [
     "portfolio",
     "workfolio",
     "problems",
-    "feed",
-    "notifications",
+    "feed", 
     "real time",
 
     // concepts
@@ -637,7 +639,7 @@ export const SEARCH_INDEX: SearchItem[] = [
 {
   id: "styleloop",
 
-  type: "project",
+  type: "projects",
 
   title: "StyleLoop",
 
@@ -688,7 +690,7 @@ export const SEARCH_INDEX: SearchItem[] = [
 {
   id: "shophub",
 
-  type: "project",
+  type: "projects",
 
   title: "ShopHub",
 
@@ -751,12 +753,12 @@ export const SEARCH_INDEX: SearchItem[] = [
 {
   id: "vk-salon",
 
-  type: "project",
+  type: "projects",
 
   title: "VK Salon",
 
   description:
-    "Client Project • Modern salon website built with Next.js, TypeScript and PostgreSQL.",
+    "Client Project • Modern salon website for showcase and booking.",
 
   href: "/projects/vk-salon",
 
@@ -781,6 +783,10 @@ export const SEARCH_INDEX: SearchItem[] = [
     "appointment",
     "booking",
     "services",
+    "reviews",
+    "posts",
+    "styles",
+
 
     // technologies
     "nextjs",
@@ -798,20 +804,21 @@ export const SEARCH_INDEX: SearchItem[] = [
     "case study",
     "production project",
     "client work",
+    "full stack",
   ],
 },
 
 {
   id: "kundal-makeover",
 
-  type: "project",
+  type: "projects",
 
   title: "Kundal Makeover",
 
   description:
     "Client Project • Beauty and salon website focused on services, branding and customer engagement.",
 
-  href: "/projects/kundal-makeover",
+  href: "/projects#kundal-makeover",
 
   keywords: [
     // project
@@ -855,14 +862,14 @@ export const SEARCH_INDEX: SearchItem[] = [
 {
   id: "shivam-electro-tools",
 
-  type: "project",
+  type: "projects",
 
   title: "Shivam Electro Tools",
 
-  description:
-    "Client Project • Business website for industrial, electrical and hardware tools.",
+  description: 
+  "Client Project • Single-vendor ecommerce platform for industrial and electrical tools.",
 
-  href: "/projects/shivam-electro-tools",
+  href: "/projects#shivam-electro-tools",
 
   keywords: [
     // project
@@ -886,7 +893,16 @@ export const SEARCH_INDEX: SearchItem[] = [
     "company website",
     "catalog",
     "products",
-
+     // features
+    "product catalog",
+    "cart",
+    "checkout",
+    "orders",
+    "customers",
+    "inventory",
+    "dashboard",
+    "admin panel",
+    "product management",
     // technologies
       
     "javascript",
@@ -894,11 +910,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "laravel",
     "mysql",
     "bootstrap",
+    'ajax',
 
     // portfolio
     "case study",
     "production project",
     "client work",
+    "full stack",
   ],
 },
 
@@ -912,14 +930,14 @@ export const SEARCH_INDEX: SearchItem[] = [
 {
   id: "coaching-center-website",
 
-  type: "project",
+  type: "projects",
 
   title: "Coaching Center Website",
 
   description:
     "Personal Project • Educational institute landing page built with Next.js and Tailwind CSS.",
 
-  href: "/projects/coaching-center-website",
+  href: "/projects#coaching-center-website",
 
   keywords: [
     // project
@@ -959,14 +977,14 @@ export const SEARCH_INDEX: SearchItem[] = [
 {
   id: "gym-website",
 
-  type: "project",
+  type: "projects",
 
   title: "Gym Website",
 
   description:
     "Personal Project • Fitness and gym landing page built with Next.js and Tailwind CSS.",
 
-  href: "/projects/gym-website",
+  href: "/projects#gym-website",
 
   keywords: [
     // project
@@ -1011,12 +1029,14 @@ export const SEARCH_INDEX: SearchItem[] = [
 {
   id: "contact-card",
 
-  type: "project",
+  type: "projects",
 
   title: "Contact Card",
 
   description:
     "Archived Project • Contact management application with CRUD operations.",
+
+  href: "/projects#contact-card",
 
   keywords: [
     "contact card",
@@ -1029,6 +1049,7 @@ export const SEARCH_INDEX: SearchItem[] = [
     "react",
     "php",
     "mysql",
+    "sass ",
 
     "crud",
     "forms",
@@ -1043,12 +1064,14 @@ export const SEARCH_INDEX: SearchItem[] = [
 {
   id: "job-portal",
 
-  type: "project",
+  type: "projects",
 
   title: "Job Portal",
 
   description:
     "Archived Project • Recruitment and job listing platform.",
+
+  href: "/projects#job-portal",
 
   keywords: [
     "job portal",
@@ -1061,7 +1084,7 @@ export const SEARCH_INDEX: SearchItem[] = [
     "php",
     "mysql",
     "javascript",
-    "bootstrap",
+    "css",
 
     "candidate",
     "employer",
@@ -1076,12 +1099,14 @@ export const SEARCH_INDEX: SearchItem[] = [
 {
   id: "image-gallery",
 
-  type: "project",
+  type: "projects",
 
   title: "Image Gallery",
 
   description:
     "Archived Project • Responsive image gallery and photo browsing application.",
+
+  href: "/projects#image-galary",
 
   keywords: [
     "image gallery",
@@ -1107,12 +1132,14 @@ export const SEARCH_INDEX: SearchItem[] = [
 {
   id: "image-puzzle",
 
-  type: "project",
+  type: "projects",
 
   title: "Image Puzzle",
 
   description:
     "Archived Project • Interactive puzzle game built with JavaScript.",
+
+  href: "/projects#image-puzzle",
 
   keywords: [
     "image puzzle",
@@ -1121,7 +1148,8 @@ export const SEARCH_INDEX: SearchItem[] = [
     "interactive game",
 
     "javascript",
-    "react",
+    "html",
+    'css',
 
     "frontend",
     "logic",
@@ -1136,12 +1164,14 @@ export const SEARCH_INDEX: SearchItem[] = [
 {
   id: "calculator",
 
-  type: "project",
+  type: "projects",
 
   title: "Calculator",
 
   description:
     "Archived Project • Calculator application for arithmetic operations.",
+
+  href: "/projects#calculator",
 
   keywords: [
     "calculator",
@@ -1151,6 +1181,7 @@ export const SEARCH_INDEX: SearchItem[] = [
 
     "javascript",
     "react",
+    "sass ",
 
     "frontend",
     "logic",

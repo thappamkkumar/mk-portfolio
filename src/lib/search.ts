@@ -1,4 +1,5 @@
 import { SEARCH_INDEX } from "@/data/search/index";
+
 import type {
   SearchItem,
   SearchItemType,
@@ -6,65 +7,83 @@ import type {
 
 export const SEARCH_GROUP_ORDER: SearchItemType[] =
   [
-    "skill",
+    "skills",
     "experience",
-    "project",
+    "projects",
     "contact",
     "info",
   ];
 
-function calculateSearchScore(
-  item: SearchItem,
-  query: string
-) {
-  let score = 0;
+const CATEGORY_MAP: Record<
+  string,
+  SearchItemType
+> = {
+  skill: "skills",
+  skills: "skills",
 
-  const title = item.title.toLowerCase();
- const description =
-  item.description?.toLowerCase() ?? "";
+  experience: "experience",
+  experiences: "experience",
 
-  if (title === query) score += 500;
-  if (title.startsWith(query)) score += 200;
-  if (title.includes(query)) score += 100;
-  if (description.includes(query)) {
-    score += 50;
-  }
+  project: "projects",
+  projects: "projects",
 
-  if (
-    item.keywords.some((keyword) =>
-      keyword.toLowerCase().includes(query)
-    )
-  ) {
-    score += 25;
-  }
+  contact: "contact",
+  contacts: "contact",
 
-  return score;
-}
+  info: "info",
+  information: "info",
+};
 
-
-//for search
+// Search portfolio
 export function searchPortfolio(
   query: string
 ) {
   const q = query.trim().toLowerCase();
 
-  if (!q) return [];
+  if (!q) {
+    return [];
+  }
 
-  return SEARCH_INDEX.map((item) => ({
-    item,
-    score: calculateSearchScore(
-      item,
-      q
-    ),
-  }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .map((entry) => entry.item);
+  // Category intent detection
+  const targetType =
+    CATEGORY_MAP[q];
+
+  if (targetType) {
+    return SEARCH_INDEX.filter(
+      (item) =>
+        item.type === targetType
+    );
+  }
+
+  // Normal search
+  return SEARCH_INDEX.filter((item) => {
+    const title =
+      item.title.toLowerCase();
+
+    const description =
+      item.description?.toLowerCase() ??
+      "";
+
+    const value =
+      item.value?.toLowerCase() ?? "";
+
+    const keywords = item.keywords.map(
+      (keyword) =>
+        keyword.toLowerCase()
+    );
+
+    return (
+      title.includes(q) ||
+      description.includes(q) ||
+      value.includes(q) ||
+      keywords.some((keyword) =>
+        keyword.includes(q)
+      )
+    );
+  });
 }
 
-
-
-//for group data after search
+// Group search results
 export function groupSearchResults(
   results: SearchItem[]
 ) {

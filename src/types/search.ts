@@ -1,6 +1,6 @@
 export type SearchItemType =
-  | "skill"
-  | "project"
+  | "skills"
+  | "projects"
   | "experience"
   | "contact"
   | "info";

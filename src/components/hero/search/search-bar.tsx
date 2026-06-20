@@ -78,7 +78,7 @@ export default function SearchBar() {
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className="
+        className={`
           group
           relative
           flex
@@ -98,10 +98,10 @@ export default function SearchBar() {
           focus-within:border-emerald-500/40
           focus-within:bg-zinc-900/80
           focus-within:shadow-[0_0_40px_rgba(16,185,129,0.08)]
-        "
+        `}
       >
         <Search
-          className="
+          className={`
             h-5
             w-5
             shrink-0
@@ -109,7 +109,7 @@ export default function SearchBar() {
             transition-colors
             duration-300
             group-focus-within:text-emerald-400
-          "
+          `}
         />
 
         <input
@@ -120,7 +120,7 @@ export default function SearchBar() {
           }
           onKeyDown={handleKeyDown}
           placeholder="Search React, Laravel, SkillVilla..."
-          className="
+          className={`
             h-full
             w-full
             bg-transparent
@@ -129,11 +129,11 @@ export default function SearchBar() {
             outline-none
             placeholder:text-zinc-500
             sm:text-base
-          "
+          `}
         />
 
         <div
-          className="
+          className={`
             hidden
             shrink-0
             items-center
@@ -148,7 +148,7 @@ export default function SearchBar() {
             text-zinc-500
             backdrop-blur
             lg:flex
-          "
+          `}
         >
           <span className="h-2 w-2 rounded-full bg-emerald-400" />
           Try &rdquo;React&ldquo;
@@ -161,17 +161,8 @@ export default function SearchBar() {
         onSelect={navigateToResult}
       />
 
-      <p
-        className="
-          mt-3
-          text-center
-          text-xs
-          text-zinc-600
-          lg:hidden
-        "
-      >
-        Try searching: React, Laravel, SkillVilla
-      </p>
+       
+     
     </div>
   );
 }

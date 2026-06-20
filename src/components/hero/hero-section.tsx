@@ -1,8 +1,7 @@
  
 
 import ActionCards from "./action-cards";
-import SearchBar from "./search/search-bar";
-import TrendingTags from "./trending-tags";
+import SearchBar from "./search/search-bar"; 
 import ProjectStrip from "./project-strip/project-strip";
 
 const HeroSection = () => {
@@ -104,19 +103,27 @@ const HeroSection = () => {
         {/* Search */}
         <div className="mt-10 w-full">
           <SearchBar />
+           <p
+            className="
+              mt-3 
+              text-xs
+              text-zinc-600
+            "
+          >
+            Search skills, projects, experience, contact details, or technologies.
+          </p> 
+          <p
+            className="
+              mt-1 
+              text-xs
+              text-zinc-600
+            "
+            >
+            Examples: React, SkillVilla, Laravel, Email, Freelance.
+          </p>
         </div>
 
-        {/* Popular Searches */}
-        <div
-          className="
-            mt-8
-            
-          "
-        >
-           
-
-          <TrendingTags />
-        </div>
+         
 
         {/* Projects */}
         <div className="mt-12 w-full">

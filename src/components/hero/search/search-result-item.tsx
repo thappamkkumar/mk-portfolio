@@ -22,10 +22,8 @@ export default function SearchResultItem({
 
         px-4
         py-2.5
-
-        transition-colors
-
-        hover:bg-white/5
+ 
+ 
       "
     >
       <div className="flex w-full items-center gap-3">
@@ -46,7 +44,7 @@ export default function SearchResultItem({
             onClick={() =>
               onSelect(result.href!)
             }
-            className="
+            className={`
               flex
               shrink-0
               items-center
@@ -66,7 +64,7 @@ export default function SearchResultItem({
               hover:bg-emerald-400/5
               hover:text-white
               
-            "
+            `}
           >
             <Eye size={14} />
 
