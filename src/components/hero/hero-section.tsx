@@ -1,7 +1,7 @@
  
 
 import ActionCards from "./action-cards";
-import SearchBar from "./search-bar";
+import SearchBar from "./search/search-bar";
 import TrendingTags from "./trending-tags";
 import ProjectStrip from "./project-strip/project-strip";
 
