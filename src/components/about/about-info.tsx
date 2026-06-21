@@ -46,7 +46,7 @@ export default function AboutInfoCard({
         rounded-3xl
         border
         border-white/10
-        bg-white/[0.02]
+        bg-white/2
         ${className}
       `}
     >
@@ -86,7 +86,7 @@ export default function AboutInfoCard({
                 py-5
                 transition-colors
                 duration-300
-                hover:bg-white/[0.02]
+                hover:bg-white/2
 
                 ${
                   index !==

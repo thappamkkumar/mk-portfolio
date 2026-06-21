@@ -25,7 +25,7 @@ export default function ContactInfo() {
           rounded-3xl
           border
           border-white/10
-          bg-white/[0.02]
+          bg-white/2
         "
       >
         <div className="border-b border-white/10 p-5">
@@ -66,7 +66,7 @@ export default function ContactInfo() {
           rounded-3xl
           border
           border-white/10
-          bg-white/[0.02]
+          bg-white/2
           p-6
         "
       >

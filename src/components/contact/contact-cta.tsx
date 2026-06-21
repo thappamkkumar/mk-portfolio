@@ -11,7 +11,7 @@ export default function ContactCTA() {
         rounded-3xl
         border
         border-white/10
-        bg-white/[0.02]
+        bg-white/2
         p-8
         md:p-12
       "
@@ -35,7 +35,7 @@ export default function ContactCTA() {
               text-emerald-400
             "
           >
-            Let's Work Together
+            Let&apos;s Work Together
           </p>
 
           <h2
@@ -58,11 +58,11 @@ export default function ContactCTA() {
               text-white/60
             "
           >
-            I'm currently available for full-time
+            I&apos;m currently available for full-time
             opportunities, freelance projects,
             and collaborations. If you have an
             idea, a role, or a product to build,
-            I'd be happy to discuss it.
+            I&apos;d be happy to discuss it.
           </p>
         </div>
 

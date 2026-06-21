@@ -1,6 +1,6 @@
  
 import CursorEffect from "@/components/layout/cursor-effect";
-import CaseStudyHeader from "@/components/case-study/case-study-header";
+import SecondaryHeader from "@/components/layout/secondary-header";
 import Footer from "@/components/layout/footer";
 
 export default function CaseStudyLayout({
@@ -10,7 +10,7 @@ export default function CaseStudyLayout({
 }) {
   return (
     <>
-      <CaseStudyHeader />
+      <SecondaryHeader />
       <CursorEffect />
       <main
         className="

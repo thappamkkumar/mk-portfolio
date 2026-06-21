@@ -90,7 +90,7 @@ export default function Footer() {
               mt-8
               h-px
               w-24
-              bg-gradient-to-r
+              bg-linear-to-r
               from-transparent
               via-white/20
               to-transparent

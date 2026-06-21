@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-export default function CaseStudyHeader() {
+export default function SecondaryHeader() {
   const router = useRouter();
 
   return (
@@ -13,6 +13,7 @@ export default function CaseStudyHeader() {
         <button
           onClick={() => router.back()}
           className="
+            cursor-pointer
             flex
             items-center
             gap-2

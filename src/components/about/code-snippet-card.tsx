@@ -34,7 +34,7 @@ export default function CodeSnippetCard({
         rounded-3xl
         border
         border-white/10
-        bg-white/[0.02]
+        bg-white/2
         p-6
         ${className}
       `}

@@ -19,7 +19,7 @@ export default function ExperienceGallery({
         rounded-3xl
         border
         border-white/10
-        bg-white/[0.02]
+        bg-white/2
         p-4
         md:p-5
       "
@@ -31,12 +31,12 @@ export default function ExperienceGallery({
             className="
               group
               relative
-              aspect-[4/3]
+              aspect-4/3
               overflow-hidden
               rounded-2xl
               border
               border-white/10
-              bg-white/[0.03]
+              bg-white/3
               transition-all
               duration-300
               hover:border-emerald-400/20
@@ -72,7 +72,7 @@ export default function ExperienceGallery({
                 absolute
                 inset-x-0
                 bottom-0
-                bg-gradient-to-t
+                bg-linear-to-t
                 from-black
                 via-black/60
                 to-transparent

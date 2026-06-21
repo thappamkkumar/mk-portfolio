@@ -1,5 +1,5 @@
 import CursorEffect from "@/components/layout/cursor-effect";
-import TopNavbar from "@/components/layout/top-navbar";
+import MainHeader from "@/components/layout/main-header";
 import Footer from "@/components/layout/footer";
 
 export default function MainLayout({
@@ -9,7 +9,7 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <TopNavbar />
+      <MainHeader />
 
       <main
         className="

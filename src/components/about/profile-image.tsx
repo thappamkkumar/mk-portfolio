@@ -18,10 +18,10 @@ export default function ProfileImage({
         rounded-3xl
         border
         border-white/10
-        bg-white/[0.02]
+        bg-white/2
 
-        min-h-[420px]
-        md:min-h-[520px]
+        min-h-105
+        md:min-h-130
         backdrop-blur-sm
       "
     >
@@ -43,7 +43,7 @@ export default function ProfileImage({
         className="
           absolute
           inset-0
-          bg-gradient-to-t
+          bg-linear-to-t
           from-black/50
           via-transparent
           to-transparent

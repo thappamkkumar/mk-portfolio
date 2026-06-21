@@ -21,12 +21,12 @@ export default function ContactLinkCard({
         rounded-3xl
         border
         border-white/10
-        bg-white/[0.02]
+        bg-white/2
         p-6
         transition-all
         duration-300
         hover:border-emerald-400/20
-        hover:bg-white/[0.03]
+        hover:bg-white/3
       "
     >
       <div className="flex h-full flex-col">

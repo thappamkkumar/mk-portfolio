@@ -13,7 +13,7 @@ const navItems = [
   { title: "Contact", link: "/contact" },
 ];
 
-export default function TopNavbar() {
+export default function MainHeader() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
