@@ -4,6 +4,7 @@ export type SkillLevel =
   | "familiar";
 
 export interface Skill {
+  id:string;
   name: string;
   level: SkillLevel;
 }

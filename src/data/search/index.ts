@@ -760,7 +760,7 @@ export const SEARCH_INDEX: SearchItem[] = [
   description:
     "Client Project • Modern salon website for showcase and booking.",
 
-  href: "/projects/vk-salon",
+  href: "/experience/vk-salon",
 
   keywords: [
     // project
@@ -818,7 +818,7 @@ export const SEARCH_INDEX: SearchItem[] = [
   description:
     "Client Project • Beauty and salon website focused on services, branding and customer engagement.",
 
-  href: "/projects#kundal-makeover",
+  href: "/experience#kundal-makeover",
 
   keywords: [
     // project
@@ -869,7 +869,7 @@ export const SEARCH_INDEX: SearchItem[] = [
   description: 
   "Client Project • Single-vendor ecommerce platform for industrial and electrical tools.",
 
-  href: "/projects#shivam-electro-tools",
+  href: "/experience#shivam-electro-tools",
 
   keywords: [
     // project

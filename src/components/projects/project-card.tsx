@@ -18,6 +18,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <article
+      id={project.id}
       className="
         border-b
         border-white/10

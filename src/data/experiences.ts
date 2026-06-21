@@ -45,7 +45,7 @@ export const experiences: Experience[] = [
   },
 
   {
-    id: "kundal",
+    id: "kundal-makeover",
 
     company: "Kundal Makeover",
 
@@ -87,7 +87,7 @@ export const experiences: Experience[] = [
 
   
   {
-    id: "shivam",
+    id: "shivam-electro-tools",
 
     company: "Shivam Electro Tools",
 

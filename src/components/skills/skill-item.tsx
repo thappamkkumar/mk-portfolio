@@ -18,6 +18,7 @@ export default function SkillItem({
   return (
     <li>
       <div
+        id={skill.id}
         className="
           inline-flex
           items-center

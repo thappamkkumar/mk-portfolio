@@ -20,6 +20,7 @@ export default function ExperienceItem({
 
   return (
     <article
+      id={experience.id}
       className="
         border-b
         border-white/10
