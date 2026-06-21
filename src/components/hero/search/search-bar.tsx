@@ -17,15 +17,48 @@ import SearchResults from "./search-results";
 export default function SearchBar() {
   const router = useRouter();
 
-  const wrapperRef = useRef<HTMLDivElement>(null);
+  const wrapperRef =
+    useRef<HTMLDivElement>(null);
 
-  const [query, setQuery] = useState("");
+  const [query, setQuery] =
+    useState(() => {
+      if (
+        typeof window === "undefined"
+      ) {
+        return "";
+      }
+
+      return (
+        sessionStorage.getItem(
+          "portfolio-search-query"
+        ) ?? ""
+      );
+    });
 
   const results = useMemo(
     () => searchPortfolio(query),
     [query]
   );
 
+  /**
+   * Persist query for current tab
+   */
+  useEffect(() => {
+    if (query.trim()) {
+      sessionStorage.setItem(
+        "portfolio-search-query",
+        query
+      );
+    } else {
+      sessionStorage.removeItem(
+        "portfolio-search-query"
+      );
+    }
+  }, [query]);
+
+  /**
+   * Clear on outside click
+   */
   useEffect(() => {
     const handleClickOutside = (
       event: MouseEvent
@@ -53,10 +86,10 @@ export default function SearchBar() {
     };
   }, []);
 
-  const navigateToResult = (href: string) => {
+  const navigateToResult = (
+    href: string
+  ) => {
     router.push(href);
-
-    setQuery("");
   };
 
   const handleKeyDown = (
@@ -67,12 +100,33 @@ export default function SearchBar() {
     }
   };
 
+  const handleCloseResults = () => {
+    setQuery("");
+
+    sessionStorage.removeItem(
+      "portfolio-search-query"
+    );
+  };
+
   return (
     <div
       ref={wrapperRef}
-      className="relative mx-auto w-full max-w-3xl"
+      className={`
+        relative
+        mx-auto
+        w-full
+        max-w-3xl
+      `}
     >
-      <div className="absolute inset-0 rounded-3xl bg-emerald-500/10 blur-3xl" />
+      <div
+        className={`
+          absolute
+          inset-0
+          rounded-3xl
+          bg-emerald-500/10
+          blur-3xl
+        `}
+      />
 
       <form
         onSubmit={(e) => {
@@ -150,19 +204,25 @@ export default function SearchBar() {
             lg:flex
           `}
         >
-          <span className="h-2 w-2 rounded-full bg-emerald-400" />
-          Try &rdquo;React&ldquo;
+          <span
+            className={`
+              h-2
+              w-2
+              rounded-full
+              bg-emerald-400
+            `}
+          />
+
+          Try &#34;React&#34;
         </div>
       </form>
-
+                     
       <SearchResults
         query={query}
         results={results}
         onSelect={navigateToResult}
+        onClose={handleCloseResults}
       />
-
-       
-     
     </div>
   );
 }
