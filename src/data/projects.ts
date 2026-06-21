@@ -169,7 +169,24 @@ export const projects: Project[] = [
     "Tailwind CSS",
   ],
 
-  images: [],
+  images: [
+  {
+    src: "/projects/coaching-center/home.png",
+    label: "Homepage",
+  },
+  {
+    src: "/projects/coaching-center/courses.png",
+    label: "Courses",
+  },
+  {
+    src: "/projects/coaching-center/faculty.png",
+    label: "Faculty",
+  },
+  {
+    src: "/projects/coaching-center/testimonials.png",
+    label: "Testimonials",
+  },
+],
 
   githubUrl:
     "https://github.com/thappamkkumar/education-coaching",
@@ -200,7 +217,24 @@ export const projects: Project[] = [
     "Tailwind CSS",
   ],
 
-  images: [],
+  images: [
+  {
+    src: "/projects/gym/home.png",
+    label: "Homepage",
+  },
+  {
+    src: "/projects/gym/programs.png",
+    label: "Programs",
+  },
+  {
+    src: "/projects/gym/gallery.png",
+    label: "Gallery",
+  },
+  {
+    src: "/projects/gym/testimonials.png",
+    label: "Testimonials",
+  },
+],
 
   githubUrl:
     "https://github.com/thappamkkumar/gym",
@@ -233,7 +267,24 @@ export const projects: Project[] = [
     "MySQL",
   ],
 
-  images: [],
+  images: [
+  {
+    src: "/projects/job-portal/jobs.png",
+    label: "Job Listings",
+  },
+  {
+    src: "/projects/job-portal/job-details.png",
+    label: "Job Details",
+  },
+  {
+    src: "/projects/job-portal/recruiter.png",
+    label: "Recruiter Dashboard",
+  },
+  {
+    src: "/projects/job-portal/admin.png",
+    label: "Admin Dashboard",
+  },
+],
 
   githubUrl:
     "https://github.com/thappamkkumar/job-portal",
@@ -264,7 +315,24 @@ export const projects: Project[] = [
     "MySQL",
   ],
 
-  images: [],
+ images: [
+  {
+    src: "/projects/contact-manager/list.png",
+    label: "Contacts List",
+  },
+  {
+    src: "/projects/contact-manager/add.png",
+    label: "Add Contact",
+  },
+  {
+    src: "/projects/contact-manager/details.png",
+    label: "Contact Details",
+  },
+  {
+    src: "/projects/contact-manager/login.png",
+    label: "Authentication",
+  },
+],
 
   githubUrl:
     "https://github.com/thappamkkumar/contact-card",
@@ -295,7 +363,24 @@ export const projects: Project[] = [
     "MySQL",
   ],
 
-  images: [],
+  images: [
+  {
+    src: "/projects/image-gallery/gallery.png",
+    label: "Gallery",
+  },
+  {
+    src: "/projects/image-gallery/category.png",
+    label: "Category View",
+  },
+  {
+    src: "/projects/image-gallery/upload.png",
+    label: "Image Upload",
+  },
+  {
+    src: "/projects/image-gallery/viewer.png",
+    label: "Image Viewer",
+  },
+],
 
   githubUrl:
     "https://github.com/thappamkkumar/image-gallery",
@@ -354,7 +439,24 @@ export const projects: Project[] = [
     "JavaScript",
   ],
 
-  images: [],
+  images: [
+    {
+      src: "/projects/image-puzzle/game.png",
+      label: "Puzzle Board",
+    },
+    {
+      src: "/projects/image-puzzle/easy.png",
+      label: "Easy Level",
+    },
+    {
+      src: "/projects/image-puzzle/medium.png",
+      label: "Medium Level",
+    },
+    {
+      src: "/projects/image-puzzle/completed.png",
+      label: "Completed Puzzle",
+    },
+  ],
 
   githubUrl:
     "https://github.com/thappamkkumar/image-puzzle",
@@ -386,7 +488,24 @@ export const projects: Project[] = [
     "MySQL",
   ],
 
-  images: [],
+  images: [
+  {
+    src: "/projects/auth/signup.png",
+    label: "Registration",
+  },
+  {
+    src: "/projects/auth/otp.png",
+    label: "OTP Verification",
+  },
+  {
+    src: "/projects/auth/image.png",
+    label: "Image Verification",
+  },
+  {
+    src: "/projects/auth/login.png",
+    label: "Login",
+  },
+],  
 
   githubUrl:
     "https://github.com/thappamkkumar/three-level-password-authentication/tree/main",
