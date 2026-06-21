@@ -1,5 +1,5 @@
 import CursorEffect from "@/components/layout/cursor-effect";
-import MainHeader from "@/components/layout/main-header";
+import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
 export default function MainLayout({
@@ -9,7 +9,7 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <MainHeader />
+      <Header />
 
       <main
         className="
