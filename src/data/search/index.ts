@@ -935,45 +935,31 @@ export const SEARCH_INDEX: SearchItem[] = [
   title: "Coaching Center Website",
 
   description:
-    "Personal Project • Educational institute landing page built with Next.js and Tailwind CSS.",
+    "Educational institute website showcasing courses, faculty and student achievements.",
 
   href: "/projects?project=coaching-center-website",
 
   keywords: [
-    // project
     "coaching center website",
-
-    // category
-    "personal project",
-
-    // business
-    "coaching center",
     "education",
     "academy",
     "institute",
     "student",
     "courses",
+    "faculty",
     "training",
-    "admission",
-    "classes",
 
-    // technologies
     "nextjs",
-    "next.js",
     "react",
     "typescript",
-    "tailwind",
     "tailwindcss",
 
-    // concepts
     "landing page",
-    "portfolio website",
     "business website",
     "responsive design",
-    "seo",
-    "frontend",
   ],
 },
+
 {
   id: "gym-website",
 
@@ -982,84 +968,34 @@ export const SEARCH_INDEX: SearchItem[] = [
   title: "Gym Website",
 
   description:
-    "Personal Project • Fitness and gym landing page built with Next.js and Tailwind CSS.",
+    "Fitness and gym website featuring programs, trainers and memberships.",
 
   href: "/projects?project=gym-website",
 
   keywords: [
-    // project
     "gym website",
-
-    // category
-    "personal project",
-
-    // business
-    "gym",
     "fitness",
     "workout",
     "health",
-    "training",
-    "bodybuilding",
-    "coach",
+    "trainer",
     "membership",
 
-    // technologies
     "nextjs",
-    "next.js",
     "react",
     "typescript",
-    "tailwind",
     "tailwindcss",
 
-    // concepts
     "landing page",
     "business website",
-    "responsive design",
-    "frontend",
-    "seo",
   ],
 },
-
 
 
 // =========================
 // ARCHIVED PROJECTS
 // =========================
 
-{
-  id: "contact-card",
 
-  type: "projects",
-
-  title: "Contact Card",
-
-  description:
-    "Archived Project • Contact management application with CRUD operations.",
-
-  href: "/projects?project=contact-card",
-
-  keywords: [
-    "contact card",
-    "contact manager",
-    "contact management",
-    "contacts",
-    "address book",
-    "phone book",
-
-    "react",
-    "php",
-    "mysql",
-    "sass ",
-
-    "crud",
-    "forms",
-    "search",
-    "management system",
-
-    "personal project",
-    "archived project",
-  ],
-},
 
 {
   id: "job-portal",
@@ -1069,30 +1005,55 @@ export const SEARCH_INDEX: SearchItem[] = [
   title: "Job Portal",
 
   description:
-    "Archived Project • Recruitment and job listing platform.",
+    "Recruitment platform supporting job seekers, recruiters and administrators.",
 
   href: "/projects?project=job-portal",
 
   keywords: [
     "job portal",
     "jobs",
-    "job board",
     "career",
-    "employment",
     "recruitment",
 
+    "job seeker",
+    "recruiter",
+    "admin",
+
+    "html",
+    "css",
+    "javascript",
     "php",
     "mysql",
-    "javascript",
-    "css",
 
-    "candidate",
-    "employer",
-    "applications",
-    "job listings",
+    "industrial training",
+  ],
+},
 
-    "personal project",
-    "archived project",
+{
+  id: "contact-manager",
+
+  type: "projects",
+
+  title: "Contact Manager",
+
+  description:
+    "Contact management application with authentication and search functionality.",
+
+  href: "/projects?project=contact-manager",
+
+  keywords: [
+    "contact manager",
+    "contacts",
+    "address book",
+
+    "react",
+    "scss",
+    "php",
+    "mysql",
+
+    "crud",
+    "authentication",
+    "search",
   ],
 },
 
@@ -1104,28 +1065,54 @@ export const SEARCH_INDEX: SearchItem[] = [
   title: "Image Gallery",
 
   description:
-    "Archived Project • Responsive image gallery and photo browsing application.",
+    "Image sharing platform with upload, search and category browsing.",
 
-  href: "/projects?project=image-galary",
+  href: "/projects?project=image-gallery",
 
   keywords: [
     "image gallery",
     "gallery",
     "photos",
     "images",
-    "photo viewer",
+
+    "upload",
+    "categories",
+    "search",
 
     "react",
-    "javascript",
+    "php",
+    "mysql",
     "css",
+  ],
+},
 
-    "frontend",
-    "responsive",
-    "grid layout",
-    "ui",
+{
+  id: "three-level-password-auth",
 
-    "personal project",
-    "archived project",
+  type: "projects",
+
+  title: "Multi-Factor Authentication System",
+
+  description:
+    "Authentication system using OTP, password and image verification.",
+
+  href: "/projects?project=three-level-password-auth",
+
+  keywords: [
+    "authentication",
+    "security",
+    "login",
+    "signup",
+
+    "otp",
+    "password",
+    "image verification",
+
+    "html",
+    "css",
+    "javascript",
+    "php",
+    "mysql",
   ],
 },
 
@@ -1137,7 +1124,7 @@ export const SEARCH_INDEX: SearchItem[] = [
   title: "Image Puzzle",
 
   description:
-    "Archived Project • Interactive puzzle game built with JavaScript.",
+    "Interactive puzzle game with drag-and-drop image reconstruction.",
 
   href: "/projects?project=image-puzzle",
 
@@ -1145,19 +1132,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "image puzzle",
     "puzzle",
     "game",
-    "interactive game",
 
-    "javascript",
-    "html",
-    'css',
-
-    "frontend",
-    "logic",
     "drag and drop",
-    "game development",
+    "timer",
 
-    "personal project",
-    "archived project",
+    "html",
+    "css",
+    "javascript",
   ],
 },
 
@@ -1169,7 +1150,7 @@ export const SEARCH_INDEX: SearchItem[] = [
   title: "Calculator",
 
   description:
-    "Archived Project • Calculator application for arithmetic operations.",
+    "Calculator application supporting arithmetic operations.",
 
   href: "/projects?project=calculator",
 
@@ -1179,19 +1160,13 @@ export const SEARCH_INDEX: SearchItem[] = [
     "arithmetic",
     "calculation",
 
-    "javascript",
     "react",
-    "sass ",
+    "css",
 
     "frontend",
     "logic",
-    "ui",
-
-    "personal project",
-    "archived project",
   ],
 },
-
 
 // =========================
 // INFO

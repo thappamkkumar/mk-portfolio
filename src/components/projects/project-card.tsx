@@ -22,6 +22,10 @@ export default function ProjectCard({
   index,
 }: ProjectCardProps) {
 
+  const hasImages =
+    project.images &&
+    project.images.length > 0;
+
 
   const searchParams = useSearchParams();
 
@@ -59,10 +63,8 @@ export default function ProjectCard({
             ? `
               rounded-4xl
               p-5 lg:p-6 xl:p-8 
-                
-              border
-              border-emerald-400/30
-              bg-emerald-400/5 
+                 
+              bg-zinc-900
             `
             : ` 
               
@@ -238,7 +240,9 @@ export default function ProjectCard({
         </div>
 
         {/* Gallery */}
-        <ProjectGallery images={project.images} />
+         {hasImages && (
+          <ProjectGallery images={project.images} />
+         )}
       </div>
     </article>
   );

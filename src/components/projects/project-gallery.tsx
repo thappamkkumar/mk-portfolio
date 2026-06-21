@@ -3,12 +3,15 @@ import Image from "next/image";
 import { ProjectImage } from "@/types/project";
 
 interface ProjectGalleryProps {
-  images: ProjectImage[];
+  images?: ProjectImage[];
 }
 
 export default function ProjectGallery({
   images,
 }: ProjectGalleryProps) {
+   if (!images?.length) {
+    return null;
+  }
   return (
     <div
       className="

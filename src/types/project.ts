@@ -15,7 +15,7 @@ export interface Project {
 
   technologies: string[];
 
-  images: ProjectImage[];
+  images?: ProjectImage[];
 
   githubUrl?: string;
   liveUrl?: string;

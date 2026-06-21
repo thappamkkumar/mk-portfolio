@@ -12,7 +12,7 @@ export const projects: Project[] = [
     tagline:
       "Professional Media & Networking Platform",
 
-    period: "Jan 2025 – Ongoing",
+    period: "Sept 2025 – Ongoing",
 
     summary:
       "Full-stack professional networking and media platform featuring posts, stories, communities, real-time chat, audio/video calling, job listings, freelance modules, and content discovery systems.",
@@ -104,7 +104,7 @@ export const projects: Project[] = [
     tagline:
       "Fashion E-Commerce Store",
 
-    period: "Sep 2023 – Nov 2023",
+    period: "Jan 2024 – Feb 2024",
 
     summary:
       "Modern fashion e-commerce application featuring product discovery, category browsing, authentication workflows, shopping cart functionality, order management, and responsive shopping experiences.",
@@ -139,4 +139,260 @@ export const projects: Project[] = [
     liveUrl: "https://styleloop.page.gd/",
     caseStudyUrl: "/projects/styleloop",
   },
+
+
+
+
+
+
+
+
+
+
+  {
+  id: "coaching-center-website",
+  slug: "coaching-center-website",
+
+  name: "Coaching Center Website",
+
+  tagline:
+    "Educational Institute Landing Page",
+
+  period: "Jun 2025",
+
+  summary:
+    "Modern coaching center website showcasing courses, faculty, student achievements, teaching methodology, testimonials, and contact information.",
+
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+  ],
+
+  images: [],
+
+  githubUrl:
+    "https://github.com/thappamkkumar/education-coaching",
+
+  liveUrl:
+    "https://education-coaching.vercel.app/",
+
+  caseStudyUrl: "",
+},
+
+{
+  id: "gym-website",
+  slug: "gym-website",
+
+  name: "Gym Website",
+
+  tagline:
+    "Fitness Business Landing Page",
+
+  period: "June 2025",
+
+  summary:
+    "Responsive gym website highlighting fitness programs, facilities, member testimonials, gallery content, and lead generation features.",
+
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+  ],
+
+  images: [],
+
+  githubUrl:
+    "https://github.com/thappamkkumar/gym",
+
+  liveUrl:
+    "https://gym-sample-1.vercel.app",
+
+  caseStudyUrl: "",
+},
+
+{
+  id: "job-portal",
+  slug: "job-portal",
+
+  name: "Job Portal",
+
+  tagline:
+    "Multi-Role Recruitment Platform",
+
+  period: "Feb 2022 – May 2022",
+
+  summary: 
+  "Developed during a 4-month industrial training program, this recruitment platform supports job seekers, recruiters, and administrators with job posting, candidate applications, recruitment workflows, filtering tools, and centralized administration.",
+  
+  technologies: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "PHP",
+    "MySQL",
+  ],
+
+  images: [],
+
+  githubUrl:
+    "https://github.com/thappamkkumar/job-portal",
+
+  liveUrl: "",
+
+  caseStudyUrl: "",
+},
+
+{
+  id: "contact-manager",
+  slug: "contact-manager",
+
+  name: "Contact Manager",
+
+  tagline:
+    "Personal Contact Management System",
+
+  period: "March 2023 - Apr 2023",
+
+  summary:
+    "Contact management application with authentication, profile-based access, search functionality, and secure storage of contact information including photos, emails, phone numbers, and addresses.",
+
+  technologies: [
+    "React.js",
+    "SCSS",
+    "PHP",
+    "MySQL",
+  ],
+
+  images: [],
+
+  githubUrl:
+    "https://github.com/thappamkkumar/contact-card",
+
+  liveUrl: "",
+
+  caseStudyUrl: "",
+},
+
+{
+  id: "image-gallery",
+  slug: "image-gallery",
+
+  name: "Image Gallery",
+
+  tagline:
+    "Community Image Sharing Platform",
+
+  period: "Feb 2023 - March 2023",
+
+  summary:
+    "Public image sharing platform allowing users to upload, categorize, browse, and search image collections without requiring account registration.",
+
+  technologies: [
+    "React.js",
+    "CSS",
+    "PHP",
+    "MySQL",
+  ],
+
+  images: [],
+
+  githubUrl:
+    "https://github.com/thappamkkumar/image-gallery",
+
+  liveUrl: "",
+
+  caseStudyUrl: "",
+},
+
+{
+  id: "calculator",
+  slug: "calculator",
+
+  name: "Calculator",
+
+  tagline:
+    "Interactive Calculator Application",
+
+  period: "Feb 2023",
+
+  summary:
+    "React-based calculator implementing arithmetic operations, expression evaluation, and a responsive user interface.",
+
+  technologies: [
+    "React.js",
+    "CSS",
+  ],
+
+  images: [],
+
+  githubUrl:
+    "https://github.com/thappamkkumar/calculator/tree/main",
+
+  liveUrl: "",
+
+  caseStudyUrl: "",
+},
+
+{
+  id: "image-puzzle",
+  slug: "image-puzzle",
+
+  name: "Image Puzzle",
+
+  tagline:
+    "Drag & Drop Puzzle Game",
+
+  period: "Nov 2022",
+
+  summary:
+    "Interactive puzzle game where users reconstruct shuffled images through drag-and-drop mechanics, multiple difficulty levels, and configurable time challenges.",
+
+  technologies: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+  ],
+
+  images: [],
+
+  githubUrl:
+    "https://github.com/thappamkkumar/image-puzzle",
+
+  liveUrl: "",
+
+  caseStudyUrl: "",
+},
+
+{
+  id: "three-level-password-auth",
+  slug: "three-level-password-auth",
+
+  name: "Multi-Factor Authentication System",
+
+  tagline:
+    "Three-Level Authentication Workflow",
+
+  period: "Oct 2022",
+
+  summary:
+    "Authentication system combining email OTP verification, password validation, and image-based challenge authentication through drag-and-drop image reconstruction.",
+
+  technologies: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "PHP",
+    "MySQL",
+  ],
+
+  images: [],
+
+  githubUrl:
+    "https://github.com/thappamkkumar/three-level-password-authentication/tree/main",
+
+  liveUrl: "",
+
+  caseStudyUrl: "",
+},
 ];

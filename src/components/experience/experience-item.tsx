@@ -64,10 +64,8 @@ export default function ExperienceItem({
             `
                rounded-4xl
               p-5 lg:p-6 xl:p-8 
-                
-              border
-              border-emerald-400/30
-              bg-emerald-400/5 
+                 
+              bg-zinc-900 
             `
         )}
       >

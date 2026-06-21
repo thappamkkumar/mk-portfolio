@@ -11,7 +11,7 @@ interface SkillItemProps {
 
 const levelStyles = {
   comfortable: "bg-emerald-400",
-  working: "bg-emerald-400/40",
+  working: "bg-emerald-800 ",
   familiar: "border border-white/30",
 };
 
@@ -47,10 +47,9 @@ export default function SkillItem({
           `,
           isSelected
             ? ` 
-              border-emerald-400/50
-              bg-emerald-400/10
+              border-zinc-600
+              bg-zinc-800
               text-white
-              shadow-[0_0_20px_rgba(16,185,129,0.15)]
             `
             : `
               border-white/10
