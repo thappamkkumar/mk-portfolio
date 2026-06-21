@@ -1,3 +1,8 @@
+"use client";
+
+import clsx from "clsx";
+import { useSearchParams } from "next/navigation";
+
 import Link from "next/link";
 
 import { ArrowUpRight } from "lucide-react";
@@ -18,6 +23,21 @@ export default function ExperienceItem({
     experience.images &&
     experience.images.length > 0;
 
+  const hasLinks =
+  experience.liveUrl ||
+  experience.caseStudyUrl;
+
+
+
+  const searchParams =
+  useSearchParams();
+
+  const selectedExperience =
+    searchParams.get("experience");
+
+  const isSelected =
+  selectedExperience === experience.id;
+
   return (
     <article
       id={experience.id}
@@ -31,19 +51,25 @@ export default function ExperienceItem({
         md:py-24
       "
     >
-      <div
-        className={
-          hasImages
-            ? `
+      
+      <div 
+        className={clsx(
+            `
               grid
               gap-12
               lg:grid-cols-[minmax(0,1fr)_500px]
               lg:items-start
+            `,
+          isSelected &&
             `
-            : `
-              max-w-3xl
+               rounded-4xl
+              p-5 lg:p-6 xl:p-8 
+                
+              border
+              border-emerald-400/30
+              bg-emerald-400/5 
             `
-        }
+        )}
       >
         <div>
           <span
@@ -104,79 +130,80 @@ export default function ExperienceItem({
           <ExperienceTechStack
             technologies={experience.technologies}
           />
-
-          <div
-            className="
-              mt-10
-              flex
-              flex-wrap
-              items-center
-              gap-3
-              border-t
-              border-white/10
-              pt-8
-            "
-          >
-            {experience.liveUrl && (
-              <Link
-                href={experience.liveUrl}
-                target="_blank"
-                className="
-                  group
-                  inline-flex
-                  items-center
-                  gap-2
-                  rounded-full
-                  bg-emerald-400
-                  px-5
-                  py-2.5
-                  font-medium
-                  text-black
-                  shadow-lg
-                  shadow-emerald-400/10
-                  transition-all
-                  duration-300
-                  hover:scale-[1.02]
-                  hover:bg-emerald-300
-                "
-              >
-                Visit Website
-
-                <ArrowUpRight
-                  size={16}
+          {hasLinks && (
+            <div
+              className="
+                mt-10
+                flex
+                flex-wrap
+                items-center
+                gap-3
+                border-t
+                border-white/10
+                pt-8
+              "
+            >
+              {experience.liveUrl && (
+                <Link
+                  href={experience.liveUrl}
+                  target="_blank"
                   className="
-                    transition-transform
+                    group
+                    inline-flex
+                    items-center
+                    gap-2
+                    rounded-full
+                    bg-emerald-400
+                    px-5
+                    py-2.5
+                    font-medium
+                    text-black
+                    shadow-lg
+                    shadow-emerald-400/10
+                    transition-all
                     duration-300
-                    group-hover:translate-x-0.5
-                    group-hover:-translate-y-0.5
+                    hover:scale-[1.02]
+                    hover:bg-emerald-300
                   "
-                />
-              </Link>
-            )}
+                >
+                  Visit Website
 
-            {experience.caseStudyUrl && (
-              <Link
-                href={experience.caseStudyUrl}
-                className="
-                  rounded-full
-                  border
-                  border-white/10
-                  px-5
-                  py-2.5
-                  text-white/70
-                  transition-all
-                  duration-300
-                  hover:border-emerald-400/30
-                  hover:bg-emerald-400/5
-                  hover:text-white
-                "
-              >
-                Case Study
-              </Link>
-            )}
-          </div>
+                  <ArrowUpRight
+                    size={16}
+                    className="
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5
+                    "
+                  />
+                </Link>
+              )}
+
+              {experience.caseStudyUrl && (
+                <Link
+                  href={experience.caseStudyUrl}
+                  className="
+                    rounded-full
+                    border
+                    border-white/10
+                    px-5
+                    py-2.5
+                    text-white/70
+                    transition-all
+                    duration-300
+                    hover:border-emerald-400/30
+                    hover:bg-emerald-400/5
+                    hover:text-white
+                  "
+                >
+                  Case Study
+                </Link>
+              )}
+            </div>
+          )}
         </div>
-
+        
         {hasImages && (
           <ExperienceGallery
             images={experience.images}

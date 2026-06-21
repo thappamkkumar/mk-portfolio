@@ -1,4 +1,7 @@
+"use client";
+
 import clsx from "clsx";
+import { useSearchParams } from "next/navigation";
 
 import { Skill } from "@/types/skill";
 
@@ -15,28 +18,49 @@ const levelStyles = {
 export default function SkillItem({
   skill,
 }: SkillItemProps) {
+
+  const searchParams = useSearchParams();
+
+  const selectedSkill =
+    searchParams.get("skill");
+
+  const isSelected =
+    selectedSkill === skill.id;
+
+
   return (
     <li>
       <div
         id={skill.id}
-        className="
-          inline-flex
-          items-center
-          gap-2.5
-          rounded-full
-          border
-          border-white/10
-          bg-white/3
-          px-4
-          py-2
-          text-sm
-          text-white/70
-          transition-all
-          duration-300
-          hover:border-emerald-400/20
-          hover:bg-emerald-400/5
-          hover:text-white
-        "
+        className={clsx(
+          `
+            inline-flex
+            items-center
+            gap-2.5
+            rounded-full
+            border
+            px-4
+            py-2
+            text-sm
+            transition-all
+            duration-300
+          `,
+          isSelected
+            ? ` 
+              border-emerald-400/50
+              bg-emerald-400/10
+              text-white
+              shadow-[0_0_20px_rgba(16,185,129,0.15)]
+            `
+            : `
+              border-white/10
+              bg-white/3
+              text-white/70
+              hover:border-emerald-400/20
+              hover:bg-emerald-400/5
+              hover:text-white
+            `
+        )}
       >
         <span>{skill.name}</span>
 

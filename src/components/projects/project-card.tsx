@@ -1,3 +1,8 @@
+"use client";
+
+import clsx from "clsx";
+import { useSearchParams } from "next/navigation";
+
 import Link from "next/link";
 
 import { ArrowUpRight } from "lucide-react";
@@ -16,26 +21,53 @@ export default function ProjectCard({
   project,
   index,
 }: ProjectCardProps) {
+
+
+  const searchParams = useSearchParams();
+
+  const selectedProject =
+    searchParams.get("project");
+
+  const isSelected =
+    selectedProject === project.id;
+
+
   return (
     <article
       id={project.id}
       className="
-        border-b
-        border-white/10
-        py-16
-        transition-colors
-        duration-300
-        hover:border-emerald-400/10
-        md:py-24
+          border-b
+          border-white/10
+          py-16
+          transition-colors
+          duration-300
+          hover:border-emerald-400/10
+          md:py-24
       "
     >
       <div
-        className="
+        className={clsx(
+        `
           grid
           gap-12
           lg:grid-cols-[minmax(0,1fr)_500px]
           lg:items-start
-        "
+          
+              
+        `,
+          isSelected
+            ? `
+              rounded-4xl
+              p-5 lg:p-6 xl:p-8 
+                
+              border
+              border-emerald-400/30
+              bg-emerald-400/5 
+            `
+            : ` 
+              
+            `
+        )}
       >
         {/* Content */}
         <div>

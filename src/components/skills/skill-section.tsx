@@ -1,6 +1,7 @@
 import SkillsGrid from "./skills-grid";
 import SkillsHeader from "./skills-header";
 import SkillsGuide from "./skills-guide";
+import SkillFocus from "./skill-focus";
 
 import { SkillCategory } from "@/types/skill";
 
@@ -13,6 +14,9 @@ export default function SkillSection({
 }: SkillsPageProps) {
   return (
     <div>
+
+      <SkillFocus />
+      
       <SkillsHeader />
 
       <SkillsGrid categories={categories} />
