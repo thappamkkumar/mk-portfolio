@@ -183,7 +183,7 @@ export const projects: Project[] = [
     label: "Faculty",
   },
   {
-    src: "/projects/coaching-center/testimonials.png",
+    src: "/projects/coaching-center/	testimonials.png",
     label: "Testimonials",
   },
 ],
@@ -316,6 +316,10 @@ export const projects: Project[] = [
   ],
 
  images: [
+ 	{
+    src: "/projects/contact-manager/home.png",
+    label: "Home",
+  },
   {
     src: "/projects/contact-manager/list.png",
     label: "Contacts List",
@@ -324,10 +328,7 @@ export const projects: Project[] = [
     src: "/projects/contact-manager/add.png",
     label: "Add Contact",
   },
-  {
-    src: "/projects/contact-manager/details.png",
-    label: "Contact Details",
-  },
+  
   {
     src: "/projects/contact-manager/login.png",
     label: "Authentication",
@@ -449,8 +450,8 @@ export const projects: Project[] = [
       label: "Easy Level",
     },
     {
-      src: "/projects/image-puzzle/medium.png",
-      label: "Medium Level",
+      src: "/projects/image-puzzle/hard.png",
+      label: "Hard Level",
     },
     {
       src: "/projects/image-puzzle/completed.png",
@@ -488,27 +489,10 @@ export const projects: Project[] = [
     "MySQL",
   ],
 
-  images: [
-  {
-    src: "/projects/auth/signup.png",
-    label: "Registration",
-  },
-  {
-    src: "/projects/auth/otp.png",
-    label: "OTP Verification",
-  },
-  {
-    src: "/projects/auth/image.png",
-    label: "Image Verification",
-  },
-  {
-    src: "/projects/auth/login.png",
-    label: "Login",
-  },
-],  
+  
 
   githubUrl:
-    "https://github.com/thappamkkumar/three-level-password-authentication/tree/main",
+    "https://github.com/thappamkkumar/three-level-password-authentication",
 
   liveUrl: "",
 

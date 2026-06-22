@@ -16,22 +16,22 @@ export const skillVilla: CaseStudy = {
   screenshots: [
     {
       title: "Home Feed",
-      image: "/case-study/projects/skillvilla/hero.webp",
+      image: "/case-study/projects/skillvilla/home.png",
     },
 
     {
       title: "Workfolio Showcase",
-      image: "/case-study/projects/skillvilla/hero.webp",
+      image: "/case-study/projects/skillvilla/workfolio.png",
     },
 
     {
       title: "Communities",
-      image: "/case-study/projects/skillvilla/hero.webp",
+      image: "/case-study/projects/skillvilla/community.png",
     },
 
     {
       title: "Realtime Communication", //call image
-      image: "/case-study/projects/skillvilla/hero.webp",
+      image: "/case-study/projects/skillvilla/video.png",
     },
  
   ],
@@ -124,8 +124,7 @@ export const skillVilla: CaseStudy = {
         items: [
           "Laravel Reverb",
           "Pusher Echo",
-          "Chat",
-          "Notifications",
+          "Chat", 
         ],
       },
 

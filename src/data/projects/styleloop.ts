@@ -15,23 +15,23 @@ export const styleLoop: CaseStudy = {
 
   screenshots: [
     {
-      title: "Home Storefront",
-      image: "/case-study/projects/styleloop/storefront.webp",
-    },
-
-    {
-      title: "Product Details",
-      image: "/case-study/projects/styleloop/product-details.webp",
-    },
-
-    {
-      title: "Shopping Cart",
-      image: "/case-study/projects/styleloop/cart.webp",
-    },
-
-    {
       title: "Admin Dashboard",
-      image: "/case-study/projects/styleloop/admin.webp",
+      image: "/case-study/projects/styleloop/dashboard.png",
+    },
+
+    {
+      title: "Order Management",
+      image: "/case-study/projects/styleloop/order.png",
+    },
+
+    {
+      title: "Product Search",
+      image: "/case-study/projects/styleloop/search.png",
+    },
+
+    {
+      title: "Product Detail",
+      image: "/case-study/projects/styleloop/detail.png",
     },
   ],
 

@@ -16,22 +16,22 @@ export const vkSalon: CaseStudy = {
   screenshots: [
     {
       title: "Homepage Experience",
-      image: "/case-study/experience/vk-salon/home.webp",
+      image: "/case-study/experience/vk-salon/home.png",
     },
 
     {
       title: "Services & Styles",
-      image: "/case-study/experience/vk-salon/services.webp",
+      image: "/case-study/experience/vk-salon/services.png",
     },
 
     {
       title: "Appointment Booking",
-      image: "/case-study/experience/vk-salon/booking.webp",
+      image: "/case-study/experience/vk-salon/booking.png",
     },
 
     {
-      title: "Admin Dashboard",
-      image: "/case-study/experience/vk-salon/admin.webp",
+      title: "Admin",
+      image: "/case-study/experience/vk-salon/admin.png",
     },
   ],
 

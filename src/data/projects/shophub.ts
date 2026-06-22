@@ -15,23 +15,23 @@ export const shopHub: CaseStudy = {
 
   screenshots: [
     {
-      title: "Marketplace Storefront",
-      image: "/case-study/projects/shophub/storefront.webp",
-    },
-
-    {
-      title: "Vendor Dashboard",
-      image: "/case-study/projects/shophub/vendor-dashboard.webp",
-    },
-
-    {
-      title: "Product Management",
-      image: "/case-study/projects/shophub/products.webp",
-    },
-
-    {
       title: "Admin Dashboard",
-      image: "/case-study/projects/shophub/admin-panel.webp",
+      image: "/case-study/projects/shophub/admin-dashboard.png",
+    },
+
+    {
+      title: "Order Managment",
+      image: "/case-study/projects/shophub/order-managment.png",
+    },
+
+    {
+      title: "Cart",
+      image: "/case-study/projects/shophub/cart.png",
+    },
+
+    {
+      title: "Product Detail",
+      image: "/case-study/projects/shophub/product-detail.png",
     },
   ],
 
