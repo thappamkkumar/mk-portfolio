@@ -11,7 +11,7 @@ export const shopHub: CaseStudy = {
 
   type: "Personal Project",
 
-  image: "/case-study/projects/shophub/hero.webp",
+  image: "/case-study/projects/shophub/case-study-hero.png",
 
   screenshots: [
     {

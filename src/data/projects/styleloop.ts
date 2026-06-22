@@ -11,7 +11,7 @@ export const styleLoop: CaseStudy = {
 
   type: "Personal Project",
 
-  image: "/case-study/projects/styleloop/hero.webp",
+  image: "/case-study/projects/styleloop/case-study-hero.png",
 
   screenshots: [
     {

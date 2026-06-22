@@ -11,7 +11,7 @@ export const skillVilla: CaseStudy = {
 
   type: "Personal Project",
 
-  image: "/case-study/projects/skillvilla/hero.webp",//feed,community,chat,jobs
+  image: "/case-study/projects/skillvilla/case-study-hero.png",//feed,community,chat,jobs
 
   screenshots: [
     {

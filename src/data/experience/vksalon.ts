@@ -11,7 +11,7 @@ export const vkSalon: CaseStudy = {
 
   type: "Client Project",
 
-  image: "/case-study/experience/vk-salon/hero.webp",
+  image: "/case-study/experience/vk-salon/case-study-hero.png",
 
   screenshots: [
     {
